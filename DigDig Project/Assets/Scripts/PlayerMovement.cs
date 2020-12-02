@@ -4,36 +4,36 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Variables
 
+    Rigidbody2D rb;
+
     //x-axis movement
     private float moveInput;
     public float speed = 6f;
 
-   //jump
-    public float jumpForce = 10f;
+    //Jump
+    public float jumpForce = 15f;
+
     private bool isJumping;
-
+    public float jumpTime = 0.2f;
     private float jumpTimeCounter;
-    public float jumpTime;
 
-    private float jumpBufferCounter;
     public float jumpBuffer = 0.1f;
+    private float jumpBufferCounter;
 
-    private float hangTimeCounter;
     public float hangTime = 0.2f;
-
+    private float hangTimeCounter;
+    
+    //ground check
     private bool isGrounded;
-    public float checkRadius;
-    public Transform feetPos;
+    public float checkRadius = 0.1f;
+    public Transform groundCheck;
     public LayerMask whatIsGround;
 
-    Rigidbody2D rb;
     #endregion
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        jumpTimeCounter = jumpTime;
     }
 
     private void FixedUpdate()
@@ -45,8 +45,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Jump
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        #region Jump
+
+        //ground check
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         //hang time
         if (isGrounded) hangTimeCounter = hangTime;
@@ -60,9 +62,9 @@ public class PlayerMovement : MonoBehaviour
         if (hangTimeCounter > 0 && jumpBufferCounter > 0) 
         {
             rb.velocity = Vector2.up * jumpForce;
-            isJumping = true;
             jumpTimeCounter = jumpTime;
             jumpBufferCounter = 0;
+            isJumping = true;
         }
 
         //different jump height
@@ -76,7 +78,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonUp("Jump")) isJumping = false;
 
+        #endregion
 
-      
+
     }
 }
