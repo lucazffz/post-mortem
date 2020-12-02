@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
 
+    private float jumpBufferCounter;
+    public float jumpBuffer = 0.1f;
+
     private bool isGrounded;
     public float checkRadius;
     public Transform feetPos;
@@ -42,11 +45,15 @@ public class PlayerMovement : MonoBehaviour
         //Jump
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if (isGrounded && Input.GetButtonDown("Jump")) 
+        if (Input.GetButtonDown("Jump")) jumpBufferCounter = jumpBuffer;
+        else jumpBufferCounter -= Time.deltaTime;
+
+        if (isGrounded && jumpBufferCounter >= 0) 
         {
             rb.velocity = Vector2.up * jumpForce;
             isJumping = true;
             jumpTimeCounter = jumpTime;
+            jumpBufferCounter = 0;
         }
 
         if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping)
