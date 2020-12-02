@@ -4,21 +4,23 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Variables
 
+    //x-axis movement
     private float moveInput;
     public float speed = 6f;
 
-    private bool isGrounded;
-    private bool isJumping;
+   //jump
     public float jumpForce = 10f;
 
+    private bool isJumping;
     private float jumpTimeCounter;
     public float jumpTime;
 
+    private bool isGrounded;
+    public float checkRadius;
+    public Transform feetPos;
+    public LayerMask whatIsGround;
+
     Rigidbody2D rb;
-
-
-
-
     #endregion
 
     void Start()
@@ -35,37 +37,28 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
 
-
-
     void Update()
     {
-        //jump
-        if(Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping)
+        //Jump
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        if (isGrounded && Input.GetButtonDown("Jump")) 
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+        }
+
+        if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping)
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpTimeCounter -= Time.deltaTime;
-
-            isGrounded = false;
         }
-
-        if (isGrounded)
-        {
-            jumpTimeCounter = jumpTime;
-        }
-    
-            
-
+        else isJumping = false;
 
         if (Input.GetButtonUp("Jump")) isJumping = false;
-    }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-            isJumping = true;
-        }
+      
     }
 }
