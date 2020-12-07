@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f803666c97ddc1b49b5d1355ab15c341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interctKey: 101
+  interactKey: 101
+  eventIndex: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls: []
-  prompt: {fileID: 0}
 --- !u!61 &6800888044658478541
 BoxCollider2D:
   m_ObjectHideFlags: 0

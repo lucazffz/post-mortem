@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 417742875}
   - component: {fileID: 417742874}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: ' Main Camera'
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -826,57 +826,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &848102527
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 848102529}
-  - component: {fileID: 848102528}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &848102528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848102527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8846f32add5259c43a505297cfa9728f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activatePrompt: 0
-  interactKey: 0
-  promptText: {fileID: 1210085023}
-  eventPrompt:
-  - open
-  - enter
-  - unlock
-  eventIndex: 0
---- !u!4 &848102529
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848102527}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &913211355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,13 +1069,14 @@ GameObject:
   - component: {fileID: 1210085024}
   - component: {fileID: 1210085026}
   - component: {fileID: 1210085025}
+  - component: {fileID: 1210085027}
   m_Layer: 5
   m_Name: Interactable Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1210085024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1188,6 +1138,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210085023}
   m_CullTransparentMesh: 0
+--- !u!114 &1210085027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210085023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8846f32add5259c43a505297cfa9728f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activatePrompt: 0
+  interactKey: 0
+  eventPrompt:
+  - open
+  - enter
+  - unlock
+  eventIndex: 0
 --- !u!1 &1244209092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: prompt
@@ -1421,7 +1390,7 @@ PrefabInstance:
     - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1997625491}
+      objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: eventTypeIndex
       value: 2
@@ -1464,7 +1433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1545,7 +1514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: eventIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1577,7 +1546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
