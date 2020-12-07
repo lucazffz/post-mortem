@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 
 public class InteractableUI : MonoBehaviour
@@ -11,13 +11,20 @@ public class InteractableUI : MonoBehaviour
     [HideInInspector] public string[] eventPrompt = {"open", "enter", "unlock"};
     [HideInInspector] public int eventIndex;
 
+    public TextMeshProUGUI textMeshPro;
+
+    private void Start()
+    {
+        textMeshPro = GetComponent<TextMeshProUGUI>();
+    }
+
     void Update()
     {
         //Set text elements
-        GetComponent<Text>().text = ($"Press {interactKey} to {eventPrompt[eventIndex]}");
+        textMeshPro.text = $"Press {interactKey} to {eventPrompt[eventIndex]}";
 
         //activate and deactivate text
-        if (activatePrompt) GetComponent<Text>().enabled = true;
-        else GetComponent<Text>().enabled = false;
+        if (activatePrompt) textMeshPro.enabled = true;
+        else textMeshPro.enabled = false;
     }
 }
