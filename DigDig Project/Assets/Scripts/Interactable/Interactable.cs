@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
 
     private bool inRange;
 
-    public KeyCode interactKey = KeyCode.E;
+    public KeyCode interactKey = KeyCode.F;
     public int eventIndex;
     public UnityEvent interactionEvent;
 
@@ -34,8 +34,6 @@ public class Interactable : MonoBehaviour
         //deactivate UI element
         if (other.CompareTag("Player")) GameObject.Find("Interactable Prompt").GetComponent<InteractableUI>().activatePrompt = false; 
     }
-
-    
 }
 
   
