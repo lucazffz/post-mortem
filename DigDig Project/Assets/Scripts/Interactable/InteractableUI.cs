@@ -9,8 +9,8 @@ public class InteractableUI : MonoBehaviour
 
     [HideInInspector] public string[] eventPrompt;
     [HideInInspector] public int eventIndex;
-
-    public TextMeshProUGUI textMeshPro;
+    
+    private TextMeshProUGUI textMeshPro;    
 
     private void Start()
     {
@@ -19,11 +19,12 @@ public class InteractableUI : MonoBehaviour
 
     void Update()
     {
-        //Set text elements
-        textMeshPro.text = $"Press {interactKey} to {eventPrompt[eventIndex]}";
-
-        //activate and deactivate text
-        if (activatePrompt) textMeshPro.enabled = true;
+        //activate and deactivate text and set elements
+        if (activatePrompt)
+        {
+            textMeshPro.text = $"Press {interactKey} to {eventPrompt[eventIndex]}";
+            textMeshPro.enabled = true;
+        }
         else textMeshPro.enabled = false;
     }
 }

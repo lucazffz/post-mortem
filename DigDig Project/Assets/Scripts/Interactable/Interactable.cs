@@ -14,11 +14,11 @@ public class Interactable : MonoBehaviour
 
     [HideInInspector] public int eventIndex = 0;
     [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk" };
-
+    
     void Update()
     {
         //event when interacting
-        if (inRange) if (Input.GetKeyDown(interactKey)) interactionEvent.Invoke();
+        if (inRange && Input.GetKeyDown(interactKey)) interactionEvent.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,13 +36,14 @@ public class Interactable : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         inRange = false;
+
         //deactivate UI element
         if (other.CompareTag("Player")) GameObject.Find("Interactable Prompt").GetComponent<InteractableUI>().activatePrompt = false; 
     }
 }
 
- // Custom drop down eventPrompt menu
- [CustomEditor(typeof(Interactable))]
+// Custom drop down eventPrompt menu
+[CustomEditor(typeof(Interactable))]
 public class DropDownEditor : Editor
 {
     public override void OnInspectorGUI()
