@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using TMPro;
 
-
 public class InteractableUI : MonoBehaviour
 {
     //Variables
-    [HideInInspector] public bool activatePrompt;
+    [HideInInspector] public bool activatePrompt = false;
     [HideInInspector] public KeyCode interactKey;
 
     [HideInInspector] public string[] eventPrompt;

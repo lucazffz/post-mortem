@@ -10,9 +10,9 @@ public class Interactable : MonoBehaviour
 
     public UnityEvent interactionEvent;
 
-    public KeyCode interactKey = KeyCode.F;
+    public KeyCode interactKey = KeyCode.E;
 
-    [HideInInspector] public int eventIndex;
+    [HideInInspector] public int eventIndex = 0;
     [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk" };
 
     void Update()
@@ -41,8 +41,8 @@ public class Interactable : MonoBehaviour
     }
 }
 
-// Custom drop down eventPrompt menu
-[CustomEditor(typeof(Interactable))]
+ // Custom drop down eventPrompt menu
+ [CustomEditor(typeof(Interactable))]
 public class DropDownEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -51,8 +51,9 @@ public class DropDownEditor : Editor
 
         Interactable script = (Interactable)target;
 
-        GUIContent arrayLabel = new GUIContent("eventPrompt");
+        GUIContent arrayLabel = new GUIContent("Event Type");
         script.eventIndex = EditorGUILayout.Popup(arrayLabel, script.eventIndex, script.eventPrompt);
 
+        EditorUtility.SetDirty(target);
     }
 }
