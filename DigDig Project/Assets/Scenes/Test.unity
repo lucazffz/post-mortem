@@ -699,6 +699,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable Box
       objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: eventIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.25
@@ -1070,7 +1086,6 @@ MonoBehaviour:
   interactKey: 0
   eventPrompt: []
   eventIndex: 0
-  textMeshPro: {fileID: 0}
 --- !u!114 &1133021407
 MonoBehaviour:
   m_ObjectHideFlags: 0
