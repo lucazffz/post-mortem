@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEditor;
 
 public class Interactable : MonoBehaviour
 {
@@ -7,9 +8,12 @@ public class Interactable : MonoBehaviour
 
     private bool inRange;
 
-    public KeyCode interactKey = KeyCode.F;
-    public int eventIndex;
     public UnityEvent interactionEvent;
+
+    public KeyCode interactKey = KeyCode.F;
+
+    [HideInInspector] public int eventIndex;
+    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk" };
 
     void Update()
     {
@@ -24,6 +28,7 @@ public class Interactable : MonoBehaviour
         //UI key and event type sent to Interactable Prompt 
         GameObject.Find("Interactable Prompt").GetComponent<InteractableUI>().interactKey = interactKey;
         GameObject.Find("Interactable Prompt").GetComponent<InteractableUI>().eventIndex = eventIndex;
+        GameObject.Find("Interactable Prompt").GetComponent<InteractableUI>().eventPrompt = eventPrompt;
 
         //activate UI element
         if (other.CompareTag("Player")) GameObject.Find("Interactable Prompt").GetComponent<InteractableUI>().activatePrompt = true;
@@ -36,4 +41,18 @@ public class Interactable : MonoBehaviour
     }
 }
 
-  
+// Custom drop down eventPrompt menu
+[CustomEditor(typeof(Interactable))]
+public class DropDownEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        Interactable script = (Interactable)target;
+
+        GUIContent arrayLabel = new GUIContent("eventPrompt");
+        script.eventIndex = EditorGUILayout.Popup(arrayLabel, script.eventIndex, script.eventPrompt);
+
+    }
+}

@@ -7,8 +7,8 @@ public class InteractableUI : MonoBehaviour
     //Variables
     [HideInInspector] public bool activatePrompt;
     [HideInInspector] public KeyCode interactKey;
-    
-    [HideInInspector] public string[] eventPrompt = {"open", "enter", "unlock"};
+
+    [HideInInspector] public string[] eventPrompt;
     [HideInInspector] public int eventIndex;
 
     public TextMeshProUGUI textMeshPro;
