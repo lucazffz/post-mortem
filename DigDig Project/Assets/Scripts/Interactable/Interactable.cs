@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
     public KeyCode interactKey = KeyCode.E;
 
     [HideInInspector] public int eventIndex = 0;
-    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk" };
+    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read" };
     
     void Update()
     {
@@ -58,3 +58,4 @@ public class DropDownEditor : Editor
         EditorUtility.SetDirty(target);
     }
 }
+
