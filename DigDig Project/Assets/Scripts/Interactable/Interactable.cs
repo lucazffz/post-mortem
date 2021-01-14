@@ -7,6 +7,8 @@ public class Interactable : MonoBehaviour
     //Variables
 
     private bool inRange;
+    [HideInInspector]
+   
 
     public UnityEvent interactionEvent;
 

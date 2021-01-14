@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Dialgoue
 {
     public string name;
+    public Sprite characterSprite;
 
     [TextArea(3, 6)]
     public string[] sentences;
