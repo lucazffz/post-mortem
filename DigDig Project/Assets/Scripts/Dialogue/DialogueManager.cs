@@ -16,8 +16,6 @@ public class DialogueManager : MonoBehaviour
     
     public Animator animator;
 
-    [HideInInspector] public Interactable interactable;
-
     [HideInInspector] public bool haveSpoken;
     private bool inConversation;
 

@@ -2,8 +2,6 @@
 
 public class PlayerBehavior : MonoBehaviour
 {
-    public Interactable interactable;
-
     #region Variables
 
     Rigidbody2D rb;
