@@ -16,25 +16,28 @@ public class DialogueManager : MonoBehaviour
     
     public Animator animator;
 
-
     [HideInInspector] public Interactable interactable;
 
     [HideInInspector] public bool haveSpoken;
+    private bool inConversation;
 
     private Queue<string> sentences = new Queue<string>();
+
+   
 
     #endregion
 
     //enter to continue conversation
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence();
+        if (Input.GetKeyDown(KeyCode.Return) && inConversation) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialgoue dialogue)
     {
         //can't interact during dialogue
         FindObjectOfType<InteractableManager>().canInteract = false;
+        inConversation = true;
 
         sentences.Clear();
 
@@ -94,5 +97,6 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", false);
 
         FindObjectOfType<InteractableManager>().canInteract = true;
+        inConversation = false;
     }
 }

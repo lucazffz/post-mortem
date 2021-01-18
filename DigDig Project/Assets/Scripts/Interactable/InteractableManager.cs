@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
 using TMPro;
-using UnityEngine.Events;
-using UnityEditor;
-
 
 public class InteractableManager : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
 
-    [HideInInspector] public bool canInteract;
+     public bool canInteract;
     [HideInInspector] public KeyCode interactKey;
     [HideInInspector] public string[] eventPrompt;
     [HideInInspector] public int eventIndex;

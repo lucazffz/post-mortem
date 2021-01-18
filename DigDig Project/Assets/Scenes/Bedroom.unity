@@ -3078,12 +3078,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec2ec95b09175948bef49e2926b6248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  haveSpoken: 0
   nameText: {fileID: 1093508678}
   dialogueText: {fileID: 557097192}
   continueBottonText: {fileID: 299074341}
   characterImage: {fileID: 1864146422}
   animator: {fileID: 1510219260}
+  haveSpoken: 0
 --- !u!222 &1612128943
 CanvasRenderer:
   m_ObjectHideFlags: 0
