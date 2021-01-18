@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class Dialgoue
@@ -8,5 +7,8 @@ public class Dialgoue
     public Sprite characterSprite;
 
     [TextArea(3, 6)]
-    public string[] sentences;
+    public string[] storySentences;
+
+    [TextArea(1, 3)]
+    public string[] randomSentences;
 }

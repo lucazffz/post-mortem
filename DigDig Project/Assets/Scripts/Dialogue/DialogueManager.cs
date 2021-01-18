@@ -8,40 +8,58 @@ public class DialogueManager : MonoBehaviour
 {
     #region Variables
 
+    //UI elements
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI continueBottonText;
     public Image characterImage;
     
-
     public Animator animator;
 
-    private Queue<string> sentences;
+
+    [HideInInspector] public Interactable interactable;
+
+    [HideInInspector] public bool haveSpoken;
+
+    private Queue<string> sentences = new Queue<string>();
 
     #endregion
 
-    void Start()
+    //enter to continue conversation
+    private void Update()
     {
-        sentences = new Queue<string>();
+        if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialgoue dialogue)
     {
+        //can't interact during dialogue
+        FindObjectOfType<InteractableManager>().canInteract = false;
+
         sentences.Clear();
+
+        //UI and animations
         animator.SetBool("isOpen", true);
 
-        //name and image
         characterImage.sprite = dialogue.characterSprite;
         nameText.text = dialogue.name;
 
         continueBottonText.text = "Continue >>";
         
-        //queue sentence
-        foreach (string sentence in dialogue.sentences) sentences.Enqueue(sentence);
+        //queue story sentence or random sentence
+        if(haveSpoken == false)
+        {
+            foreach (string sentence in dialogue.storySentences) sentences.Enqueue(sentence);
+        }
+        else
+        {
+            string sentence = dialogue.randomSentences[Random.Range(0, dialogue.randomSentences.Length)];
+            sentences.Enqueue(sentence);
+        }
 
         DisplayNextSentence();
     }
-   
+
     public void DisplayNextSentence()
     {
         if (sentences.Count == 1) continueBottonText.text = "End Dialogue >>";
@@ -74,5 +92,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue() 
     {
         animator.SetBool("isOpen", false);
+
+        FindObjectOfType<InteractableManager>().canInteract = true;
     }
 }
