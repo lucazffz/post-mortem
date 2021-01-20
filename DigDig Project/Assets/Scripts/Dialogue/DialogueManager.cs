@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI continueBottonText;
     public Image characterImage;
 
+
     //player character sprite and name
     public Sprite playerSprite;
     private string playerName = "Player";
@@ -57,9 +58,11 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", true);
 
         characterSprite = dialogue.characterSprite;
+
+        
         characterImage.sprite = characterSprite;
 
-        characterName = dialogue.name;
+        characterName = dialogue.fullName;
         nameText.text = characterName;
 
         continueBottonText.text = "Continue >>";
@@ -83,8 +86,7 @@ public class DialogueManager : MonoBehaviour
         //Alternate between player and character name and image
         if (haveSpokenTo == false && sentences.Count != 0)
         {
-            if (playerTalking == true) playerTalking = false;
-            else if (playerTalking == false) playerTalking = true;
+            playerTalking = !playerTalking;
 
             if (playerTalking == true)
             {
