@@ -6,7 +6,7 @@ public class PlayerBehavior : MonoBehaviour
 
     Rigidbody2D rb;
 
-    [HideInInspector] private bool canMove = true;
+    [HideInInspector] public bool canMove = true;
 
     //X-axis movement
     private float moveInput;

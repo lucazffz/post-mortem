@@ -9,19 +9,27 @@ public class DialogueManager : MonoBehaviour
     #region Variables
 
     //UI elements
+    public Animator animator;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI continueBottonText;
     public Image characterImage;
-    
-    public Animator animator;
 
-    [HideInInspector] public bool haveSpoken;
+    //player character sprite and name
+    public Sprite playerSprite;
+    private string playerName = "Player";
+
+    //character name and sprite
+    private Sprite characterSprite;
+    private string characterName;
+
+    [HideInInspector] public bool haveSpokenTo;
     private bool inConversation;
 
-    private Queue<string> sentences = new Queue<string>();
+    private bool playerTalking;
 
-   
+    private Queue<string> sentences = new Queue<string>();
 
     #endregion
 
@@ -33,8 +41,14 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialgoue dialogue)
     {
-        //can't interact during dialogue
+        //can't interact or move during dialogue
         FindObjectOfType<InteractableManager>().canInteract = false;
+        FindObjectOfType<PlayerBehavior>().canMove = false;
+
+        //decides if player or character starts talking
+        if (dialogue.playerStartTalking == true) playerTalking = false;
+        else playerTalking = true;
+        
         inConversation = true;
 
         sentences.Clear();
@@ -42,15 +56,18 @@ public class DialogueManager : MonoBehaviour
         //UI and animations
         animator.SetBool("isOpen", true);
 
-        characterImage.sprite = dialogue.characterSprite;
-        nameText.text = dialogue.name;
+        characterSprite = dialogue.characterSprite;
+        characterImage.sprite = characterSprite;
+
+        characterName = dialogue.name;
+        nameText.text = characterName;
 
         continueBottonText.text = "Continue >>";
         
         //queue story sentence or random sentence
-        if(haveSpoken == false)
+        if(haveSpokenTo == false)
         {
-            foreach (string sentence in dialogue.storySentences) sentences.Enqueue(sentence);
+            foreach (string sentence in dialogue.sentences) sentences.Enqueue(sentence);
         }
         else
         {
@@ -63,6 +80,24 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        //Alternate between player and character name and image
+        if (haveSpokenTo == false && sentences.Count != 0)
+        {
+            if (playerTalking == true) playerTalking = false;
+            else if (playerTalking == false) playerTalking = true;
+
+            if (playerTalking == true)
+            {
+                characterImage.sprite = playerSprite;
+                nameText.text = playerName;
+            }
+            else
+            {
+                characterImage.sprite = characterSprite;
+                nameText.text = characterName;
+            }    
+        }
+        
         if (sentences.Count == 1) continueBottonText.text = "End Dialogue >>";
 
         //if no sentences left
@@ -95,6 +130,8 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("isOpen", false);
 
         FindObjectOfType<InteractableManager>().canInteract = true;
+        FindObjectOfType<PlayerBehavior>().canMove = true;
+
         inConversation = false;
     }
 }

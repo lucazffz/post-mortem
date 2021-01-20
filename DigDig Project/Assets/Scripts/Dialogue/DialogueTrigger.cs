@@ -11,8 +11,8 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         //have had conversation with or not
-        if(haveSpoken == true) FindObjectOfType<DialogueManager>().haveSpoken = true;
-        else FindObjectOfType<DialogueManager>().haveSpoken = false;
+        if(haveSpoken == true) FindObjectOfType<DialogueManager>().haveSpokenTo = true;
+        else FindObjectOfType<DialogueManager>().haveSpokenTo = false;
 
         haveSpoken = true;
 

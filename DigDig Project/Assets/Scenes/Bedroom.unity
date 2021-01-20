@@ -970,10 +970,8 @@ MonoBehaviour:
   dialogue:
     name: david
     characterSprite: {fileID: 21300000, guid: 69d7f8aa1b767ef468d939bf177fca29, type: 3}
-    storySentences:
-    - 1
-    - 2
-    - 3
+    playerStartTalking: 0
+    sentences: []
     randomSentences:
     - Have I met you before?
     - What really is this place?
@@ -1127,10 +1125,18 @@ MonoBehaviour:
   dialogue:
     name: Josh
     characterSprite: {fileID: 21300000, guid: b103a27f176526d4e8b6e0d0c209d64a, type: 3}
-    storySentences:
+    playerStartTalking: 0
+    sentences:
     - 1
     - 2
     - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
     randomSentences:
     - Go on now you prick
     - 'Well then, find your parents. '
@@ -2097,7 +2103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: eventIndex
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
       propertyPath: interactable
@@ -3078,12 +3084,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec2ec95b09175948bef49e2926b6248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1510219260}
   nameText: {fileID: 1093508678}
   dialogueText: {fileID: 557097192}
   continueBottonText: {fileID: 299074341}
   characterImage: {fileID: 1864146422}
-  animator: {fileID: 1510219260}
-  haveSpoken: 0
+  playerSprite: {fileID: 21300000, guid: 69d7f8aa1b767ef468d939bf177fca29, type: 3}
+  haveSpokenTo: 0
 --- !u!222 &1612128943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3352,6 +3359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8173ba5b5ca374746a366ec4a48abd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
   speed: 4
   jumpForce: 10
   jumpTime: 0.2
