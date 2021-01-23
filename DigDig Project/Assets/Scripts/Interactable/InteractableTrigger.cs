@@ -13,6 +13,8 @@ public class InteractableTrigger : MonoBehaviour
     private void Update ()
     {
         if (Input.GetKeyDown(FindObjectOfType<InteractableManager>().interactKey) && FindObjectOfType<InteractableManager>().canInteract && inRange) interactionEvent.Invoke();
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -3,9 +3,14 @@
 [System.Serializable]
 public class Dialgoue
 {
-    public Characters player, character;
+    public Characters interactCharacter;
 
     public Conversations[] conversations;
+
+    [HideInInspector]
+    public bool haveSpokenTo;
+    [HideInInspector]
+    public int sentenceIndex = 0, conversationIndex = 0;
 
     [TextArea(1, 3)]
     public string[] fillerLines;
@@ -14,14 +19,15 @@ public class Dialgoue
 [System.Serializable]
 public struct Conversations
 {
-    public bool playerStartTalking;
-    public Sentences[] sentences;
+    public SentenceGroups[] sentenceGroups;
 }
 [System.Serializable]
-public struct Sentences
+public struct SentenceGroups
 {
+    public Characters speaker;
+
     [TextArea(1, 6)]
-    public string[] lines;
+    public string[] sentences;
 }
 
 

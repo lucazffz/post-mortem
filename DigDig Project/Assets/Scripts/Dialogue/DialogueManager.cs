@@ -10,134 +10,130 @@ public class DialogueManager : MonoBehaviour
 
     //UI elements
     public Animator animator;
+    public new TextMeshProUGUI name;
+    public Image portrait;
+    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI continueButtonText;
 
-    public TextMeshProUGUI UIname;
-    public TextMeshProUGUI UIdialogueText;
-    public TextMeshProUGUI UIcontinueButtonText;
-    public Image UIportrait;
-
-
-  
-
-    [HideInInspector] public bool haveSpokenTo;
-
+    [HideInInspector]
     public bool inConversaion;
-  
-   
 
+    private bool haveSpokenTo;
+
+    //qeueus for text, name and portrait
     private Queue<string> sentences = new Queue<string>();
     private Queue<string> names = new Queue<string>();
     private Queue<Sprite> portraits = new Queue<Sprite>();
 
-    private int conversationIndex = 0;
-    private int sentenceIndex = 0;
+    private int conversationIndex;
+    private int sentenceIndex;
 
-    
+    //random num for filler lines
+    int prevNum;
+    int newNum = 0;
+
     #endregion
 
-    //enter to continue conversation
     private void Update()
     {
+        //press enter to continue conversation
         if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialgoue dialogue)
     {
+        //SETUP
+        FindObjectOfType<InteractableManager>().canInteract = false;
         inConversaion = true;
 
-        sentences.Clear();
-        names.Clear();
-        portraits.Clear();
+        haveSpokenTo = dialogue.haveSpokenTo;
+        conversationIndex = dialogue.conversationIndex;
+        sentenceIndex = dialogue.sentenceIndex;
 
         //UI and animations
         animator.SetBool("isOpen", true);
+        continueButtonText.text = "Continue >>";
 
-        UIcontinueButtonText.text = "Continue >>";
-
-        //queue story sentence or random sentence
+        //QUEUE INFORMATION
         if (haveSpokenTo == false)
         {
             sentenceIndex = 0;
 
-            foreach (var sentence in dialogue.conversations[conversationIndex].sentences)
+            //loop trough all sentences in each conversation and add all lines in a queue
+            for (int i = 0; i < dialogue.conversations[conversationIndex].sentenceGroups.Length; i++)
             {
-                foreach (string line in dialogue.conversations[conversationIndex].sentences[sentenceIndex].lines)
+                foreach (string sentence in dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].sentences)
                 {
-                    if (sentenceIndex % 2 == 0)
-                    {
-                        names.Enqueue(dialogue.player.fullName);
-                        portraits.Enqueue(dialogue.player.portrait);
-                    } 
-                    else
-                    {
-                        names.Enqueue(dialogue.character.fullName);
-                        portraits.Enqueue(dialogue.character.portrait);
-                    }
-                    
-                    sentences.Enqueue(line);
+                    sentences.Enqueue(sentence);
+
+                    //add speaker name and portrait in queues
+                    names.Enqueue(dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.name);
+                    portraits.Enqueue(dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.portrait);
                 }
+
                 sentenceIndex++;
             }
         }
         else
         {
-            sentences.Clear();
+            //RANDOM FILLER LINES
+            name.text = dialogue.interactCharacter.name;
+            portrait.sprite = dialogue.interactCharacter.portrait;
 
-            UIname.text = dialogue.character.fullName;
-            UIportrait.sprite = dialogue.character.portrait;
+            //random num, always different from before
+            prevNum = newNum;
+            newNum = Random.Range(0, dialogue.fillerLines.Length);
+            while (newNum == prevNum) newNum = Random.Range(0, dialogue.fillerLines.Length);
            
-            string sentence = dialogue.fillerLines[Random.Range(0, dialogue.fillerLines.Length)];
+            //set sentence to filler lines
+            string sentence = dialogue.fillerLines[newNum];
             sentences.Enqueue(sentence);
         }
+
         DisplayNextSentence();
-         
+
+        dialogue.haveSpokenTo = true;
     }
 
     public void DisplayNextSentence()
     {
+        //go trough name and portrait queues
         if(haveSpokenTo == false && sentences.Count != 0)
         {
-            UIname.text = names.Dequeue();
-            UIportrait.sprite = portraits.Dequeue();
+            name.text = names.Dequeue();
+            portrait.sprite = portraits.Dequeue();
         }
 
-        //if no sentences left
-        if (sentences.Count == 0)
+        //if 1 or 0 sentences left
+        if (sentences.Count == 1) continueButtonText.text = "End Dialogue";
+        else if(sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-      
+            
         string sentence = sentences.Dequeue();
-
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
- 
-    //show letter one by one
+    //type letters
     IEnumerator TypeSentence(string sentence)
     {
-        UIdialogueText.text = "";
+        dialogueText.text = "";
 
         foreach (char letter in sentence.ToCharArray())
         {
-            UIdialogueText.text += letter;
-            yield return null;
+            dialogueText.text += letter;
+            yield return new WaitForFixedUpdate();
         }
-    }
-
-    public void NextConversation()
-    {
-        conversationIndex++;
-        haveSpokenTo = false;
     }
 
     private void EndDialogue() 
     {
+        FindObjectOfType<InteractableManager>().canInteract = true;
         inConversaion = false;
 
         animator.SetBool("isOpen", false);
-        haveSpokenTo = true;
     }
 }

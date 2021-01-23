@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
 public class Characters: ScriptableObject
 {
-    public string fullName;
+    public new string name;
     public Sprite portrait;
 }

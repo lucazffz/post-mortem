@@ -922,114 +922,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &423620835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 423620836}
-  - component: {fileID: 423620838}
-  - component: {fileID: 423620837}
-  m_Layer: 0
-  m_Name: NPC 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &423620836
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423620835}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.670002, y: -1.8600001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1627797050}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &423620837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423620835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f90461b75186a584dad3344c32232f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    player: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
-    character: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
-    conversations:
-    - playerStartTalking: 0
-      sentences:
-      - lines:
-        - Hello my man
-      - lines:
-        - Hi how are you
-    fillerLines:
-    - Off with you now
---- !u!212 &423620838
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423620835}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5f80d9bfefee1c244bbec810aa217828, type: 3}
-  m_Color: {r: 0.6001438, g: 0.6037736, b: 0.5325739, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &485729541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,211 +1019,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    player: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
-    character: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+    interactCharacter: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
     conversations:
-    - playerStartTalking: 0
-      sentences:
-      - lines:
-        - Hi, who are you mister?
-        - I havent seen you around here before
-      - lines:
-        - My name is Josh!
-        - Im the local gardener around here.
-        - Who are you if i may ask?
-      - lines:
-        - Im the player, someones playing me right now haha
-        - Pretty werid tbh
-      - lines:
-        - Yeah really!
-        - Anyways... See yu around
-    - playerStartTalking: 0
-      sentences:
-      - lines:
-        - sdfsdf
-        - darfadrh
-      - lines:
-        - 2 sdfgsdgf
-        - 2 asgr
-        - 2 assdG
-    - playerStartTalking: 0
-      sentences:
-      - lines:
-        - Hi again!
-      - lines:
-        - You again, what do you want?
-        - Let me be child, I have imprtant things to do cant you see?
-        - Off with you now.
+    - sentences:
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        lines:
+        - Hi there, I havent seen you around here before.
+        - Where are you from little one? This is no place for a child.
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        lines:
+        - HI, my name is Gert. Nice to meet you mister pumpkin!
+        - Why are you a pumpkin?
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        lines:
+        - Well, you see this place i magical. Everything around you is magical. Including
+          me! I can transform to whatever i want.
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        lines:
+        - Waow... Is everything magical. How cool!
+        - can you transform into a little cute rabbit mr. Pumpkin. Please...
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        lines:
+        - 'Im afraid that is not a good idea. No, off with you. '
+    haveSpokenTo: 0
+    sentenceIndex: 0
+    conversationIndex: 0
     fillerLines:
-    - Huh?
-    - Aways with you?
-    - Did you say something?
-    - Anywayss...
---- !u!1001 &541377649
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 423620836}
-    m_Modifications:
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.eventPrompt.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 423620837}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueTrigger, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.eventIndex
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.interactKey
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 423620837}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueTrigger, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactable.eventPrompt.Array.data[6]
-      value: test
-      objectReference: {fileID: 0}
-    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactableManager
-      value: 
-      objectReference: {fileID: 1133667764}
-    - target: {fileID: 6800888044658478540, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_Name
-      value: Interactable Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: eventIndex
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 423620837}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueTrigger, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478542, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+    - What?
+    - 'Now now, off with you I said. Mr.Pumpkin need some time alone. '
+    - Shhhh, im thinking. No away with you!
 --- !u!1 &557097190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1060,7 @@ GameObject:
   - component: {fileID: 557097193}
   - component: {fileID: 557097192}
   m_Layer: 5
-  m_Name: Dialogue
+  m_Name: Dialogue Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1871,6 +1587,131 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &755055229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755055232}
+  - component: {fileID: 755055231}
+  - component: {fileID: 755055230}
+  m_Layer: 0
+  m_Name: NPC 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &755055230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755055229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90461b75186a584dad3344c32232f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    interactCharacter: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+    conversations:
+    - sentences:
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        lines:
+        - 2
+        - 2
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        lines:
+        - 3
+        - 3
+        - 3
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        lines:
+        - 4
+        - 4
+    - sentences:
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        lines:
+        - convo number 2
+    haveSpokenTo: 0
+    sentenceIndex: 0
+    conversationIndex: 0
+    fillerLines:
+    - 1
+    - 2
+    - 3
+    - 4
+--- !u!212 &755055231
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755055229}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 5f80d9bfefee1c244bbec810aa217828, type: 3}
+  m_Color: {r: 0.20334375, g: 1, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &755055232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755055229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.99, y: -1.8600001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 955063427}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &784881817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,6 +1877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3ca141ce12edb4d96e84e4b0e6e85b, type: 3}
+--- !u!4 &955063427 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+  m_PrefabInstance: {fileID: 1252561498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080282205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2044,7 @@ GameObject:
   - component: {fileID: 1093508680}
   - component: {fileID: 1093508678}
   m_Layer: 5
-  m_Name: NPC name
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2732,6 +2578,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1252561498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 755055232}
+    m_Modifications:
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 755055230}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactable.eventIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: eventIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 1133667764}
+    - target: {fileID: 6800888044658478540, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_Name
+      value: Interactable Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
 --- !u!1001 &1269935390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3111,11 +3058,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1510219260}
-  UIname: {fileID: 1093508678}
-  UIdialogueText: {fileID: 557097192}
-  UIcontinueButtonText: {fileID: 299074341}
-  UIportrait: {fileID: 1864146422}
-  haveSpokenTo: 0
+  name: {fileID: 1093508678}
+  portrait: {fileID: 1864146422}
+  dialogueText: {fileID: 557097192}
+  continueButtonText: {fileID: 299074341}
   inConversaion: 0
 --- !u!222 &1612128943
 CanvasRenderer:
@@ -3144,11 +3090,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!4 &1627797050 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
-  m_PrefabInstance: {fileID: 541377649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1864146420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3102,7 @@ GameObject:
   - component: {fileID: 1864146423}
   - component: {fileID: 1864146422}
   m_Layer: 5
-  m_Name: Character Image
+  m_Name: Portrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

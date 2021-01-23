@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 559d143308e9853428fb0a3c47c31d26, type: 3}
-  m_Name: Josh
+  m_Name: Player
   m_EditorClassIdentifier: 
-  fullName: Josh
-  portrait: {fileID: 21300000, guid: b103a27f176526d4e8b6e0d0c209d64a, type: 3}
+  name: Player
+  portrait: {fileID: 21300000, guid: 69d7f8aa1b767ef468d939bf177fca29, type: 3}
