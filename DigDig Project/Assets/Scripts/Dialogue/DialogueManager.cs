@@ -11,127 +11,133 @@ public class DialogueManager : MonoBehaviour
     //UI elements
     public Animator animator;
 
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
-    public TextMeshProUGUI continueBottonText;
-    public Image characterImage;
+    public TextMeshProUGUI UIname;
+    public TextMeshProUGUI UIdialogueText;
+    public TextMeshProUGUI UIcontinueButtonText;
+    public Image UIportrait;
 
-    //player character sprite and name
-    public Sprite playerSprite;
-    private string playerName = "Player";
 
-    //character name and sprite
-    private Sprite characterSprite;
-    private string characterName;
+  
 
     [HideInInspector] public bool haveSpokenTo;
-    private bool inConversation;
 
-    private bool playerTalking;
+    public bool inConversaion;
+  
+   
 
     private Queue<string> sentences = new Queue<string>();
+    private Queue<string> names = new Queue<string>();
+    private Queue<Sprite> portraits = new Queue<Sprite>();
 
+    private int conversationIndex = 0;
+    private int sentenceIndex = 0;
+
+    
     #endregion
 
     //enter to continue conversation
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && inConversation) DisplayNextSentence();
+        if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialgoue dialogue)
     {
-        //can't interact or move during dialogue
-        FindObjectOfType<InteractableManager>().canInteract = false;
-        FindObjectOfType<PlayerBehavior>().canMove = false;
-
-        //decides if player or character starts talking
-        if (dialogue.playerStartTalking == true) playerTalking = false;
-        else playerTalking = true;
-        
-        inConversation = true;
+        inConversaion = true;
 
         sentences.Clear();
+        names.Clear();
+        portraits.Clear();
 
         //UI and animations
         animator.SetBool("isOpen", true);
 
-        characterSprite = dialogue.characterSprite;
-        characterImage.sprite = characterSprite;
+        UIcontinueButtonText.text = "Continue >>";
 
-        characterName = dialogue.name;
-        nameText.text = characterName;
-
-        continueBottonText.text = "Continue >>";
-        
         //queue story sentence or random sentence
-        if(haveSpokenTo == false)
+        if (haveSpokenTo == false)
         {
-            foreach (string sentence in dialogue.sentences) sentences.Enqueue(sentence);
+            sentenceIndex = 0;
+
+            foreach (var sentence in dialogue.conversations[conversationIndex].sentences)
+            {
+                foreach (string line in dialogue.conversations[conversationIndex].sentences[sentenceIndex].lines)
+                {
+                    if (sentenceIndex % 2 == 0)
+                    {
+                        names.Enqueue(dialogue.player.fullName);
+                        portraits.Enqueue(dialogue.player.portrait);
+                    } 
+                    else
+                    {
+                        names.Enqueue(dialogue.character.fullName);
+                        portraits.Enqueue(dialogue.character.portrait);
+                    }
+                    
+                    sentences.Enqueue(line);
+                }
+                sentenceIndex++;
+            }
         }
         else
         {
-            string sentence = dialogue.randomSentences[Random.Range(0, dialogue.randomSentences.Length)];
+            sentences.Clear();
+
+            UIname.text = dialogue.character.fullName;
+            UIportrait.sprite = dialogue.character.portrait;
+           
+            string sentence = dialogue.fillerLines[Random.Range(0, dialogue.fillerLines.Length)];
             sentences.Enqueue(sentence);
         }
-
         DisplayNextSentence();
+         
     }
 
     public void DisplayNextSentence()
     {
-        //Alternate between player and character name and image
-        if (haveSpokenTo == false && sentences.Count != 0)
+        if(haveSpokenTo == false && sentences.Count != 0)
         {
-            if (playerTalking == true) playerTalking = false;
-            else if (playerTalking == false) playerTalking = true;
-
-            if (playerTalking == true)
-            {
-                characterImage.sprite = playerSprite;
-                nameText.text = playerName;
-            }
-            else
-            {
-                characterImage.sprite = characterSprite;
-                nameText.text = characterName;
-            }    
+            UIname.text = names.Dequeue();
+            UIportrait.sprite = portraits.Dequeue();
         }
-        
-        if (sentences.Count == 1) continueBottonText.text = "End Dialogue >>";
 
         //if no sentences left
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-       
+      
         string sentence = sentences.Dequeue();
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
+ 
     //show letter one by one
     IEnumerator TypeSentence(string sentence)
     {
-        dialogueText.text = "";
+        UIdialogueText.text = "";
 
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            UIdialogueText.text += letter;
             yield return null;
         }
     }
 
+    public void NextConversation()
+    {
+        conversationIndex++;
+        haveSpokenTo = false;
+    }
+
     private void EndDialogue() 
     {
+        inConversaion = false;
+
         animator.SetBool("isOpen", false);
-
-        FindObjectOfType<InteractableManager>().canInteract = true;
-        FindObjectOfType<PlayerBehavior>().canMove = true;
-
-        inConversation = false;
+        haveSpokenTo = true;
     }
 }

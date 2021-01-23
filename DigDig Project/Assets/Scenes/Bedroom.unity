@@ -531,8 +531,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -968,13 +968,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: david
-    characterSprite: {fileID: 21300000, guid: 69d7f8aa1b767ef468d939bf177fca29, type: 3}
-    playerStartTalking: 0
-    sentences: []
-    randomSentences:
-    - Have I met you before?
-    - What really is this place?
+    player: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+    character: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+    conversations:
+    - playerStartTalking: 0
+      sentences:
+      - lines:
+        - Hello my man
+      - lines:
+        - Hi how are you
+    fillerLines:
+    - Off with you now
 --- !u!212 &423620838
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1123,14 +1127,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Josh
-    characterSprite: {fileID: 21300000, guid: b103a27f176526d4e8b6e0d0c209d64a, type: 3}
-    playerStartTalking: 0
-    sentences: []
-    randomSentences:
-    - Go on now you prick
-    - 'Well then, find your parents. '
-    - Dont talk to me anymore
+    player: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+    character: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+    conversations:
+    - playerStartTalking: 0
+      sentences:
+      - lines:
+        - Hi, who are you mister?
+        - I havent seen you around here before
+      - lines:
+        - My name is Josh!
+        - Im the local gardener around here.
+        - Who are you if i may ask?
+      - lines:
+        - Im the player, someones playing me right now haha
+        - Pretty werid tbh
+      - lines:
+        - Yeah really!
+        - Anyways... See yu around
+    - playerStartTalking: 0
+      sentences:
+      - lines:
+        - sdfsdf
+        - darfadrh
+      - lines:
+        - 2 sdfgsdgf
+        - 2 asgr
+        - 2 assdG
+    - playerStartTalking: 0
+      sentences:
+      - lines:
+        - Hi again!
+      - lines:
+        - You again, what do you want?
+        - Let me be child, I have imprtant things to do cant you see?
+        - Off with you now.
+    fillerLines:
+    - Huh?
+    - Aways with you?
+    - Did you say something?
+    - Anywayss...
 --- !u!1001 &541377649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1380,8 +1416,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2234,8 +2270,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3075,12 +3111,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1510219260}
-  nameText: {fileID: 1093508678}
-  dialogueText: {fileID: 557097192}
-  continueBottonText: {fileID: 299074341}
-  characterImage: {fileID: 1864146422}
-  playerSprite: {fileID: 0}
+  UIname: {fileID: 1093508678}
+  UIdialogueText: {fileID: 557097192}
+  UIcontinueButtonText: {fileID: 299074341}
+  UIportrait: {fileID: 1864146422}
   haveSpokenTo: 0
+  inConversaion: 0
 --- !u!222 &1612128943
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -14,7 +14,10 @@ public class InteractableManager : MonoBehaviour
 
     public void Update()
     {
-        if(canInteract == true)
+        if (FindObjectOfType<DialogueManager>().inConversaion == true) canInteract = false;
+        else if (FindObjectOfType<DialogueManager>().inConversaion == false) canInteract = true;
+
+        if (canInteract == true)
         {
             textMeshPro.enabled = true;
             textMeshPro.text = $"Press {interactKey} to {eventPrompt[eventIndex]}";

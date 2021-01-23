@@ -50,9 +50,12 @@ public class PlayerBehavior : MonoBehaviour
 
     void Update()
     {
+        if (FindObjectOfType<DialogueManager>().inConversaion == true) canMove = false;
+        else if (FindObjectOfType<DialogueManager>().inConversaion == false) canMove = true;
+
         #region Jump
 
-        if(canMove)
+        if (canMove)
         {
             //ground check
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
