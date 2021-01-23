@@ -38,52 +38,52 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (canMove == false) rb.velocity = Vector2.zero;
-
         //x-axis movement
-        if (canMove) {
-            moveInput = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        } 
+        if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
 
     private void Update() {
         if (FindObjectOfType<DialogueManager>().inConversaion == true) canMove = false;
         else canMove = true;
 
+        if (!canMove && isGrounded) moveInput = 0;
+
         #region Jump
 
-        if (canMove) {
-            //ground check
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        //ground check
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-            //hang time
-            if (isGrounded) hangTimeCounter = hangTime;
-            else hangTimeCounter -= Time.deltaTime;
+        //hang time
+        if (isGrounded) hangTimeCounter = hangTime;
+        else hangTimeCounter -= Time.deltaTime;
 
-            //jump buffer
-            if (Input.GetButtonDown("Jump")) jumpBufferCounter = jumpBuffer;
-            else jumpBufferCounter -= Time.deltaTime;
+        //jump buffer
+        if (Input.GetButtonDown("Jump") && canMove) jumpBufferCounter = jumpBuffer;
+        else jumpBufferCounter -= Time.deltaTime;
 
-            //normal jump
-            if (hangTimeCounter > 0 && jumpBufferCounter > 0) {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter = jumpTime;
-                jumpBufferCounter = 0;
-                isJumping = true;
-            }
-
-            //different jump height
-            if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping) {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
-                hangTimeCounter = 0;
-            }
-            else isJumping = false;
-
-            if (Input.GetButtonUp("Jump")) isJumping = false;
+        //normal jump
+        if (hangTimeCounter > 0 && jumpBufferCounter > 0)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpTimeCounter = jumpTime;
+            jumpBufferCounter = 0;
+            isJumping = true;
         }
-        
+
+        //different jump height
+        if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpTimeCounter -= Time.deltaTime;
+            hangTimeCounter = 0;
+        }
+        else isJumping = false;
+
+        if (Input.GetButtonUp("Jump")) isJumping = false;
+
+
+
         #endregion
     }
 }
