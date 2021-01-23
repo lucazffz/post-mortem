@@ -10,27 +10,21 @@ public class InteractableTrigger : MonoBehaviour
 
     public UnityEvent interactionEvent;
 
-    private void Update ()
-    {
-        if (Input.GetKeyDown(FindObjectOfType<InteractableManager>().interactKey) && FindObjectOfType<InteractableManager>().canInteract && inRange) interactionEvent.Invoke();
-
-        
+    private void Update () {
+        if (Input.GetKeyDown(FindObjectOfType<InteractableManager>().interactKey) 
+            && FindObjectOfType<InteractableManager>().canInteract && inRange) interactionEvent.Invoke();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
             inRange = true;
             FindObjectOfType<InteractableManager>().eventPrompt = eventPrompt;
             FindObjectOfType<InteractableManager>().eventIndex = eventIndex;
             FindObjectOfType<InteractableManager>().canInteract = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
             inRange = false;
             FindObjectOfType<InteractableManager>().canInteract = false;
         }
@@ -41,8 +35,7 @@ public class InteractableTrigger : MonoBehaviour
 [CustomEditor(typeof(InteractableTrigger))]
 public class DropDownEditor : Editor
 {
-    public override void OnInspectorGUI()
-    {
+    public override void OnInspectorGUI() {
         base.OnInspectorGUI();
 
         InteractableTrigger script = (InteractableTrigger)target;

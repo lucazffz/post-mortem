@@ -9,54 +9,49 @@ public class PlayerBehavior : MonoBehaviour
     [HideInInspector] public bool canMove = true;
 
     //X-axis movement
-    private float moveInput;
+    float moveInput;
     public float speed = 6f;
 
     //Jump
     public float jumpForce = 15f;
 
-    private bool isJumping;
+    bool isJumping;
     public float jumpTime = 0.2f;
-    private float jumpTimeCounter;
+    float jumpTimeCounter;
 
     public float jumpBuffer = 0.1f;
-    private float jumpBufferCounter;
+    float jumpBufferCounter;
 
     public float hangTime = 0.2f;
-    private float hangTimeCounter;
+    float hangTimeCounter;
     
     //ground check
-    private bool isGrounded;
+    bool isGrounded;
     public float checkRadius = 0.1f;
     public Transform groundCheck;
     public LayerMask whatIsGround;
 
     #endregion
 
-    void Start()
-    {
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         //x-axis movement
-        if (canMove)
-        {
+        if (canMove) {
             moveInput = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
     }
 
-    void Update()
-    {
+    private void Update() {
         if (FindObjectOfType<DialogueManager>().inConversaion == true) canMove = false;
-        else if (FindObjectOfType<DialogueManager>().inConversaion == false) canMove = true;
+        else canMove = true;
 
         #region Jump
 
-        if (canMove)
-        {
+        if (canMove) {
             //ground check
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
@@ -69,8 +64,7 @@ public class PlayerBehavior : MonoBehaviour
             else jumpBufferCounter -= Time.deltaTime;
 
             //normal jump
-            if (hangTimeCounter > 0 && jumpBufferCounter > 0)
-            {
+            if (hangTimeCounter > 0 && jumpBufferCounter > 0) {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter = jumpTime;
                 jumpBufferCounter = 0;
@@ -78,8 +72,7 @@ public class PlayerBehavior : MonoBehaviour
             }
 
             //different jump height
-            if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping)
-            {
+            if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping) {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
                 hangTimeCounter = 0;
@@ -90,7 +83,5 @@ public class PlayerBehavior : MonoBehaviour
         }
         
         #endregion
-
-
     }
 }

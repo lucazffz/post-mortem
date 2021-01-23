@@ -18,15 +18,15 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public bool inConversaion;
 
-    private bool haveSpokenTo;
+    bool haveSpokenTo;
 
     //qeueus for text, name and portrait
-    private Queue<string> sentences = new Queue<string>();
-    private Queue<string> names = new Queue<string>();
-    private Queue<Sprite> portraits = new Queue<Sprite>();
+    Queue<string> sentences = new Queue<string>();
+    Queue<string> names = new Queue<string>();
+    Queue<Sprite> portraits = new Queue<Sprite>();
 
-    private int conversationIndex;
-    private int sentenceIndex;
+    int conversationIndex;
+    int sentenceIndex;
 
     //random num for filler lines
     int prevNum;
@@ -34,14 +34,12 @@ public class DialogueManager : MonoBehaviour
 
     #endregion
 
-    private void Update()
-    {
+    private void Update() {
         //press enter to continue conversation
-        if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence();
+        if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence(); 
     }
 
-    public void StartDialogue(Dialgoue dialogue)
-    {
+    public void StartDialogue(Dialgoue dialogue) {
         //SETUP
         FindObjectOfType<InteractableManager>().canInteract = false;
         inConversaion = true;
@@ -55,27 +53,21 @@ public class DialogueManager : MonoBehaviour
         continueButtonText.text = "Continue >>";
 
         //QUEUE INFORMATION
-        if (haveSpokenTo == false)
-        {
+        if (haveSpokenTo == false) {
             sentenceIndex = 0;
 
             //loop trough all sentences in each conversation and add all lines in a queue
-            for (int i = 0; i < dialogue.conversations[conversationIndex].sentenceGroups.Length; i++)
-            {
-                foreach (string sentence in dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].sentences)
-                {
+            for (int i = 0; i < dialogue.conversations[conversationIndex].sentenceGroups.Length; i++) {
+                foreach (string sentence in dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].sentences) {
                     sentences.Enqueue(sentence);
 
                     //add speaker name and portrait in queues
                     names.Enqueue(dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.name);
                     portraits.Enqueue(dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.portrait);
                 }
-
                 sentenceIndex++;
             }
-        }
-        else
-        {
+        } else {
             //RANDOM FILLER LINES
             name.text = dialogue.interactCharacter.name;
             portrait.sprite = dialogue.interactCharacter.portrait;
@@ -91,46 +83,40 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-
         dialogue.haveSpokenTo = true;
     }
 
-    public void DisplayNextSentence()
-    {
+    public void DisplayNextSentence() {
         //go trough name and portrait queues
-        if(haveSpokenTo == false && sentences.Count != 0)
-        {
+        if(haveSpokenTo == false && sentences.Count != 0) {
             name.text = names.Dequeue();
             portrait.sprite = portraits.Dequeue();
         }
 
         //if 1 or 0 sentences left
         if (sentences.Count == 1) continueButtonText.text = "End Dialogue";
-        else if(sentences.Count == 0)
-        {
+        else if (sentences.Count == 0) {
             EndDialogue();
             return;
         }
-            
+
         string sentence = sentences.Dequeue();
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
     //type letters
-    IEnumerator TypeSentence(string sentence)
-    {
+    IEnumerator TypeSentence(string sentence) {
         dialogueText.text = "";
 
-        foreach (char letter in sentence.ToCharArray())
-        {
+        foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
             yield return new WaitForFixedUpdate();
         }
     }
 
-    private void EndDialogue() 
-    {
+    private void EndDialogue() {
         FindObjectOfType<InteractableManager>().canInteract = true;
         inConversaion = false;
 
