@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559d143308e9853428fb0a3c47c31d26, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  name: Player
+  name: Alexis
   portrait: {fileID: 21300000, guid: 69d7f8aa1b767ef468d939bf177fca29, type: 3}

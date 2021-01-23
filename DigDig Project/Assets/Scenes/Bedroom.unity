@@ -238,6 +238,107 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &52770103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1520060172}
+    m_Modifications:
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1520060170}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactable.eventIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactKey
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: eventIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3391488727956054498, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: interactable
+      value: 
+      objectReference: {fileID: 1133667764}
+    - target: {fileID: 6800888044658478540, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_Name
+      value: Interactable Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
 --- !u!1 &61083236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,18 +1125,47 @@ MonoBehaviour:
     - sentenceGroups:
       - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
         sentences:
-        - sdasdfsdf
+        - Hi there, i havent seen you around here before. Who are you?
       - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
         sentences:
-        - werwe
-    - sentenceGroups: []
+        - Hello mister, my name is Alexis. Nice to meet you mister!
+        - Do you have any food, im staaaarving...?
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        sentences:
+        - Im afraid not.
+        - What are you doing out here anyways. This is no place for a child. Where
+          are your parents?
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        sentences:
+        - I think i lost them. We were walk trough the park and, and, and, i went
+          in the forest to play. but i fell down a hole. And whoops, here I am.
+        - 'I must say, it is very beautiful here but im starting to get worried.
+          And im very very hungry. '
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        sentences:
+        - Im sorry kid. I dont have any food. Well...
+        - Im quite busy at the moment so go on now. You have to get back to your
+          parents.
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        sentences:
+        - Okay mister, im so very sorry i disturbed,
+        - Bye Bye!
+    - sentenceGroups:
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        sentences:
+        - 
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        sentences:
+        - 
     haveSpokenTo: 0
     sentenceIndex: 0
     conversationIndex: 0
     fillerLines:
     - What?
-    - 'Now now, off with you I said. Mr.Pumpkin need some time alone. '
-    - Shhhh, im thinking. No away with you!
+    - Now now, off with you I said. I nned to work
+    - Go and find your parents. They must be terribly worried
+    - Now away with you
+    - Go on, im busy
 --- !u!1 &557097190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3ca141ce12edb4d96e84e4b0e6e85b, type: 3}
+--- !u!4 &1069140271 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6800888044658478543, guid: 0c2ceb905223fb243ab182d92f9642e6, type: 3}
+  m_PrefabInstance: {fileID: 52770103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080282205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2919,131 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1520060169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520060172}
+  - component: {fileID: 1520060171}
+  - component: {fileID: 1520060170}
+  m_Layer: 0
+  m_Name: NPC 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1520060170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520060169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90461b75186a584dad3344c32232f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    interactCharacter: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+    conversations:
+    - sentenceGroups:
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        sentences:
+        - Hello, who are you?
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        sentences:
+        - 'Go away with you child. I dont have time for this. '
+        - Dont you think I have better things to do than talking to you child.
+      - speaker: {fileID: 11400000, guid: f2a89c9378da82e478328bde8202f172, type: 2}
+        sentences:
+        - 'I do have a name and its Alexis. '
+        - That is not a very nice way to talk to someone. Havent your mom taught
+          you kindness?
+      - speaker: {fileID: 11400000, guid: dab4c982b825f4e418b7b6dda1e5a180, type: 2}
+        sentences:
+        - Mother.. pffff.
+        - 'Im a living pumpkin, do you think I have a mother. Then you are more stupid
+          than i tought. '
+        - Now away with you child!
+    haveSpokenTo: 0
+    sentenceIndex: 0
+    conversationIndex: 0
+    fillerLines:
+    - Go away I said!
+    - What do you want!?
+    - I busy, cant you see.
+--- !u!212 &1520060171
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520060169}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 5f80d9bfefee1c244bbec810aa217828, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.004989147, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1520060172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520060169}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -21.53, y: -1.8600001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1069140271}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612128941
 GameObject:
   m_ObjectHideFlags: 0
