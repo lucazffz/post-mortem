@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         //if 1 or 0 sentences left
-        if (sentences.Count == 1) continueButtonText.text = "End Dialogue";
+        if (sentences.Count == 1) continueButtonText.text = "End Dialogue >>";
         else if (sentences.Count == 0) {
             EndDialogue();
             return;
