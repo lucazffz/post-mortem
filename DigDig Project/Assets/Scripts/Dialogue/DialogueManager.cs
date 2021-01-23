@@ -15,9 +15,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI continueButtonText;
 
-    [HideInInspector]
-    public bool inConversaion;
-
+    [HideInInspector] public bool inConversaion;
     bool haveSpokenTo;
 
     //qeueus for text, name and portrait
@@ -29,13 +27,12 @@ public class DialogueManager : MonoBehaviour
     int sentenceIndex;
 
     //random num for filler lines
-    int prevNum;
     int newNum = 0;
-
+    int prevNum;
+   
     #endregion
 
     private void Update() {
-        //press enter to continue conversation
         if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence(); 
     }
 
@@ -101,7 +98,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }

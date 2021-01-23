@@ -38,11 +38,13 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if (canMove == false) rb.velocity = Vector2.zero;
+
         //x-axis movement
         if (canMove) {
             moveInput = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        }
+        } 
     }
 
     private void Update() {
