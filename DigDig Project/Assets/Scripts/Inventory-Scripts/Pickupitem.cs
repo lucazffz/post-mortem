@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Pickupitem : MonoBehaviour
 {
-    
+    public Item itemData;
 
-    private void OnTriggerEnter2D(Collider2D Other)
+    public void OnTriggerEnter2D(Collider2D Other)
     {
         if(Other.tag == "Player")
         {
-            
                 Destroy(gameObject);
+
+            GameManager.instance.AddItem(itemData);
         }
     }
 }

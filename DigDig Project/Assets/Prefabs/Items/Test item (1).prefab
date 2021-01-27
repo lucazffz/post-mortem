@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4626309570212543572}
   - component: {fileID: 624616798001354868}
   - component: {fileID: 2017054624526440112}
-  - component: {fileID: 724416738533994011}
+  - component: {fileID: 2108305643}
   m_Layer: 0
   m_Name: Test item (1)
   m_TagString: Untagged
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 4567e23b151bc94459de6fef56ddd9db, type: 3}
   m_Color: {r: 0.10595441, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &724416738533994011
+--- !u!114 &2108305643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3281801ec2d4204fb89629f3318575a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickuppEffect: {fileID: 0}
+  itemData: {fileID: 11400000, guid: b4b43d0eedecb9e439e2833d0453c7e4, type: 2}

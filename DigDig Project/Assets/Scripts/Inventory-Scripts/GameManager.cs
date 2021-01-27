@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     public Item additem_01;
 
+    public Itembutton thisbutton;
+    public Itembutton[] itembuttons;
+
     //public Dictionary<Item, int> itemDict = new Dictionary<Item, int>();
 
     private void Awake()
@@ -60,7 +63,7 @@ public class GameManager : MonoBehaviour
             
         }
     }
-    private void AddItem(Item _item)
+    public void AddItem(Item _item)
     {
         if (!items.Contains(_item))
         {
@@ -79,5 +82,38 @@ public class GameManager : MonoBehaviour
             }
         }
         Displayitem();
+    }
+    public void Removeitem(Item _item)
+    {
+        if (items.Contains(_item))
+        {
+            for(int i = 0; i < items.Count; i++)
+            {
+                if(_item == items[i])
+                {
+                    itemNumbers[i]--;
+                    if(itemNumbers[i] == 0)
+                    {
+
+                    }
+                }
+            }
+        }
+        ResetButtonitem();
+        Displayitem();
+    }
+    public void ResetButtonitem()
+    {
+        for(int i = 0; i < itembuttons.Length; i++)
+        {
+            if(i < items.Count)
+            {
+                itembuttons[i].thisItem = items[i];
+            }
+            else
+            {
+                itembuttons[i].thisItem = null;
+            }
+        }
     }
 }
