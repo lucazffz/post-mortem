@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Josh
   m_EditorClassIdentifier: 
   name: Josh
-  portrait: {fileID: 21300000, guid: b103a27f176526d4e8b6e0d0c209d64a, type: 3}
+  portrait: {fileID: 21300000, guid: 5cd9afeadd6e66a4fa876a34ab83af34, type: 3}

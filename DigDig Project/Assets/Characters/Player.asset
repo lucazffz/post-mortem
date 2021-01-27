@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   name: Alexis
-  portrait: {fileID: 21300000, guid: 69d7f8aa1b767ef468d939bf177fca29, type: 3}
+  portrait: {fileID: 21300000, guid: 0061f1ffd72d06141bb6eabe052ebe9a, type: 3}
