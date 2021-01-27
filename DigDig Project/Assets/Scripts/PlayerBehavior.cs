@@ -33,17 +33,20 @@ public class PlayerBehavior : MonoBehaviour
 
     #endregion
 
-    void Start() {
+    void Start() 
+    {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate() 
+    {
         //x-axis movement
         if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
 
-    private void Update() {
+    private void Update() 
+    {
         if (FindObjectOfType<DialogueManager>().inConversaion == true) canMove = false;
         else canMove = true;
 
@@ -51,14 +54,11 @@ public class PlayerBehavior : MonoBehaviour
 
         #region Jump
 
-        //ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        //hang time
         if (isGrounded) hangTimeCounter = hangTime;
         else hangTimeCounter -= Time.deltaTime;
 
-        //jump buffer
         if (Input.GetButtonDown("Jump") && canMove) jumpBufferCounter = jumpBuffer;
         else jumpBufferCounter -= Time.deltaTime;
 
@@ -72,12 +72,12 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         //different jump height
-        if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping)
+        if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping) 
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpTimeCounter -= Time.deltaTime;
             hangTimeCounter = 0;
-        }
+        } 
         else isJumping = false;
 
         if (Input.GetButtonUp("Jump")) isJumping = false;
