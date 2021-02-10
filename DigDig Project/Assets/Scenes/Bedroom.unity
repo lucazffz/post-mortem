@@ -2155,7 +2155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01af5f0d30932b743a594d697e137bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshPro: {fileID: 1133021407}
+  IinteractText: {fileID: 0}
   canInteract: 0
   interactKey: 101
   eventPrompt:
@@ -2781,10 +2781,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1510219260}
-  name: {fileID: 1093508678}
-  portrait: {fileID: 1864146422}
-  dialogueText: {fileID: 557097192}
-  continueButtonText: {fileID: 299074341}
+  Iname: {fileID: 0}
+  Iportrait: {fileID: 0}
+  IdialogueText: {fileID: 0}
+  IcontinueButtonText: {fileID: 0}
   inConversaion: 0
 --- !u!222 &1612128943
 CanvasRenderer:
@@ -2981,6 +2981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8173ba5b5ca374746a366ec4a48abd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   canMove: 1
   speed: 4
   jumpForce: 10
