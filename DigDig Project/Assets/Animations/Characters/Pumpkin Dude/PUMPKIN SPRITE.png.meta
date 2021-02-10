@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 4c435385244a8704f8e6a4a5e8a766a2
+guid: 7b05d18eb2d30fe4aa4282f050b96d17
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8609468847852854501
-    second: PLAYER WALK RIGHT (1)_0
+      213: 4774232310403123229
+    second: PUMPKIN SPRITE_0
   - first:
-      213: 3447917948822455878
-    second: PLAYER WALK RIGHT (1)_1
+      213: 8799748046165233016
+    second: PUMPKIN SPRITE_1
   - first:
-      213: 4169714014040208117
-    second: PLAYER WALK RIGHT (1)_2
+      213: -4056791251864014760
+    second: PUMPKIN SPRITE_2
   - first:
-      213: -6681339105574257240
-    second: PLAYER WALK RIGHT (1)_3
+      213: 8197282057642988902
+    second: PUMPKIN SPRITE_3
   - first:
-      213: 6613770642166698918
-    second: PLAYER WALK RIGHT (1)_4
+      213: 2038432314679762506
+    second: PUMPKIN SPRITE_4
   - first:
-      213: 7784679760164374986
-    second: PLAYER WALK RIGHT (1)_5
+      213: 387614717174558474
+    second: PUMPKIN SPRITE_5
   - first:
-      213: 9089919789518489476
-    second: PLAYER WALK RIGHT (1)_6
+      213: -1955226850089896256
+    second: PUMPKIN SPRITE_6
   - first:
-      213: -4606230509175552397
-    second: PLAYER WALK RIGHT (1)_7
+      213: 631829091843708450
+    second: PUMPKIN SPRITE_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,169 +113,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_0
+      name: PUMPKIN SPRITE_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1206
-        width: 324
+        x: 162
+        y: 1197
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1360f2a2b5058880800000000000000
-      internalID: -8609468847852854501
+      spriteID: d1845c8cdfa714240800000000000000
+      internalID: 4774232310403123229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_1
+      name: PUMPKIN SPRITE_1
       rect:
         serializedVersion: 2
-        x: 675
-        y: 1206
-        width: 324
+        x: 738
+        y: 1197
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646814a4b1779df20800000000000000
-      internalID: 3447917948822455878
+      spriteID: 87dcd94993cfe1a70800000000000000
+      internalID: 8799748046165233016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_2
+      name: PUMPKIN SPRITE_2
       rect:
         serializedVersion: 2
-        x: 1251
-        y: 1206
-        width: 324
+        x: 1314
+        y: 1197
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f2b5ddbdcccdd930800000000000000
-      internalID: 4169714014040208117
+      spriteID: 850bbb8a9d163b7c0800000000000000
+      internalID: -4056791251864014760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_3
+      name: PUMPKIN SPRITE_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 630
-        width: 324
+        x: 162
+        y: 621
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8adf1549b7d1743a0800000000000000
-      internalID: -6681339105574257240
+      spriteID: 6655e71b99892c170800000000000000
+      internalID: 8197282057642988902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_4
+      name: PUMPKIN SPRITE_4
       rect:
         serializedVersion: 2
-        x: 675
-        y: 630
-        width: 324
+        x: 738
+        y: 621
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a3d0489b55d8cb50800000000000000
-      internalID: 6613770642166698918
+      spriteID: a4e1a2fd367f94c10800000000000000
+      internalID: 2038432314679762506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_5
+      name: PUMPKIN SPRITE_5
       rect:
         serializedVersion: 2
-        x: 1251
-        y: 630
-        width: 324
+        x: 1314
+        y: 621
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac945c23ffcb80c60800000000000000
-      internalID: 7784679760164374986
+      spriteID: a0f27e61885116500800000000000000
+      internalID: 387614717174558474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_6
+      name: PUMPKIN SPRITE_6
       rect:
         serializedVersion: 2
-        x: 99
-        y: 54
-        width: 324
+        x: 162
+        y: 45
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4870b0b53e1e52e70800000000000000
-      internalID: 9089919789518489476
+      spriteID: 0c6f5110a83add4e0800000000000000
+      internalID: -1955226850089896256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_7
+      name: PUMPKIN SPRITE_7
       rect:
         serializedVersion: 2
-        x: 675
-        y: 54
-        width: 324
+        x: 738
+        y: 45
+        width: 342
         height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376460bb1c16310c0800000000000000
-      internalID: -4606230509175552397
+      spriteID: 2261a122635b4c800800000000000000
+      internalID: 631829091843708450
       vertices: []
       indices: 
       edges: []
@@ -283,7 +283,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5dd4c58738ec2c343a101f379a17b3c0
+    spriteID: 0947bdb2b4f8c3e4c9dc5e5c90057bf6
     internalID: 0
     vertices: []
     indices: 

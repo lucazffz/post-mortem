@@ -15,6 +15,14 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void ReloadCurrentLevel()
+    {
+        //get legnth of animation
+        transitionTime = transition.GetCurrentAnimatorStateInfo(0).length;
+
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    }
+
     IEnumerator LoadLevel(int levelIndex) 
     {
         transition.SetTrigger("Start");

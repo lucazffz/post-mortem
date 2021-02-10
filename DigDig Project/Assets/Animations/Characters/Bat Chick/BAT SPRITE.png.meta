@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 4c435385244a8704f8e6a4a5e8a766a2
+guid: 29b3f232fb49c3649b4559c6a2c30267
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8609468847852854501
-    second: PLAYER WALK RIGHT (1)_0
+      213: 84547349250578445
+    second: BAT SPRITE_0
   - first:
-      213: 3447917948822455878
-    second: PLAYER WALK RIGHT (1)_1
+      213: 8176649246154123799
+    second: BAT SPRITE_1
   - first:
-      213: 4169714014040208117
-    second: PLAYER WALK RIGHT (1)_2
+      213: -5450008905781238700
+    second: BAT SPRITE_2
   - first:
-      213: -6681339105574257240
-    second: PLAYER WALK RIGHT (1)_3
+      213: -7443592895949852468
+    second: BAT SPRITE_3
   - first:
-      213: 6613770642166698918
-    second: PLAYER WALK RIGHT (1)_4
+      213: -1374269866285397258
+    second: BAT SPRITE_4
   - first:
-      213: 7784679760164374986
-    second: PLAYER WALK RIGHT (1)_5
+      213: -1314879830900629662
+    second: BAT SPRITE_5
   - first:
-      213: 9089919789518489476
-    second: PLAYER WALK RIGHT (1)_6
+      213: -5164856432871819398
+    second: BAT SPRITE_6
   - first:
-      213: -4606230509175552397
-    second: PLAYER WALK RIGHT (1)_7
+      213: 276478410489589576
+    second: BAT SPRITE_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,169 +113,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_0
+      name: BAT SPRITE_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1206
-        width: 324
-        height: 513
+        x: 135
+        y: 1179
+        width: 306
+        height: 540
       alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      pivot: {x: 0.47058824, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1360f2a2b5058880800000000000000
-      internalID: -8609468847852854501
+      spriteID: d0818cebd5f5c2100800000000000000
+      internalID: 84547349250578445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_1
+      name: BAT SPRITE_1
       rect:
         serializedVersion: 2
-        x: 675
-        y: 1206
-        width: 324
-        height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+        x: 702
+        y: 1179
+        width: 306
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646814a4b1779df20800000000000000
-      internalID: 3447917948822455878
+      spriteID: 71a6bf9ea2b497170800000000000000
+      internalID: 8176649246154123799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_2
+      name: BAT SPRITE_2
       rect:
         serializedVersion: 2
-        x: 1251
-        y: 1206
-        width: 324
-        height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+        x: 1278
+        y: 1179
+        width: 306
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f2b5ddbdcccdd930800000000000000
-      internalID: 4169714014040208117
+      spriteID: 454a13c86cdad54b0800000000000000
+      internalID: -5450008905781238700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_3
+      name: BAT SPRITE_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 630
-        width: 324
-        height: 513
+        x: 126
+        y: 603
+        width: 306
+        height: 540
       alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8adf1549b7d1743a0800000000000000
-      internalID: -6681339105574257240
+      spriteID: cc0b940f2bb03b890800000000000000
+      internalID: -7443592895949852468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_4
+      name: BAT SPRITE_4
       rect:
         serializedVersion: 2
-        x: 675
-        y: 630
-        width: 324
-        height: 513
+        x: 711
+        y: 603
+        width: 306
+        height: 540
       alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      pivot: {x: 0.47058824, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a3d0489b55d8cb50800000000000000
-      internalID: 6613770642166698918
+      spriteID: 6fa098a76dc9dece0800000000000000
+      internalID: -1374269866285397258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_5
+      name: BAT SPRITE_5
       rect:
         serializedVersion: 2
-        x: 1251
-        y: 630
-        width: 324
-        height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+        x: 1278
+        y: 603
+        width: 306
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac945c23ffcb80c60800000000000000
-      internalID: 7784679760164374986
+      spriteID: 26f97d4a2cb90cde0800000000000000
+      internalID: -1314879830900629662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_6
+      name: BAT SPRITE_6
       rect:
         serializedVersion: 2
-        x: 99
-        y: 54
-        width: 324
-        height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+        x: 126
+        y: 27
+        width: 306
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4870b0b53e1e52e70800000000000000
-      internalID: 9089919789518489476
+      spriteID: a77b8ca507eb258b0800000000000000
+      internalID: -5164856432871819398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK RIGHT (1)_7
+      name: BAT SPRITE_7
       rect:
         serializedVersion: 2
-        x: 675
-        y: 54
-        width: 324
-        height: 513
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+        x: 702
+        y: 27
+        width: 306
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376460bb1c16310c0800000000000000
-      internalID: -4606230509175552397
+      spriteID: 84feb4546af36d300800000000000000
+      internalID: 276478410489589576
       vertices: []
       indices: 
       edges: []
@@ -283,7 +283,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5dd4c58738ec2c343a101f379a17b3c0
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

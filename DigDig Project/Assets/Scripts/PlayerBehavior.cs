@@ -5,6 +5,7 @@ public class PlayerBehavior : MonoBehaviour
     #region Variables
 
     Rigidbody2D rb;
+    public Animator animator;
 
     [HideInInspector] public bool canMove = true;
 
@@ -30,6 +31,8 @@ public class PlayerBehavior : MonoBehaviour
     public float checkRadius = 0.1f;
     public Transform groundCheck;
     public LayerMask whatIsGround;
+
+    bool facingRight;
 
     #endregion
 
@@ -83,6 +86,21 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetButtonUp("Jump")) isJumping = false;
 
 
+
+        #endregion
+
+        #region Animations
+
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
+        if (facingRight == false && moveInput < 0) Flip();
+        else if (facingRight == true && moveInput > 0) Flip();
+
+        void Flip()
+        {
+            facingRight = !facingRight;
+            transform.Rotate(0, 180, 0);
+        }
 
         #endregion
     }

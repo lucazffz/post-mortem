@@ -7,7 +7,7 @@ public class CheckLightLevel : MonoBehaviour
     //Variables
     public RenderTexture sourceTexture;
 
-    private float lightLevel;
+    public float lightLevel;
     public int roundedLight;
 
     public float maxTime = 10;
@@ -48,7 +48,7 @@ public class CheckLightLevel : MonoBehaviour
         roundedLight = Mathf.RoundToInt(lightLevel);
 
         //wait, then reload level
-        if (roundedLight <= -4)
+        if (lightLevel <= -3.9f)
         {
             Debug.Log(currentTime);
             currentTime -= Time.deltaTime;
