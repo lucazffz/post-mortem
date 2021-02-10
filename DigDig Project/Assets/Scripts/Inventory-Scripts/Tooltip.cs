@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Tooltip : MonoBehaviour
 {
     public Text detailtext;
+
     public void Start()
     {
         gameObject.SetActive(false);
@@ -22,8 +23,5 @@ public class Tooltip : MonoBehaviour
     {
         detailtext.text = _detailText;
     }
-    public void Setposition(Vector2 _pos)
-    {
-        transform.localPosition = _pos;
-    }
+   
 }

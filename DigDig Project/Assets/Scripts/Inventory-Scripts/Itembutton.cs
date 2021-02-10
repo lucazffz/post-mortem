@@ -48,7 +48,6 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             tooltip.Updatetooltip(Getdeatialtext(thisItem));
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Canvas").transform as RectTransform, Input.mousePosition, null, out position);
-            tooltip.Setposition(position);
         }
     }
 
