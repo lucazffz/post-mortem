@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:DigDig Project/Assets/Scripts/Dialogue/Characters.cs.meta
 guid: 559d143308e9853428fb0a3c47c31d26
-=======
-guid: 00d146707fdb81d489dacb68319d1783
->>>>>>> proto-LightLevelDetection:DigDig Project/Assets/Scripts/Lights/CheckLightLevel.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
