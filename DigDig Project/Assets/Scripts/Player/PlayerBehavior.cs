@@ -7,11 +7,17 @@ public class PlayerBehavior : MonoBehaviour
     Rigidbody2D rb;
     public Animator animator;
 
+    public GrabController grabController;
+
     [HideInInspector] public bool canMove = true;
 
     //X-axis movement
     float moveInput;
-    public float speed = 6f;
+
+    public float speed = 4f;
+    private float currentSpeed;
+    public float holdingSpeed = 2f;
+    
 
     //Jump
     public float jumpForce = 15f;
@@ -34,24 +40,33 @@ public class PlayerBehavior : MonoBehaviour
 
     bool facingRight;
 
+    bool holding;
+
     #endregion
 
     void Start() 
     {
         rb = GetComponent<Rigidbody2D>();
+        currentSpeed = speed;
     }
 
     private void FixedUpdate() 
     {
         //x-axis movement
         if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
     }
 
     private void Update() 
     {
-        if (FindObjectOfType<DialogueManager>().inConversaion == true) canMove = false;
+        if (FindObjectOfType<DialogueManager>().inConversaion) canMove = false;
         else canMove = true;
+
+        if (FindObjectOfType<GrabController>().holding) holding = true;
+        else holding = false;
+
+        if (holding) currentSpeed = holdingSpeed;
+        else currentSpeed = speed;
 
         if (!canMove && isGrounded) moveInput = 0;
 
@@ -62,7 +77,7 @@ public class PlayerBehavior : MonoBehaviour
         if (isGrounded) hangTimeCounter = hangTime;
         else hangTimeCounter -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump") && canMove) jumpBufferCounter = jumpBuffer;
+        if (Input.GetButtonDown("Jump") && canMove && !holding) jumpBufferCounter = jumpBuffer;
         else jumpBufferCounter -= Time.deltaTime;
 
         //normal jump
@@ -93,8 +108,12 @@ public class PlayerBehavior : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
-        if (facingRight == false && moveInput < 0) Flip();
-        else if (facingRight == true && moveInput > 0) Flip();
+        if(!holding)
+        {
+            if (facingRight == false && moveInput < 0) Flip();
+            else if (facingRight == true && moveInput > 0) Flip();
+        }
+        
 
         void Flip()
         {

@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892df45c6f30f6141b8b2de742c91dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: {fileID: 0}
   eventIndex: 0
   eventPrompt:
   - open
@@ -53,10 +52,10 @@ MonoBehaviour:
   - talk
   - pick up
   - read
+  inRange: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls: []
-  inRange: 0
 --- !u!61 &6800888044658478541
 BoxCollider2D:
   m_ObjectHideFlags: 0
