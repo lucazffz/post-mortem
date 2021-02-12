@@ -105,14 +105,9 @@ public class PlayerBehavior : MonoBehaviour
         #endregion
 
         #region Animations
-       animator.SetBool("isGrounded", isGrounded);
-      
-
-        if (!isGrounded && gameObject.GetComponent<Rigidbody2D>().velocity.y > 0) animator.SetFloat("Jump", 1);
-        else if (!isGrounded && gameObject.GetComponent<Rigidbody2D>().velocity.y < 0) animator.SetFloat("Jump", -1);
-        else animator.SetFloat("Jump", 0);
-
+        animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
+        animator.SetFloat("Jump", gameObject.GetComponent<Rigidbody2D>().velocity.normalized.y);
 
         if(!holding)
         {
@@ -120,7 +115,6 @@ public class PlayerBehavior : MonoBehaviour
             else if (facingRight == true && moveInput > 0) Flip();
         }
         
-
         void Flip()
         {
             facingRight = !facingRight;
