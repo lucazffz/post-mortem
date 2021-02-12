@@ -3667,9 +3667,9 @@ BoxCollider2D:
   m_Offset: {x: -0.043608665, y: -0.34576178}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.63, y: 0.5}
+    pivot: {x: 0.6608642, y: 0.5}
     oldSize: {x: 3.24, y: 5.13}
-    newSize: {x: 0.16, y: 0.16}
+    newSize: {x: 3.51, y: 5.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3711,7 +3711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1997625497}
-  grabController: {fileID: 0}
   canMove: 1
   speed: 3.5
   holdingSpeed: 2
@@ -3764,12 +3763,12 @@ SpriteRenderer:
   m_SortingLayerID: -287164339
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7504077562483161515, guid: aeed7171f5b489c42be90cead15d0060, type: 3}
+  m_Sprite: {fileID: -475291969927540450, guid: aeed7171f5b489c42be90cead15d0060, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 3.51, y: 5.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

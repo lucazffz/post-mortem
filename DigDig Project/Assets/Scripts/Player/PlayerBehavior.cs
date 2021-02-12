@@ -4,10 +4,8 @@ public class PlayerBehavior : MonoBehaviour
 {
     #region Variables
 
-    Rigidbody2D rb;
+    Rigidbody2D rigidBody;
     public Animator animator;
-
-    public GrabController grabController;
 
     [HideInInspector] public bool canMove = true;
 
@@ -18,7 +16,6 @@ public class PlayerBehavior : MonoBehaviour
     private float currentSpeed;
     public float holdingSpeed = 2f;
     
-
     //Jump
     public float jumpForce = 15f;
 
@@ -46,7 +43,7 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start() 
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
         currentSpeed = speed;
     }
 
@@ -54,7 +51,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         //x-axis movement
         if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
+        rigidBody.velocity = new Vector2(moveInput * currentSpeed, rigidBody.velocity.y);
     }
 
     private void Update() 
@@ -83,7 +80,7 @@ public class PlayerBehavior : MonoBehaviour
         //normal jump
         if (hangTimeCounter > 0 && jumpBufferCounter > 0)
         {
-            rb.velocity = Vector2.up * jumpForce;
+            rigidBody.velocity = Vector2.up * jumpForce;
             jumpTimeCounter = jumpTime;
             jumpBufferCounter = 0;
             isJumping = true;
@@ -92,7 +89,7 @@ public class PlayerBehavior : MonoBehaviour
         //different jump height
         if (Input.GetButton("Jump") && jumpTimeCounter > 0 && isJumping) 
         {
-            rb.velocity = Vector2.up * jumpForce;
+            rigidBody.velocity = Vector2.up * jumpForce;
             jumpTimeCounter -= Time.deltaTime;
             hangTimeCounter = 0;
         } 
@@ -100,14 +97,15 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonUp("Jump")) isJumping = false;
 
-
-
+        
         #endregion
 
         #region Animations
+
         animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetFloat("Jump", gameObject.GetComponent<Rigidbody2D>().velocity.normalized.y);
+
+        animator.SetFloat("Jump", rigidBody.velocity.normalized.y);
 
         if(!holding)
         {

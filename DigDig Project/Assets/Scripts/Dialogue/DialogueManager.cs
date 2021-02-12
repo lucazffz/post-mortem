@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Return)) DisplayNextSentence(); 
+        if (Input.GetKeyDown(KeyCode.Return) && inConversaion) DisplayNextSentence(); 
     }
 
     public void StartDialogue(Dialgoue dialogue) 
