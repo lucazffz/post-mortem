@@ -98,8 +98,8 @@ TextureImporter:
       name: PLAYER STAND RIGHT SPRITE_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 630
+        x: 103
+        y: 639
         width: 324
         height: 513
       alignment: 9
@@ -119,12 +119,12 @@ TextureImporter:
       name: PLAYER STAND RIGHT SPRITE_1
       rect:
         serializedVersion: 2
-        x: 99
+        x: 98
         y: 54
-        width: 315
+        width: 324
         height: 513
       alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+      pivot: {x: 0.64761907, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

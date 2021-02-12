@@ -105,6 +105,12 @@ public class PlayerBehavior : MonoBehaviour
         #endregion
 
         #region Animations
+       animator.SetBool("isGrounded", isGrounded);
+      
+
+        if (!isGrounded && gameObject.GetComponent<Rigidbody2D>().velocity.y > 0) animator.SetFloat("Jump", 1);
+        else if (!isGrounded && gameObject.GetComponent<Rigidbody2D>().velocity.y < 0) animator.SetFloat("Jump", -1);
+        else animator.SetFloat("Jump", 0);
 
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
