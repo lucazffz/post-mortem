@@ -251,4 +251,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5c3b69a126f774e9ebf1e684a54f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 5356459958811187900}
+  animator: {fileID: 5356459958811187900}

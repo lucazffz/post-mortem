@@ -4,14 +4,17 @@ using TMPro;
 public class InteractableManager : MonoBehaviour
 {
     public TextMeshProUGUI IinteractText;
-    public bool canInteract;
+    public static bool canInteract;
 
-    [HideInInspector] public KeyCode interactKey;
-    [HideInInspector] public string[] eventPrompt;
-    [HideInInspector] public int eventIndex;
+    [HideInInspector] public static KeyCode interactKey = KeyCode.E;
+    [HideInInspector] public static string[] eventPrompt;
+    [HideInInspector] public static int eventIndex;
 
     public void Update() 
     {
+        if (PauseMenu.isPaused || DialogueManager.inConversaion || GrabController.holding || !InteractableTrigger.inRange) canInteract = false;
+        else canInteract = true;
+
         if (canInteract) 
         {
             IinteractText.enabled = true;

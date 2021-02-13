@@ -5,7 +5,7 @@ public class GrabController : MonoBehaviour
     public Transform grabDetect;
     public Transform boxHolder;
     public float rayDistance;
-    public bool holding;
+    public static bool holding;
 
     
 
@@ -19,14 +19,11 @@ public class GrabController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.C)) holding = !holding;
 
-
-            FindObjectOfType<InteractableManager>().eventPrompt = prompt;
-            FindObjectOfType<InteractableManager>().canInteract = true;
-            FindObjectOfType<InteractableManager>().eventIndex = 0;
+           
 
             if (holding)
             {
-                FindObjectOfType<InteractableManager>().eventIndex = 1;
+               
 
                 grabCheck.collider.gameObject.transform.parent = boxHolder;
 

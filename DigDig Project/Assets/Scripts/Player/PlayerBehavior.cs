@@ -7,7 +7,7 @@ public class PlayerBehavior : MonoBehaviour
     Rigidbody2D rigidBody;
     public Animator animator;
 
-    [HideInInspector] public bool canMove = true;
+    public bool canMove = true;
 
     //X-axis movement
     float moveInput;
@@ -56,10 +56,10 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Update() 
     {
-        if (FindObjectOfType<DialogueManager>().inConversaion) canMove = false;
+        if (DialogueManager.inConversaion || PauseMenu.isPaused) canMove = false;
         else canMove = true;
 
-        if (FindObjectOfType<GrabController>().holding) holding = true;
+        if (GrabController.holding) holding = true;
         else holding = false;
 
         if (holding) currentSpeed = holdingSpeed;

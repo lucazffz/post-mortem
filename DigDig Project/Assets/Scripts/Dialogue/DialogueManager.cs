@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI IdialogueText;
     public TextMeshProUGUI IcontinueButtonText;
 
-    [HideInInspector] public bool inConversaion;
+    public static bool inConversaion;
     bool haveSpokenTo;
 
     Queue<string> sentences = new Queue<string>();
@@ -31,12 +31,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Return) && inConversaion) DisplayNextSentence(); 
+        if (Input.GetKeyDown(KeyCode.Return) && inConversaion && !PauseMenu.isPaused) DisplayNextSentence(); 
     }
 
     public void StartDialogue(Dialgoue dialogue) 
     {
-        FindObjectOfType<InteractableManager>().canInteract = false;
         inConversaion = true;
 
         haveSpokenTo = dialogue.haveSpokenTo;
@@ -118,7 +117,6 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        FindObjectOfType<InteractableManager>().canInteract = true;
         inConversaion = false;
 
         animator.SetBool("isOpen", false);

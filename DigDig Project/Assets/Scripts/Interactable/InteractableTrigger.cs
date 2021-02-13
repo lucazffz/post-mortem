@@ -5,42 +5,44 @@ using UnityEngine.Events;
 public class InteractableTrigger : MonoBehaviour
 {
     [HideInInspector] public int eventIndex = 0;
-    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read", };
-    [HideInInspector] public bool inRange;
+    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read" };
+    [HideInInspector] public static bool inRange;
 
     public UnityEvent interactionEvent;
 
     private void Update () 
     {
-        if (Input.GetKeyDown(FindObjectOfType<InteractableManager>().interactKey) 
-            && FindObjectOfType<InteractableManager>().canInteract && inRange) interactionEvent.Invoke();
+        if (Input.GetKeyDown(InteractableManager.interactKey) 
+            && InteractableManager.canInteract && inRange) interactionEvent.Invoke();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) 
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) 
+        if (collision.CompareTag("Player"))
         {
             inRange = true;
-            FindObjectOfType<InteractableManager>().eventPrompt = eventPrompt;
-            FindObjectOfType<InteractableManager>().eventIndex = eventIndex;
-            FindObjectOfType<InteractableManager>().canInteract = true;
+
+            InteractableManager.eventPrompt = eventPrompt;
+            InteractableManager.eventIndex = eventIndex;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision) 
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) 
+        if(collision.CompareTag("Player"))
         {
             inRange = false;
-            FindObjectOfType<InteractableManager>().canInteract = false;
         }
     }
 }
+
+#region UI element
 
 // Custom drop down eventPrompt menu
 [CustomEditor(typeof(InteractableTrigger))]
 public class DropDownEditor : Editor
 {
-    public override void OnInspectorGUI() 
+    public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
@@ -52,3 +54,5 @@ public class DropDownEditor : Editor
         EditorUtility.SetDirty(target);
     }
 }
+
+#endregion
