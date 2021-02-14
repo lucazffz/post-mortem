@@ -43,6 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 7137407
+    locked: 0
+  - name: Furniture
+    uniqueID: 1758657441
+    locked: 0
+  - name: NPC
+    uniqueID: 436692883
+    locked: 0
   - name: Player
     uniqueID: 4007802957
     locked: 0

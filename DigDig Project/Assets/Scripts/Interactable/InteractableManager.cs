@@ -3,7 +3,13 @@ using TMPro;
 
 public class InteractableManager : MonoBehaviour
 {
+    public GameObject player;
+    public Canvas Iinteractable;
     public TextMeshProUGUI IinteractText;
+
+    public float xOffset;
+    public float yOffset;
+
     public static bool canInteract;
 
     [HideInInspector] public static KeyCode interactKey = KeyCode.E;
@@ -12,15 +18,18 @@ public class InteractableManager : MonoBehaviour
 
     public void Update() 
     {
+        Vector2 promptPosition = Camera.main.WorldToScreenPoint(player.transform.position) + new Vector3(xOffset, yOffset);
+        Iinteractable.transform.position = promptPosition;
+
         if (PauseMenu.isPaused || DialogueManager.inConversaion || GrabController.holding || !InteractableTrigger.inRange) canInteract = false;
         else canInteract = true;
 
-        if (canInteract) 
+        if (canInteract)
         {
-            IinteractText.enabled = true;
+            Iinteractable.enabled = true;
             IinteractText.text = $"Press {interactKey} to {eventPrompt[eventIndex]}";
         }
-        else IinteractText.enabled = false;
+        else Iinteractable.enabled = false;
     }
 }
 

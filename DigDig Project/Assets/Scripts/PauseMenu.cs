@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    #region Variables
+
     public Animator animator;
     public UnityEvent switchMenu;
 
     private float animationLength;
     public static bool isPaused;
+
+    #endregion
 
     private void Update()
     {
@@ -20,9 +24,8 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = !isPaused;
 
-        animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
         gameObject.transform.GetChild(0).gameObject.SetActive(isPaused);
-
+        animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
         StartCoroutine(WaitForAnimation());
 
         if (isPaused)
