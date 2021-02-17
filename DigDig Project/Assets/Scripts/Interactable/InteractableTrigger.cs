@@ -6,13 +6,15 @@ public class InteractableTrigger : MonoBehaviour
 {
     [HideInInspector] public int eventIndex = 0;
     [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read" };
-    [HideInInspector] public static bool inRange;
+    [HideInInspector] private bool inRange;
+
+    public static bool staticInRange;
 
     public UnityEvent interactionEvent;
 
     private void Update () 
     {
-        if (Input.GetKeyDown(InteractableManager.interactKey) 
+        if (Input.GetKeyDown(InteractableManager.interactKey)
             && InteractableManager.canInteract && inRange) interactionEvent.Invoke();
     }
 
@@ -21,6 +23,7 @@ public class InteractableTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             inRange = true;
+            staticInRange = true;
 
             InteractableManager.eventPrompt = eventPrompt;
             InteractableManager.eventIndex = eventIndex;
@@ -32,6 +35,7 @@ public class InteractableTrigger : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             inRange = false;
+            staticInRange = false;
         }
     }
 }

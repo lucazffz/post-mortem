@@ -5,7 +5,13 @@ public class PlayerBehavior : MonoBehaviour
     #region Variables
 
     Rigidbody2D rigidBody;
+
     public Animator animator;
+    public Animator heightAnimator;
+
+    public SpriteRenderer spriteRenderer;
+
+   
 
     public bool canMove = true;
 
@@ -13,8 +19,7 @@ public class PlayerBehavior : MonoBehaviour
     float moveInput;
 
     public float speed = 4f;
-    private float currentSpeed;
-    public float holdingSpeed = 2f;
+   
     
     //Jump
     public float jumpForce = 15f;
@@ -44,14 +49,15 @@ public class PlayerBehavior : MonoBehaviour
     void Start() 
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        currentSpeed = speed;
+       
+      
     }
 
     private void FixedUpdate() 
     {
         //x-axis movement
         if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
-        rigidBody.velocity = new Vector2(moveInput * currentSpeed, rigidBody.velocity.y);
+        rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
     }
 
     private void Update() 
@@ -61,9 +67,6 @@ public class PlayerBehavior : MonoBehaviour
 
         if (GrabController.holding) holding = true;
         else holding = false;
-
-        if (holding) currentSpeed = holdingSpeed;
-        else currentSpeed = speed;
 
         if (!canMove && isGrounded) moveInput = 0;
 
@@ -97,27 +100,33 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonUp("Jump")) isJumping = false;
 
-        
+
         #endregion
 
         #region Animations
 
+        heightAnimator.SetBool("isGrounded", isGrounded);
+        heightAnimator.SetFloat("Speed", Mathf.Abs(moveInput));
+        heightAnimator.SetFloat("Jump", rigidBody.velocity.normalized.y);
+
         animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-
         animator.SetFloat("Jump", rigidBody.velocity.normalized.y);
 
-        if(!holding)
+        if (moveInput > 0)
         {
-            if (facingRight == false && moveInput < 0) Flip();
-            else if (facingRight == true && moveInput > 0) Flip();
+            transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, 1, Time.deltaTime * 20), transform.localScale.y);
+
+            //transform.localScale = new Vector3(1, 1);
+
         }
-        
-        void Flip()
+        else if (moveInput < 0)
         {
-            facingRight = !facingRight;
-            transform.Rotate(0, 180, 0);
+            transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, -1, Time.deltaTime * 20), transform.localScale.y);
+
+            //transform.localScale = new Vector3(-1, 1);
         }
+
 
         #endregion
     }

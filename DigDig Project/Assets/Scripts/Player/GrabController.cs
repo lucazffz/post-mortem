@@ -7,37 +7,36 @@ public class GrabController : MonoBehaviour
     public float rayDistance;
     public static bool holding;
 
+    public LayerMask layerMask;
+
     
 
     public string[] prompt = new string[] { "Grab", "Release" };
    
     private void Update()
     {
-        RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDistance);
+        RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * boxHolder.parent.localScale.x, rayDistance, layerMask);
 
-        if (grabCheck.collider != null && grabCheck.collider.tag == "Grabbable")
+        if (grabCheck.collider != null && grabCheck.collider.tag == "Grabbable" ||holding)
         {
-            if (Input.GetKeyDown(KeyCode.C)) holding = !holding;
-
-           
+            if (Input.GetKeyDown(KeyCode.E)) holding = !holding;
 
             if (holding)
             {
-               
+                transform.GetChild(0).gameObject.SetActive(true);
 
-                grabCheck.collider.gameObject.transform.parent = boxHolder;
+                transform.position = boxHolder.position;
+                transform.parent = boxHolder;
 
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                GetComponent<Rigidbody2D>().isKinematic = true;
             }
             else
             {
-                grabCheck.collider.gameObject.transform.parent = null;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+                transform.GetChild(0).gameObject.SetActive(false);
+
+                transform.parent = null;
+                GetComponent<Rigidbody2D>().isKinematic = false;
             }
         }
-       
-
-
-
     }    
 }

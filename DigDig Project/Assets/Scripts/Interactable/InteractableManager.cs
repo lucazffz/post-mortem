@@ -21,7 +21,8 @@ public class InteractableManager : MonoBehaviour
         Vector2 promptPosition = Camera.main.WorldToScreenPoint(player.transform.position) + new Vector3(xOffset, yOffset);
         Iinteractable.transform.position = promptPosition;
 
-        if (PauseMenu.isPaused || DialogueManager.inConversaion || GrabController.holding || !InteractableTrigger.inRange) canInteract = false;
+        //needs to be re-worked
+        if (PauseMenu.isPaused || DialogueManager.inConversaion || GrabController.holding || !InteractableTrigger.staticInRange) canInteract = false;
         else canInteract = true;
 
         if (canInteract)
