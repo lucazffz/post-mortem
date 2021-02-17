@@ -44,7 +44,6 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         Debug.Log("Enter " + thisItem.itemName + " Slot");
 
             tooltip.Showtooltip();
-            //tooltip.Updatetooltip(thisItem.itemDesc);
             tooltip.Updatetooltip(Getdeatialtext(thisItem));
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Canvas").transform as RectTransform, Input.mousePosition, null, out position);
@@ -70,6 +69,7 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         else
         {
             StringBuilder stringbuilder = new StringBuilder();
+            stringbuilder.AppendFormat("Description {0}\n\n", _item.Desc);
             stringbuilder.AppendFormat("Item: {0}\n\n", _item.itemName);
             stringbuilder.AppendFormat("Description: {0}\n\n", _item.itemDesc);
             return stringbuilder.ToString();

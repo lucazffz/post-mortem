@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public Itembutton thisbutton;
     public Itembutton[] itembuttons;
 
-    //public Dictionary<Item, int> itemDict = new Dictionary<Item, int>();
 
     private void Awake()
     {

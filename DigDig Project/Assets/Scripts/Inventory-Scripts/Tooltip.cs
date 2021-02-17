@@ -9,19 +9,18 @@ public class Tooltip : MonoBehaviour
 
     public void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
     public void Showtooltip()
-    {
+    {   
         gameObject.SetActive(true);
     }
     public void Hidetooltip()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
     public void Updatetooltip(string _detailText)
     {
         detailtext.text = _detailText;
     }
-   
 }
