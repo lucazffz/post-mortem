@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: aeed7171f5b489c42be90cead15d0060
+guid: 7f94cdd62ee59f248839083744e10a7d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7504077562483161515
-    second: PLAYER STAND RIGHT SPRITE_0
+      213: -3235636511037435721
+    second: PLAYER STAND RIGHT LANTERN SPRITE_0
   - first:
-      213: 5147539605299751670
-    second: PLAYER STAND RIGHT SPRITE_1
-  - first:
-      213: 1068806513580023504
-    second: PlayerIdleAnimation_0
-  - first:
-      213: -475291969927540450
-    second: PlayerIdleAnimation_1
+      213: -7472344092694798020
+    second: PLAYER STAND RIGHT LANTERN SPRITE_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,8 +50,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.27823043}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -101,43 +95,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerIdleAnimation_0
+      name: PLAYER STAND RIGHT LANTERN SPRITE_0
       rect:
         serializedVersion: 2
         x: 99
         y: 630
-        width: 324
+        width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6608642, y: 0.5}
+      pivot: {x: 0.6301219, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0de9f8f7cd925de00800000000000000
-      internalID: 1068806513580023504
+      spriteID: 7b054518cb5b813d0800000000000000
+      internalID: -3235636511037435721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleAnimation_1
+      name: PLAYER STAND RIGHT LANTERN SPRITE_1
       rect:
         serializedVersion: 2
         x: 99
         y: 54
-        width: 324
+        width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6608642, y: 0.5}
+      pivot: {x: 0.6301219, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e119fd7b87c6769f0800000000000000
-      internalID: -475291969927540450
+      spriteID: c31207b43a6ec4890800000000000000
+      internalID: -7472344092694798020
       vertices: []
       indices: 
       edges: []

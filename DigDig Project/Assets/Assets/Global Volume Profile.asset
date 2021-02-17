@@ -35,7 +35,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: -15
+    m_Value: -20
     min: -100
     max: 100
 --- !u!114 &11400000
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+    m_Value: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -141,12 +141,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.264
+    m_Value: 0.3
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.4
     min: 0.01
     max: 1
   rounded:

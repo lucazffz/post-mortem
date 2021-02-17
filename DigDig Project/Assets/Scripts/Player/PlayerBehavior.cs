@@ -8,6 +8,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public Animator animator;
     public Animator heightAnimator;
+    public Animator lanternPosAnimatior;
 
     public SpriteRenderer spriteRenderer;
 
@@ -35,7 +36,7 @@ public class PlayerBehavior : MonoBehaviour
     float hangTimeCounter;
     
     //ground check
-    bool isGrounded;
+    public static bool isGrounded;
     public float checkRadius = 0.1f;
     public Transform groundCheck;
     public LayerMask whatIsGround;
@@ -65,7 +66,7 @@ public class PlayerBehavior : MonoBehaviour
         if (DialogueManager.inConversaion || PauseMenu.isPaused) canMove = false;
         else canMove = true;
 
-        if (GrabController.holding) holding = true;
+        if (LanternController.holdingLantern) holding = true;
         else holding = false;
 
         if (!canMove && isGrounded) moveInput = 0;
@@ -112,22 +113,19 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetFloat("Jump", rigidBody.velocity.normalized.y);
+        animator.SetBool("Holding", LanternController.holdingLantern);
 
-        if (moveInput > 0)
+        lanternPosAnimatior.SetFloat("Speed", Mathf.Abs(moveInput));
+
+        if (!facingRight && moveInput > 0) Flip();
+        else if (facingRight && moveInput < 0) Flip();
+
+        void Flip()
         {
-            transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, 1, Time.deltaTime * 20), transform.localScale.y);
-
-            //transform.localScale = new Vector3(1, 1);
-
+            facingRight = !facingRight;
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y);
         }
-        else if (moveInput < 0)
-        {
-            transform.localScale = new Vector3(Mathf.Lerp(transform.localScale.x, -1, Time.deltaTime * 20), transform.localScale.y);
-
-            //transform.localScale = new Vector3(-1, 1);
-        }
-
-
+       
         #endregion
     }
 }

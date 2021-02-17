@@ -22,13 +22,13 @@ public class InteractableManager : MonoBehaviour
         Iinteractable.transform.position = promptPosition;
 
         //needs to be re-worked
-        if (PauseMenu.isPaused || DialogueManager.inConversaion || GrabController.holding || !InteractableTrigger.staticInRange) canInteract = false;
+        if (PauseMenu.isPaused || DialogueManager.inConversaion || LanternController.holdingLantern  || !InteractableTrigger.staticInRange && !LanternController.canHoldLantern) canInteract = false;
         else canInteract = true;
 
         if (canInteract)
         {
             Iinteractable.enabled = true;
-            IinteractText.text = $"Press {interactKey} to {eventPrompt[eventIndex]}";
+            IinteractText.text = $"[ {interactKey} ]\nto {eventPrompt[eventIndex]}";
         }
         else Iinteractable.enabled = false;
     }

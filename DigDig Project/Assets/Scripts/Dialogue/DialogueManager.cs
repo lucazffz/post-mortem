@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
             Iportrait.sprite = portraits.Dequeue();
         }
 
-        if (sentences.Count == 1) IcontinueButtonText.text = "End Dialogue >>";
+        if (sentences.Count == 1) IcontinueButtonText.text = "End >>";
         else if (sentences.Count == 0) 
         {
             EndDialogue();

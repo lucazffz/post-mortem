@@ -4,9 +4,11 @@ using UnityEngine.Events;
 
 public class InteractableTrigger : MonoBehaviour
 {
+    public bool autoTrigger;
+
     [HideInInspector] public int eventIndex = 0;
     [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read" };
-    [HideInInspector] private bool inRange;
+    [HideInInspector] public bool inRange;
 
     public static bool staticInRange;
 
@@ -14,19 +16,28 @@ public class InteractableTrigger : MonoBehaviour
 
     private void Update () 
     {
-        if (Input.GetKeyDown(InteractableManager.interactKey)
-            && InteractableManager.canInteract && inRange) interactionEvent.Invoke();
+        if (Input.GetKeyDown(InteractableManager.interactKey) && InteractableManager.canInteract && inRange && !autoTrigger) interactionEvent.Invoke();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            inRange = true;
-            staticInRange = true;
-
-            InteractableManager.eventPrompt = eventPrompt;
-            InteractableManager.eventIndex = eventIndex;
+            if (!autoTrigger)
+            {
+                Debug.Log(staticInRange);
+                inRange = true;
+                staticInRange = true;
+             
+                InteractableManager.eventPrompt = eventPrompt;
+                InteractableManager.eventIndex = eventIndex;
+            }
+            else
+            {
+                interactionEvent.Invoke();
+                Destroy(gameObject);
+            }
+            
         }
     }
 

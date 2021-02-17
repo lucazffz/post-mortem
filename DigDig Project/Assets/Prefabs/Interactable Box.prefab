@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6800888044658478543}
-  - component: {fileID: 3391488727956054498}
   - component: {fileID: 6800888044658478541}
+  - component: {fileID: 3391488727956054498}
   m_Layer: 0
   m_Name: Interactable Box
   m_TagString: Untagged
@@ -32,30 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3391488727956054498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6800888044658478540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 892df45c6f30f6141b8b2de742c91dfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventIndex: 0
-  eventPrompt:
-  - open
-  - unlock
-  - enter
-  - talk
-  - pick up
-  - read
-  inRange: 0
-  interactionEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!61 &6800888044658478541
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82,3 +58,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3391488727956054498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6800888044658478540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892df45c6f30f6141b8b2de742c91dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoTrigger: 0
+  eventIndex: 0
+  eventPrompt:
+  - open
+  - unlock
+  - enter
+  - talk
+  - pick up
+  - read
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
