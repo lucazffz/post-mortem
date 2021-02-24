@@ -14,18 +14,18 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private Item GetThisItem()
     {
-        for (int i = 0; i < GameManager.instance.items.Count; i++)
+        for (int i = 0; i < InventoryManager.instance.items.Count; i++)
         {
             if (buttonID == i)
             {
-                thisItem = GameManager.instance.items[i];
+                thisItem = InventoryManager.instance.items[i];
             }
         }
         return thisItem;
     }
     public void CloseButton()
     {
-        GameManager.instance.Removeitem(GetThisItem());
+        InventoryManager.instance.Removeitem(GetThisItem());
         thisItem = GetThisItem();
         if(thisItem != null)
         {
@@ -39,14 +39,15 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public void OnPointerEnter(PointerEventData eventData)
     {
         GetThisItem();
-        if(thisItem != null)
+        if (thisItem != null)
         {
-        Debug.Log("Enter " + thisItem.itemName + " Slot");
+            Debug.Log("Enter " + thisItem.itemName + " Slot");
 
             tooltip.Showtooltip();
-            tooltip.Updatetooltip(Getdeatialtext(thisItem));
+            tooltip.Updatetooltip(thisItem.itemName, thisItem.itemDesc);
 
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Canvas").transform as RectTransform, Input.mousePosition, null, out position);
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Inventory UI").transform as RectTransform, Input.mousePosition, null, out position);
         }
     }
 
@@ -57,9 +58,11 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         Debug.Log("Exit " + thisItem.itemName + " Slot");
 
             tooltip.Hidetooltip();
-            tooltip.Updatetooltip("");
+            tooltip.Updatetooltip("", "");
         }
     }
+
+    /*
     private string Getdeatialtext(Item _item)
     {
         if(_item == null)
@@ -68,11 +71,17 @@ public class Itembutton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
         else
         {
+
+
+
+            
             StringBuilder stringbuilder = new StringBuilder();
             stringbuilder.AppendFormat("Description {0}\n\n", _item.Desc);
             stringbuilder.AppendFormat("Item: {0}\n\n", _item.itemName);
             stringbuilder.AppendFormat("Description: {0}\n\n", _item.itemDesc);
             return stringbuilder.ToString();
+            
         }
     }
+    */
 }

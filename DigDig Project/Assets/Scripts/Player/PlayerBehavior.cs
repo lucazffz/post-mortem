@@ -6,22 +6,23 @@ public class PlayerBehavior : MonoBehaviour
 
     Rigidbody2D rigidBody;
 
+    [Header("Animation")]
     public Animator animator;
     public Animator heightAnimator;
     public Animator lanternPosAnimatior;
 
-    public SpriteRenderer spriteRenderer;
+    bool facingRight;
 
-   
+    [Header("Movement")]
 
-    public bool canMove = true;
+    public float gravity = 7;
+    bool canMove = true;
+    bool holding;
 
     //X-axis movement
     float moveInput;
-
     public float speed = 4f;
    
-    
     //Jump
     public float jumpForce = 15f;
 
@@ -41,17 +42,22 @@ public class PlayerBehavior : MonoBehaviour
     public Transform groundCheck;
     public LayerMask whatIsGround;
 
-    bool facingRight;
-
-    bool holding;
+    [Header("Ladder")]
+    public float climbSpeed;
+    public float climbCheckDistance = 2;
+    public LayerMask whatIsLadder;
+   
+    private float inputVertical;
+    private Vector2 climbPos;
+    private GameObject platform;
+    
+    public static bool isClimbing;
 
     #endregion
 
     void Start() 
     {
         rigidBody = GetComponent<Rigidbody2D>();
-       
-      
     }
 
     private void FixedUpdate() 
@@ -59,17 +65,58 @@ public class PlayerBehavior : MonoBehaviour
         //x-axis movement
         if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
         rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
+
+        #region Climbing
+
+        RaycastHit2D climbCheck = Physics2D.Raycast(transform.position, Vector2.up, climbCheckDistance, whatIsLadder);
+
+        if (climbCheck.collider != null)
+        {
+            climbPos = new Vector2(climbCheck.collider.transform.position.x, transform.position.y);
+            platform = climbCheck.collider.transform.GetChild(0).gameObject;
+        }
+
+        inputVertical = Input.GetAxisRaw("Vertical");
+
+        if (isClimbing)
+        {
+            if(inputVertical > 0 && groundCheck.position.y > platform.transform.position.y)
+            {
+                platform.transform.GetComponent<BoxCollider2D>().enabled = true;
+                isClimbing = false;
+            }
+            else platform.transform.GetComponent<BoxCollider2D>().enabled = false;
+
+            if (inputVertical < 0 && isGrounded)
+            {
+                isClimbing = false;
+                platform.transform.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
+            rigidBody.velocity = new Vector2(0, inputVertical * climbSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, climbPos, 5 * Time.deltaTime);
+
+            rigidBody.gravityScale = 0;
+        }
+        else
+        {
+            rigidBody.gravityScale = gravity;
+        }
+
+        #endregion
     }
 
     private void Update() 
     {
-        if (DialogueManager.inConversaion || PauseMenu.isPaused) canMove = false;
+        if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing) canMove = false;
         else canMove = true;
 
-        if (LanternController.holdingLantern) holding = true;
+        if (LanternController.holdingLantern || GrabController.grabbing) holding = true;
         else holding = false;
 
         if (!canMove && isGrounded) moveInput = 0;
+
+        
 
         #region Jump
 
@@ -117,8 +164,12 @@ public class PlayerBehavior : MonoBehaviour
 
         lanternPosAnimatior.SetFloat("Speed", Mathf.Abs(moveInput));
 
-        if (!facingRight && moveInput > 0) Flip();
-        else if (facingRight && moveInput < 0) Flip();
+        if(!GrabController.grabbing && !isClimbing)
+        {
+            if (!facingRight && moveInput > 0) Flip();
+            else if (facingRight && moveInput < 0) Flip();
+        }
+       
 
         void Flip()
         {
@@ -127,5 +178,15 @@ public class PlayerBehavior : MonoBehaviour
         }
        
         #endregion
+
+        
     }
+    public void Climb()
+    {
+        isClimbing = true;
+    }
+
+   
+
+  
 }

@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Item", fileName ="New Item")]
 public class Item : ScriptableObject
 {
-    public string Desc;
     public string itemName;
-    public string itemDesc;
+    [TextArea(3, 10)] public string itemDesc;
+
 
     public Sprite itemsprite;
 }

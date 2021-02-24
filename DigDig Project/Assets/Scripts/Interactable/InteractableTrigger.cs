@@ -7,7 +7,7 @@ public class InteractableTrigger : MonoBehaviour
     public bool autoTrigger;
 
     [HideInInspector] public int eventIndex = 0;
-    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read" };
+    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read", "hold", "climb up", "climb down", "push/pull" };
     [HideInInspector] public bool inRange;
 
     public static bool staticInRange;
@@ -25,7 +25,6 @@ public class InteractableTrigger : MonoBehaviour
         {
             if (!autoTrigger)
             {
-                Debug.Log(staticInRange);
                 inRange = true;
                 staticInRange = true;
              
@@ -60,6 +59,8 @@ public class DropDownEditor : Editor
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
+
+       
 
         InteractableTrigger script = (InteractableTrigger)target;
 

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Tooltip : MonoBehaviour
 {
-    public Text detailtext;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI descText;
 
     public void Start()
     {
@@ -19,8 +21,9 @@ public class Tooltip : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    public void Updatetooltip(string _detailText)
+    public void Updatetooltip(string _nameText, string _descText)
     {
-        detailtext.text = _detailText;
+        nameText.text = _nameText;
+        descText.text = _descText;
     }
 }

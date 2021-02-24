@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6800888044658478543}
   - component: {fileID: 6800888044658478541}
-  - component: {fileID: 3391488727956054498}
+  - component: {fileID: 4972881711614207627}
   m_Layer: 0
   m_Name: Interactable Box
   m_TagString: Untagged
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3391488727956054498
+--- !u!114 &4972881711614207627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,6 +79,11 @@ MonoBehaviour:
   - talk
   - pick up
   - read
+  - hold
+  - climb up
+  - climb down
+  - push/pull
+  inRange: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls: []

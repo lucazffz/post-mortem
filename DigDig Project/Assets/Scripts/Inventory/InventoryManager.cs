@@ -1,12 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public bool isPaused;
+    #region Variables
+
+    public static InventoryManager instance;
+    public bool inventoryActivated;
 
     public List<Item> items = new List<Item>();
     public List<int> itemNumbers = new List<int>();
@@ -17,35 +18,19 @@ public class GameManager : MonoBehaviour
     public Itembutton thisbutton;
     public Itembutton[] itembuttons;
 
+    #endregion
 
     private void Awake()
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            if(instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
+        if(instance == null) instance = this;
+        else if (instance != this) Destroy(gameObject);
+       
         DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
         Displayitem();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            AddItem(additem_01);
-        }
-
     }
 
     private void Displayitem()
@@ -105,14 +90,8 @@ public class GameManager : MonoBehaviour
     {
         for(int i = 0; i < itembuttons.Length; i++)
         {
-            if(i < items.Count)
-            {
-                itembuttons[i].thisItem = items[i];
-            }
-            else
-            {
-                itembuttons[i].thisItem = null;
-            }
+            if(i < items.Count) itembuttons[i].thisItem = items[i];
+            else itembuttons[i].thisItem = null;
         }
     }
 }
