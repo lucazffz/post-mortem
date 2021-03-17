@@ -118,7 +118,6 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         inConversaion = false;
-
         animator.SetBool("isOpen", false);
     }
 }

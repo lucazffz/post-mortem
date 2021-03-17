@@ -20,7 +20,7 @@ public class PlayerBehavior : MonoBehaviour
     bool holding;
 
     //X-axis movement
-    float moveInput;
+    public float moveInput;
     public float speed = 4f;
    
     //Jump
@@ -53,11 +53,19 @@ public class PlayerBehavior : MonoBehaviour
     
     public static bool isClimbing;
 
+
+
+    RaycastHit2D climbCheck;
+
     #endregion
+  
 
     void Start() 
     {
+       
+
         rigidBody = GetComponent<Rigidbody2D>();
+        FindObjectOfType<AudioManager>().PlaySound("Test");
     }
 
     private void FixedUpdate() 
@@ -68,46 +76,44 @@ public class PlayerBehavior : MonoBehaviour
 
         #region Climbing
 
-        RaycastHit2D climbCheck = Physics2D.Raycast(transform.position, Vector2.up, climbCheckDistance, whatIsLadder);
+        climbCheck = Physics2D.Raycast(transform.position, Vector2.up, climbCheckDistance, whatIsLadder);
 
-        if (climbCheck.collider != null)
+      
+
+        if (isClimbing && climbCheck.collider != null)
         {
-            climbPos = new Vector2(climbCheck.collider.transform.position.x, transform.position.y);
-            platform = climbCheck.collider.transform.GetChild(0).gameObject;
-        }
-
-        inputVertical = Input.GetAxisRaw("Vertical");
-
-        if (isClimbing)
-        {
-            if(inputVertical > 0 && groundCheck.position.y > platform.transform.position.y)
-            {
-                platform.transform.GetComponent<BoxCollider2D>().enabled = true;
-                isClimbing = false;
-            }
-            else platform.transform.GetComponent<BoxCollider2D>().enabled = false;
-
-            if (inputVertical < 0 && isGrounded)
-            {
-                isClimbing = false;
-                platform.transform.GetComponent<BoxCollider2D>().enabled = true;
-            }
-
-            rigidBody.velocity = new Vector2(0, inputVertical * climbSpeed);
-            transform.position = Vector3.MoveTowards(transform.position, climbPos, 5 * Time.deltaTime);
+            
 
             rigidBody.gravityScale = 0;
-        }
-        else
-        {
-            rigidBody.gravityScale = gravity;
-        }
 
+            inputVertical = Input.GetAxisRaw("Vertical");
+            rigidBody.velocity = new Vector2(0, inputVertical * climbSpeed);
+
+            climbPos = new Vector2(climbCheck.collider.transform.position.x, transform.position.y);
+            transform.position = Vector3.MoveTowards(transform.position, climbPos, 5 * Time.deltaTime);
+
+            platform = climbCheck.collider.transform.GetChild(0).gameObject;
+
+            if (rigidBody.velocity.y > 0 && groundCheck.position.y > platform.transform.position.y)
+            {
+                platform.transform.GetComponent<BoxCollider2D>().enabled = true;
+                isClimbing = false;
+            }
+            else if (rigidBody.velocity.y < 0 && isGrounded)
+            {
+                isClimbing = false;
+                platform.transform.GetComponent<BoxCollider2D>().enabled = true;
+            }
+            else platform.transform.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else rigidBody.gravityScale = gravity;
+       
         #endregion
     }
 
     private void Update() 
     {
+
         if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing) canMove = false;
         else canMove = true;
 
@@ -115,8 +121,6 @@ public class PlayerBehavior : MonoBehaviour
         else holding = false;
 
         if (!canMove && isGrounded) moveInput = 0;
-
-        
 
         #region Jump
 
@@ -158,13 +162,20 @@ public class PlayerBehavior : MonoBehaviour
         heightAnimator.SetFloat("Jump", rigidBody.velocity.normalized.y);
 
         animator.SetBool("isGrounded", isGrounded);
-        animator.SetFloat("Speed", Mathf.Abs(moveInput));
         animator.SetFloat("Jump", rigidBody.velocity.normalized.y);
         animator.SetBool("Holding", LanternController.holdingLantern);
 
         lanternPosAnimatior.SetFloat("Speed", Mathf.Abs(moveInput));
 
-        if(!GrabController.grabbing && !isClimbing)
+
+        animator.SetBool("Grabbing", GrabController.grabbing);
+        animator.SetFloat("Speed", moveInput);
+
+        if(moveInput == 0 && isGrounded) animator.SetBool("Idle", true);
+        else animator.SetBool("Idle", false);
+
+
+        if (!GrabController.grabbing && !isClimbing)
         {
             if (!facingRight && moveInput > 0) Flip();
             else if (facingRight && moveInput < 0) Flip();
@@ -184,9 +195,7 @@ public class PlayerBehavior : MonoBehaviour
     public void Climb()
     {
         isClimbing = true;
+
     }
-
-   
-
-  
 }
+

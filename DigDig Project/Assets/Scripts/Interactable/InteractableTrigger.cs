@@ -14,6 +14,8 @@ public class InteractableTrigger : MonoBehaviour
 
     public UnityEvent interactionEvent;
 
+    public KeyCode interactKey = KeyCode.E;
+
     private void Update () 
     {
         if (Input.GetKeyDown(InteractableManager.interactKey) && InteractableManager.canInteract && inRange && !autoTrigger) interactionEvent.Invoke();
@@ -30,6 +32,7 @@ public class InteractableTrigger : MonoBehaviour
              
                 InteractableManager.eventPrompt = eventPrompt;
                 InteractableManager.eventIndex = eventIndex;
+                InteractableManager.interactKey = interactKey;
             }
             else
             {
@@ -52,7 +55,10 @@ public class InteractableTrigger : MonoBehaviour
 
 #region UI element
 
+
 // Custom drop down eventPrompt menu
+
+/*
 [CustomEditor(typeof(InteractableTrigger))]
 public class DropDownEditor : Editor
 {
@@ -70,5 +76,5 @@ public class DropDownEditor : Editor
         EditorUtility.SetDirty(target);
     }
 }
-
+*/
 #endregion

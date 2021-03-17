@@ -35,16 +35,28 @@ public class InventoryManager : MonoBehaviour
 
     private void Displayitem()
     {
-        for(int i = 0; i < items.Count; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
-            slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemsprite;
+            if(i < items.Count)
+            {
+                slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemsprite;
 
-            slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
-            slots[i].transform.GetChild(1).GetComponent<Text>().text = itemNumbers[i].ToString();
+                slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                slots[i].transform.GetChild(1).GetComponent<Text>().text = itemNumbers[i].ToString();
 
-            slots[i].transform.GetChild(2).gameObject.SetActive(true);
-            
+                slots[i].transform.GetChild(2).gameObject.SetActive(true);
+            }
+            else
+            {
+                slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
+
+                slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 0);
+                slots[i].transform.GetChild(1).GetComponent<Text>().text = null;
+
+                slots[i].transform.GetChild(2).gameObject.SetActive(false);
+            }
         }
     }
     public void AddItem(Item _item)
@@ -76,9 +88,11 @@ public class InventoryManager : MonoBehaviour
                 if(_item == items[i])
                 {
                     itemNumbers[i]--;
+                   
                     if(itemNumbers[i] == 0)
                     {
-
+                        items.Remove(_item);
+                        itemNumbers.Remove(itemNumbers[i]);
                     }
                 }
             }
@@ -94,4 +108,13 @@ public class InventoryManager : MonoBehaviour
             else itembuttons[i].thisItem = null;
         }
     }
+
+    public bool ContainsItem(Item _item)
+    {
+        if (items.Contains(_item)) return true;
+        else return false;
+    }
 }
+
+
+

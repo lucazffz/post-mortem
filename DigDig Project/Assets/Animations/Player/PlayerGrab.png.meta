@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 842cde936c6247549a5a815917784aca
+guid: 9a1e9d90b6670004fb6c9a86e565798a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5105791677045296344
-    second: PLAYER TURN AROUND SPRITE_0
+      213: 5725806057655205219
+    second: PLAYER GRAB SPRITE_0
   - first:
-      213: -5030394750008754003
-    second: PLAYER TURN AROUND SPRITE_1
-  - first:
-      213: -6123366654463106343
-    second: PLAYER TURN AROUND SPRITE_2
-  - first:
-      213: -249027909378216717
-    second: PLAYER TURN AROUND SPRITE_3
+      213: -5410887067357294578
+    second: PLAYER GRAB SPRITE_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,85 +95,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAYER TURN AROUND SPRITE_0
+      name: PLAYER GRAB SPRITE_0
       rect:
         serializedVersion: 2
         x: 99
         y: 630
-        width: 324
+        width: 342
         height: 513
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 823b19875859429b0800000000000000
-      internalID: -5105791677045296344
+      spriteID: 36d7157d546267f40800000000000000
+      internalID: 5725806057655205219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER TURN AROUND SPRITE_1
+      name: PLAYER GRAB SPRITE_1
       rect:
         serializedVersion: 2
-        x: 702
-        y: 630
-        width: 279
-        height: 504
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da00db580a2703ab0800000000000000
-      internalID: -5030394750008754003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PLAYER TURN AROUND SPRITE_2
-      rect:
-        serializedVersion: 2
-        x: 144
+        x: 99
         y: 54
-        width: 261
-        height: 495
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d22143887e650ba0800000000000000
-      internalID: -6123366654463106343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PLAYER TURN AROUND SPRITE_3
-      rect:
-        serializedVersion: 2
-        x: 666
-        y: 54
-        width: 387
+        width: 342
         height: 513
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fc6a529f664b8cf0800000000000000
-      internalID: -249027909378216717
+      spriteID: e00d96e51eaa8e4b0800000000000000
+      internalID: -5410887067357294578
       vertices: []
       indices: 
       edges: []
@@ -187,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 08155ebfc9c315446afd6bbc03938b53
+    spriteID: 81a1d92a6b295d54eada29f4297f4607
     internalID: 0
     vertices: []
     indices: 
