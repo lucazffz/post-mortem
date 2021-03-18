@@ -82,8 +82,6 @@ public class PlayerBehavior : MonoBehaviour
 
         if (isClimbing && climbCheck.collider != null)
         {
-            
-
             rigidBody.gravityScale = 0;
 
             inputVertical = Input.GetAxisRaw("Vertical");
@@ -98,6 +96,7 @@ public class PlayerBehavior : MonoBehaviour
             {
                 platform.transform.GetComponent<BoxCollider2D>().enabled = true;
                 isClimbing = false;
+                Debug.Log("release");
             }
             else if (rigidBody.velocity.y < 0 && isGrounded)
             {
@@ -167,9 +166,14 @@ public class PlayerBehavior : MonoBehaviour
 
         lanternPosAnimatior.SetFloat("Speed", Mathf.Abs(moveInput));
 
+        animator.SetBool("Climbing", isClimbing);
+        if (isClimbing) animator.speed = Mathf.Abs(rigidBody.velocity.normalized.y);
+        else animator.speed = 1;
+
+        
 
         animator.SetBool("Grabbing", GrabController.grabbing);
-        animator.SetFloat("Speed", moveInput);
+        animator.SetFloat("Speed", moveInput * transform.localScale.x);
 
         if(moveInput == 0 && isGrounded) animator.SetBool("Idle", true);
         else animator.SetBool("Idle", false);
