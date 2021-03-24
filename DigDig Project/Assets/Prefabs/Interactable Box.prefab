@@ -52,7 +52,6 @@ MonoBehaviour:
   - talk
   - pick up
   - read
-  inRange: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls: []

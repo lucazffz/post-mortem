@@ -39,15 +39,6 @@ public class GameManager : MonoBehaviour
         Displayitem();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            AddItem(additem_01);
-        }
-
-    }
-
     private void Displayitem()
     {
         for(int i = 0; i < items.Count; i++)

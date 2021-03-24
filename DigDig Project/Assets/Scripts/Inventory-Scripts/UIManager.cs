@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     
     private void InventoryControll()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (GameManager.instance.isPaused)
             {
