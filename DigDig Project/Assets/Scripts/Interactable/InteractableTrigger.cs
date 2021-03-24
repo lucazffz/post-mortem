@@ -58,7 +58,7 @@ public class InteractableTrigger : MonoBehaviour
 
 // Custom drop down eventPrompt menu
 
-/*
+
 [CustomEditor(typeof(InteractableTrigger))]
 public class DropDownEditor : Editor
 {
@@ -76,5 +76,5 @@ public class DropDownEditor : Editor
         EditorUtility.SetDirty(target);
     }
 }
-*/
+
 #endregion

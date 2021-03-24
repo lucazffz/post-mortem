@@ -1,7 +1,5 @@
-﻿using UnityEngine.Audio;
-using System;
+﻿using System;
 using UnityEngine;
-using System.Collections;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
 
