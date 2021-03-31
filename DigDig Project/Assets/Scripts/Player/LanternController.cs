@@ -22,6 +22,7 @@ public class LanternController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && !DialogueManager.inConversaion && !PauseMenu.pauseMenuActivated && !InventoryManager.instance.inventoryActivated && PlayerBehavior.isGrounded) holdingLantern = !holdingLantern;
 
             canHoldLantern = true;
+            
 
             InteractableManager.eventPrompt = grabPrompt;
             InteractableManager.eventIndex = 0;
@@ -30,7 +31,9 @@ public class LanternController : MonoBehaviour
             if (holdingLantern)
             {
                 canHoldLantern = false;
-                transform.GetChild(0).gameObject.SetActive(true);
+                //transform.GetChild(0).gameObject.SetActive(true);
+
+                GetComponent<CapsuleCollider2D>().enabled = false;
 
                 transform.position = lanternHolder.position;
                 transform.parent = lanternHolder;
@@ -43,14 +46,33 @@ public class LanternController : MonoBehaviour
             }
             else
             {
-                transform.GetChild(0).gameObject.SetActive(false);
+                //transform.GetChild(0).gameObject.SetActive(false);
 
-                transform.parent = null;
+                //transform.parent = null;
                 GetComponent<Rigidbody2D>().isKinematic = false;
+                GetComponent<CapsuleCollider2D>().enabled = true;
 
                 transform.localScale = new Vector3(transform.localScale.x, 1);
             }
         }
         else canHoldLantern = false;
-    }    
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Grabbable")
+        {
+            transform.parent = collision.gameObject.transform;
+
+            transform.position = new Vector2(collision.gameObject.transform.position.x, transform.position.y);
+
+
+
+
+
+
+
+
+        }
+    }
 }

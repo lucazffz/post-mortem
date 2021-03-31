@@ -109,11 +109,10 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Update() 
     {
-
         if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing) canMove = false;
         else canMove = true;
 
-        if (LanternController.holdingLantern || GrabController.grabbing) holding = true;
+        if (GrabController.grabbing) holding = true;
         else holding = false;
 
         if (!canMove && isGrounded) moveInput = 0;
