@@ -10,6 +10,8 @@ public class InteractableManager : MonoBehaviour
     public float xOffset;
     public float yOffset;
 
+    
+
     public static bool canInteract;
 
     [HideInInspector] public static KeyCode interactKey = KeyCode.E;
@@ -19,16 +21,16 @@ public class InteractableManager : MonoBehaviour
     public void Update() 
     {
         Vector2 promptPosition = Camera.main.WorldToScreenPoint(player.transform.position) + new Vector3(xOffset, yOffset);
-        Iinteractable.transform.position = promptPosition;
+        Iinteractable.transform.GetChild(0).transform.position = promptPosition;
 
         //needs to be re-worked
-        if (PauseMenu.isPaused || DialogueManager.inConversaion || LanternController.holdingLantern  || !InteractableTrigger.staticInRange && !LanternController.canHoldLantern) canInteract = false;
+        if (PauseMenu.pauseMenuActivated || DialogueManager.inConversaion || LanternController.holdingLantern  || InventoryManager.instance.inventoryActivated ||!InteractableTrigger.staticInRange && !LanternController.canHoldLantern && !GrabController.canGrab || !PlayerBehavior.isGrounded || PlayerBehavior.isClimbing) canInteract = false;
         else canInteract = true;
 
         if (canInteract)
         {
             Iinteractable.enabled = true;
-            IinteractText.text = $"[ {interactKey} ]\nto {eventPrompt[eventIndex]}";
+            IinteractText.text = $"[{interactKey}] {eventPrompt[eventIndex]}";
         }
         else Iinteractable.enabled = false;
     }

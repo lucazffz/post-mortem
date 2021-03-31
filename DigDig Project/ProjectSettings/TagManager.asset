@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Ground
   - Grabbable
+<<<<<<< HEAD
   - TestKey
+=======
+  - Lantern
+>>>>>>> proto-Sound-and-Animation
   layers:
   - Default
   - TransparentFX
@@ -20,8 +24,8 @@ TagManager:
   - LevelLoader
   - Player
   - Lantern
-  - 
-  - 
+  - Grabbable
+  - Ladder
   - 
   - 
   - 

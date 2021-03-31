@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update() 
     {
-        if (Input.GetKeyDown(KeyCode.Return) && inConversaion && !PauseMenu.isPaused) DisplayNextSentence(); 
+        if (Input.GetKeyDown(KeyCode.Return) && inConversaion && !PauseMenu.pauseMenuActivated) DisplayNextSentence(); 
     }
 
     public void StartDialogue(Dialgoue dialogue) 
@@ -118,7 +118,6 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         inConversaion = false;
-
         animator.SetBool("isOpen", false);
     }
 }
