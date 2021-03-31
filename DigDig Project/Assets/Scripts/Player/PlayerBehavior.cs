@@ -62,10 +62,7 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start() 
     {
-       
-
         rigidBody = GetComponent<Rigidbody2D>();
-        FindObjectOfType<AudioManager>().PlaySound("Test");
     }
 
     private void FixedUpdate() 
@@ -138,6 +135,8 @@ public class PlayerBehavior : MonoBehaviour
             jumpTimeCounter = jumpTime;
             jumpBufferCounter = 0;
             isJumping = true;
+
+            FindObjectOfType<AudioManager>().PlaySound("Jump");
         }
 
         //different jump height
@@ -193,13 +192,10 @@ public class PlayerBehavior : MonoBehaviour
         }
        
         #endregion
-
-        
     }
     public void Climb()
     {
         isClimbing = true;
-
     }
 }
 

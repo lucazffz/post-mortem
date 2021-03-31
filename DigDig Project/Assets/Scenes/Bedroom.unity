@@ -4646,7 +4646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757786697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66.872, y: 5.394, z: 0}
+  m_LocalPosition: {x: -78.97, y: -1.23, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 929188500}
@@ -7375,6 +7375,20 @@ MonoBehaviour:
     - {fileID: 8300000, guid: bc1e9cda4d8f8f747970cd5ca9f7393f, type: 3}
     - {fileID: 8300000, guid: f4b481168c4baab49927b5b79d638e71, type: 3}
     - {fileID: 8300000, guid: a3e58cd296a872a46b9e216b96da899e, type: 3}
+    volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+    loop: 0
+  - Name: ClimbStep
+    clip:
+    - {fileID: 8300000, guid: 80f266c96ca5e4e4f8630e166628b3c5, type: 3}
+    volume: 0.5
+    pitch: 0.9
+    source: {fileID: 0}
+    loop: 0
+  - Name: Jump
+    clip:
+    - {fileID: 8300000, guid: 962a864c9e89db54a8dcf9c29bd65de7, type: 3}
     volume: 0.5
     pitch: 0.9
     source: {fileID: 0}
