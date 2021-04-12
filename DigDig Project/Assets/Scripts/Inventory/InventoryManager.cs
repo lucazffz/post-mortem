@@ -44,8 +44,6 @@ public class InventoryManager : MonoBehaviour
 
                 slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                 slots[i].transform.GetChild(1).GetComponent<Text>().text = itemNumbers[i].ToString();
-
-                slots[i].transform.GetChild(2).gameObject.SetActive(true);
             }
             else
             {
@@ -54,8 +52,6 @@ public class InventoryManager : MonoBehaviour
 
                 slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 0);
                 slots[i].transform.GetChild(1).GetComponent<Text>().text = null;
-
-                slots[i].transform.GetChild(2).gameObject.SetActive(false);
             }
         }
     }

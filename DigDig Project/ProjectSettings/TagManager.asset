@@ -50,6 +50,9 @@ TagManager:
   - name: Furniture
     uniqueID: 4283603147
     locked: 0
+  - name: NPC
+    uniqueID: 660796761
+    locked: 0
   - name: Player
     uniqueID: 4036289329
     locked: 0

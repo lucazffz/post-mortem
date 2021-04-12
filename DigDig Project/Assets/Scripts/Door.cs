@@ -3,13 +3,15 @@
 public class Door : MonoBehaviour
 {
     public Item key;
-    public bool needKey;
-
+    public bool locked;
+   
+    private void Update()
+    {
+        
+    }
     public void OpenDoor()
     {
-        GetComponent<Animator>().SetBool("open", true);
-
-        if(needKey)
+        if(locked)
         {
             if (InventoryManager.instance.items.Contains(key))
             {
@@ -17,12 +19,19 @@ public class Door : MonoBehaviour
 
                 GetComponent<BoxCollider2D>().enabled = false;
                 transform.GetChild(0).gameObject.SetActive(false);
+
+                GetComponent<Animator>().SetBool("open", true);
+            }
+            else
+            {
+                FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
             }
         }
         else
         {
             GetComponent<BoxCollider2D>().enabled = false;
             transform.GetChild(0).gameObject.SetActive(false);
+            GetComponent<Animator>().SetBool("open", true);
         }
         
     }

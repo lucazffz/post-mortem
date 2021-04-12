@@ -19,13 +19,21 @@ public class Chest : MonoBehaviour
                 canOpen = true;
                 InventoryManager.instance.Removeitem(key);
             }
-            else canOpen = false;
+            else
+            {
+                canOpen = false;
+                FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
+            }
         }
 
         if (canOpen)
         {
             foreach (var item in items) InventoryManager.instance.AddItem(item);
             transform.GetChild(0).gameObject.SetActive(false);
+
+            if(items.Count > 1) FindObjectOfType<PopupText>().ShowText($"You picked up {items.Count} items");
+            else FindObjectOfType<PopupText>().ShowText($"You picked up 1 item");
+
         }
     }
 }

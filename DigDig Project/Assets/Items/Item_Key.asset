@@ -15,4 +15,4 @@ MonoBehaviour:
   itemName: A mysterious key
   itemDesc: Hmm... I wonder what this key does. It seems to have some sort of magical
     glowing stone i the middle. Perhaps this is needed somewhare, but where...
-  itemsprite: {fileID: 21300000, guid: 4567e23b151bc94459de6fef56ddd9db, type: 3}
+  itemsprite: {fileID: 21300000, guid: 984f68054111e57489f5eac762db9c3f, type: 3}

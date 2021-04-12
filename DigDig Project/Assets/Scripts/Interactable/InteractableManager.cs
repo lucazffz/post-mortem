@@ -10,7 +10,7 @@ public class InteractableManager : MonoBehaviour
     public float xOffset;
     public float yOffset;
 
-    
+    Vector2 promptPosition;
 
     public static bool canInteract;
 
@@ -20,7 +20,10 @@ public class InteractableManager : MonoBehaviour
 
     public void Update() 
     {
-        Vector2 promptPosition = Camera.main.WorldToScreenPoint(player.transform.position) + new Vector3(xOffset, yOffset);
+        //interact prompt position
+        Vector3 playerPositionRelativeToCamera = Camera.main.WorldToScreenPoint(FindObjectOfType<PlayerBehavior>().transform.position);
+        if (playerPositionRelativeToCamera.x < 300) promptPosition = Camera.main.WorldToScreenPoint(player.transform.position) + new Vector3(-xOffset, yOffset);
+        else promptPosition = Camera.main.WorldToScreenPoint(player.transform.position) + new Vector3(xOffset, yOffset);
         Iinteractable.transform.GetChild(0).transform.position = promptPosition;
 
         //needs to be re-worked
