@@ -10,6 +10,8 @@ public class Chest : MonoBehaviour
 
    public void OpenChest()
     {
+        GetComponent<Animator>().SetBool("open", true);
+
         if(locked)
         {
             if (InventoryManager.instance.items.Contains(key))

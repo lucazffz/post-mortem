@@ -16,9 +16,15 @@ public class InteractableTrigger : MonoBehaviour
 
     public KeyCode interactKey = KeyCode.E;
 
+    public bool interacting = false;
+
     private void Update () 
     {
-        if (Input.GetKeyDown(InteractableManager.interactKey) && InteractableManager.canInteract && inRange && !autoTrigger) interactionEvent.Invoke();
+        if (Input.GetKeyDown(InteractableManager.interactKey) && InteractableManager.canInteract && inRange && !autoTrigger)
+        {
+         
+            interactionEvent.Invoke();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -39,7 +45,6 @@ public class InteractableTrigger : MonoBehaviour
                 interactionEvent.Invoke();
                 Destroy(gameObject);
             }
-            
         }
     }
 
@@ -57,16 +62,12 @@ public class InteractableTrigger : MonoBehaviour
 
 
 // Custom drop down eventPrompt menu
-
-
 [CustomEditor(typeof(InteractableTrigger))]
 public class DropDownEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-
-       
 
         InteractableTrigger script = (InteractableTrigger)target;
 

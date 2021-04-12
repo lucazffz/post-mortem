@@ -16,7 +16,7 @@ public class GrabController : MonoBehaviour
     public static bool grabbing;
     public static bool canGrab;
 
-    private KeyCode grabKey = KeyCode.C;
+    private KeyCode grabKey = KeyCode.E;
     [HideInInspector] public string[] grabPrompt = new string[] { "grab" };
 
     Vector2 endPosition;

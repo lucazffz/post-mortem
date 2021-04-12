@@ -60,19 +60,11 @@ public class LanternController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Grabbable")
+        if (collision.gameObject.tag == "Grabbable")
         {
             transform.parent = collision.gameObject.transform;
-
             transform.position = new Vector2(collision.gameObject.transform.position.x, transform.position.y);
-
-
-
-
-
-
-
-
         }
+        else transform.parent = null;
     }
 }

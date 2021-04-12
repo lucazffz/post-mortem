@@ -87,3 +87,5 @@ MonoBehaviour:
   interactionEvent:
     m_PersistentCalls:
       m_Calls: []
+  interactKey: 101
+  interacting: 0
