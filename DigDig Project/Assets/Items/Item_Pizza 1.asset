@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559d143308e9853428fb0a3c47c31d26, type: 3}
-  m_Name: Josh
+  m_Script: {fileID: 11500000, guid: 4e5d286ede11abf4a9bae7a5f3ced24e, type: 3}
+  m_Name: Item_Pizza 1
   m_EditorClassIdentifier: 
-  name: Josh
-  portrait: {fileID: 21300000, guid: 5cd9afeadd6e66a4fa876a34ab83af34, type: 3}
+  itemName: Pizza
+  itemDesc: 
+  itemsprite: {fileID: 21300000, guid: 4567e23b151bc94459de6fef56ddd9db, type: 3}

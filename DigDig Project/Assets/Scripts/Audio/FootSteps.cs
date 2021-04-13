@@ -11,4 +11,9 @@ public class FootSteps : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().PlaySound("ClimbStep");
     }
+
+    public void PlayLandingSound()
+    {
+        FindObjectOfType<AudioManager>().PlaySound("Landing");
+    }
 }

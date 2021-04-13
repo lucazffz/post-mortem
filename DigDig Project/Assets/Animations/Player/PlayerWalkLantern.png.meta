@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: ac971eb4deb88724d8bcb2e810d11b0e
+guid: 8a8cd9f513faaa445919235f60ab5514
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -573524322870059665
-    second: PLAYER WALK LANTERN SPRITE_0
+      213: -1025858148312789146
+    second: PlayerWalkLantern_0
   - first:
-      213: -3652088445877632802
-    second: PLAYER WALK LANTERN SPRITE_1
+      213: 4911158795234555994
+    second: PlayerWalkLantern_1
   - first:
-      213: 1981591543649422196
-    second: PLAYER WALK LANTERN SPRITE_2
+      213: -7769165048040124716
+    second: PlayerWalkLantern_2
   - first:
-      213: 5916584466215033604
-    second: PLAYER WALK LANTERN SPRITE_3
+      213: -8200106243738673971
+    second: PlayerWalkLantern_3
   - first:
-      213: -2984036761594942028
-    second: PLAYER WALK LANTERN SPRITE_4
+      213: 8920776539015746181
+    second: PlayerWalkLantern_4
   - first:
-      213: -2301741705982633583
-    second: PLAYER WALK LANTERN SPRITE_5
+      213: -181755250851869982
+    second: PlayerWalkLantern_5
   - first:
-      213: 8769847367113321175
-    second: PLAYER WALK LANTERN SPRITE_6
+      213: -5073336032889734604
+    second: PlayerWalkLantern_6
   - first:
-      213: -916614001178148653
-    second: PLAYER WALK LANTERN SPRITE_7
+      213: 5369364751937668302
+    second: PlayerWalkLantern_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_0
+      name: PlayerWalkLantern_0
       rect:
         serializedVersion: 2
         x: 99
@@ -121,20 +121,20 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6d9841caae6a08f0800000000000000
-      internalID: -573524322870059665
+      spriteID: 66f40e7037b63c1f0800000000000000
+      internalID: -1025858148312789146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_1
+      name: PlayerWalkLantern_1
       rect:
         serializedVersion: 2
         x: 675
@@ -142,20 +142,20 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed0c72778ec215dc0800000000000000
-      internalID: -3652088445877632802
+      spriteID: a58bd7167e0f72440800000000000000
+      internalID: 4911158795234555994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_2
+      name: PlayerWalkLantern_2
       rect:
         serializedVersion: 2
         x: 1251
@@ -163,20 +163,20 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b44219207008b10800000000000000
-      internalID: 1981591543649422196
+      spriteID: 4de00363d816e2490800000000000000
+      internalID: -7769165048040124716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_3
+      name: PlayerWalkLantern_3
       rect:
         serializedVersion: 2
         x: 99
@@ -184,20 +184,20 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40b5750893eeb1250800000000000000
-      internalID: 5916584466215033604
+      spriteID: dcc5e7d31de533e80800000000000000
+      internalID: -8200106243738673971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_4
+      name: PlayerWalkLantern_4
       rect:
         serializedVersion: 2
         x: 675
@@ -205,20 +205,20 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bd2d6c10629696d0800000000000000
-      internalID: -2984036761594942028
+      spriteID: 5821ca87ff6fccb70800000000000000
+      internalID: 8920776539015746181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_5
+      name: PlayerWalkLantern_5
       rect:
         serializedVersion: 2
         x: 1251
@@ -226,41 +226,41 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19914321d129e00e0800000000000000
-      internalID: -2301741705982633583
+      spriteID: 2ea89e4ff864a7df0800000000000000
+      internalID: -181755250851869982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_6
+      name: PlayerWalkLantern_6
       rect:
         serializedVersion: 2
         x: 99
-        y: 52
+        y: 54
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7da2f2b37b1c4b970800000000000000
-      internalID: 8769847367113321175
+      spriteID: 43afa6df1c3e799b0800000000000000
+      internalID: -5073336032889734604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER WALK LANTERN SPRITE_7
+      name: PlayerWalkLantern_7
       rect:
         serializedVersion: 2
         x: 675
@@ -268,14 +268,14 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6245688, y: 0.5}
+      pivot: {x: 0.63, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d080af1c688743f0800000000000000
-      internalID: -916614001178148653
+      spriteID: ec48fb43bc0d38a40800000000000000
+      internalID: 5369364751937668302
       vertices: []
       indices: 
       edges: []
@@ -283,7 +283,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 81b9e3aa18c4f554aa962d79ccefd1cd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

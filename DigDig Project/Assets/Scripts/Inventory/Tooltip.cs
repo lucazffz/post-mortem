@@ -8,7 +8,7 @@ public class Tooltip : MonoBehaviour
 
     public void Start()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
     public void Showtooltip()
     {   
@@ -16,7 +16,7 @@ public class Tooltip : MonoBehaviour
     }
     public void Hidetooltip()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
     public void Updatetooltip(string _nameText, string _descText)
     {

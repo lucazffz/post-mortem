@@ -35,6 +35,7 @@ public class ElevatorMove : MonoBehaviour
     public void Activate()
     {
         activate = true;
+        FindObjectOfType<AudioManager>().PlaySound("ButtonClick");
     }
     public void ChangePos()
     {

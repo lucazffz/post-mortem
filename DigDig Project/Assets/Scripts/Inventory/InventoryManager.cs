@@ -10,13 +10,9 @@ public class InventoryManager : MonoBehaviour
     public bool inventoryActivated;
 
     public List<Item> items = new List<Item>();
-    public List<int> itemNumbers = new List<int>();
     public GameObject[] slots;
 
     public Item additem_01;
-
-    public Itembutton thisbutton;
-    public Itembutton[] itembuttons;
 
     #endregion
 
@@ -41,17 +37,11 @@ public class InventoryManager : MonoBehaviour
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemsprite;
-
-                slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
-                slots[i].transform.GetChild(1).GetComponent<Text>().text = itemNumbers[i].ToString();
             }
             else
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 0);
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
-
-                slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 0);
-                slots[i].transform.GetChild(1).GetComponent<Text>().text = null;
             }
         }
     }
@@ -60,18 +50,10 @@ public class InventoryManager : MonoBehaviour
         if (!items.Contains(_item))
         {
             items.Add(_item);
-            itemNumbers.Add(1);
         }
         else
         {
-            Debug.Log("You alreadyahve thsi one");
-            for(int i = 0; i < items.Count; i++)
-            {
-                if(_item == items[i])
-                {
-                    itemNumbers[i]++;
-                }
-            }
+            Debug.Log("You already have this one");
         }
         Displayitem();
     }
@@ -81,28 +63,11 @@ public class InventoryManager : MonoBehaviour
         {
             for(int i = 0; i < items.Count; i++)
             {
-                if(_item == items[i])
-                {
-                    itemNumbers[i]--;
-                   
-                    if(itemNumbers[i] == 0)
-                    {
-                        items.Remove(_item);
-                        itemNumbers.Remove(itemNumbers[i]);
-                    }
-                }
+                if(_item == items[i]) items.Remove(_item);
             }
         }
-        ResetButtonitem();
+        
         Displayitem();
-    }
-    public void ResetButtonitem()
-    {
-        for(int i = 0; i < itembuttons.Length; i++)
-        {
-            if(i < items.Count) itembuttons[i].thisItem = items[i];
-            else itembuttons[i].thisItem = null;
-        }
     }
 
     public bool ContainsItem(Item _item)

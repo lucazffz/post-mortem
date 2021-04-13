@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 21b72007e466a0940af00de11700cab9
+guid: fe55b0a6f47d4b048b722fe7624c234e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8785086956022851063
-    second: PlayerClimb_0
+      213: 1315674778026831755
+    second: PLAYER CLIMB SPRITE (1)_0
   - first:
-      213: 2505607305355808016
-    second: PlayerClimb_1
+      213: -5684320540468843845
+    second: PLAYER CLIMB SPRITE (1)_1
   - first:
-      213: 2756701434220601250
-    second: PlayerClimb_2
+      213: 8986989667905117788
+    second: PLAYER CLIMB SPRITE (1)_2
   - first:
-      213: 8601763016563551598
-    second: PlayerClimb_3
+      213: 2213941925047052936
+    second: PLAYER CLIMB SPRITE (1)_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,85 +101,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerClimb_0
+      name: PLAYER CLIMB SPRITE (1)_0
       rect:
         serializedVersion: 2
         x: 99
         y: 630
-        width: 378
+        width: 387
         height: 504
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a175975f9151680800000000000000
-      internalID: -8785086956022851063
+      spriteID: b8fea386d37324210800000000000000
+      internalID: 1315674778026831755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerClimb_1
+      name: PLAYER CLIMB SPRITE (1)_1
       rect:
         serializedVersion: 2
         x: 675
         y: 630
-        width: 378
+        width: 387
         height: 504
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01d4b56a194b5c220800000000000000
-      internalID: 2505607305355808016
+      spriteID: bbae5e3d59c3d11b0800000000000000
+      internalID: -5684320540468843845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerClimb_2
+      name: PLAYER CLIMB SPRITE (1)_2
       rect:
         serializedVersion: 2
         x: 99
         y: 54
-        width: 378
+        width: 387
         height: 504
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2af578a4955c14620800000000000000
-      internalID: 2756701434220601250
+      spriteID: c5e1793ec7338bc70800000000000000
+      internalID: 8986989667905117788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerClimb_3
+      name: PLAYER CLIMB SPRITE (1)_3
       rect:
         serializedVersion: 2
         x: 675
         y: 54
-        width: 378
+        width: 387
         height: 504
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6dec54b3e99f5770800000000000000
-      internalID: 8601763016563551598
+      spriteID: 88a26cb637089be10800000000000000
+      internalID: 2213941925047052936
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 040978ccdba716d4eada4a74ef6178ec
+    spriteID: 1c9443018311ff549bca923f22fe2bca
     internalID: 0
     vertices: []
     indices: 

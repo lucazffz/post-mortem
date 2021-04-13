@@ -149,7 +149,6 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonUp("Jump")) isJumping = false;
 
-
         #endregion
 
         #region Animations

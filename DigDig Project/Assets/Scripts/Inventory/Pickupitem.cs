@@ -8,5 +8,6 @@ public class Pickupitem : MonoBehaviour
     {
         Destroy(gameObject);
         InventoryManager.instance.AddItem(itemData);
+        FindObjectOfType<PopupText>().ShowText($"You pick up a {itemData.itemName}");
     }
 }

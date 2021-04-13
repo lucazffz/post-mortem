@@ -5,6 +5,7 @@ using System.Collections;
 public class PopupText : MonoBehaviour
 {
     public TextMeshProUGUI Itext;
+    private bool coroutineRunning;
 
     public void Start()
     {
@@ -14,12 +15,14 @@ public class PopupText : MonoBehaviour
     {
         Itext.text = text;
 
-        StartCoroutine(FadeTextToFullAlpha(1f, Itext));
+
+        if(!coroutineRunning) StartCoroutine(FadeTextToFullAlpha(1f, Itext));
     }
 
     public IEnumerator FadeTextToFullAlpha(float t, TextMeshProUGUI i)
     {
         Itext.enabled = true;
+        coroutineRunning = true;
 
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
         while (i.color.a < 1.0f)
@@ -41,6 +44,7 @@ public class PopupText : MonoBehaviour
         }
 
         Itext.enabled = false;
+        coroutineRunning = false;
     }
 }
 

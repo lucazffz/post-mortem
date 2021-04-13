@@ -22,6 +22,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Swosh");
+
         pauseMenuActivated = !pauseMenuActivated;
 
         gameObject.transform.GetChild(0).gameObject.SetActive(pauseMenuActivated);

@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("isOpen", true);
         IcontinueButtonText.text = "Continue >>";
+        FindObjectOfType<AudioManager>().PlaySound("Swosh");
 
         if (haveSpokenTo == false) 
         {
@@ -111,7 +112,9 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray()) 
         {
             IdialogueText.text += letter;
-            yield return new WaitForFixedUpdate();
+            FindObjectOfType<AudioManager>().PlaySound("Typewriter");
+
+            yield return new WaitForSeconds(0.07f);
         }
     }
 
@@ -119,5 +122,8 @@ public class DialogueManager : MonoBehaviour
     {
         inConversaion = false;
         animator.SetBool("isOpen", false);
+        StopAllCoroutines();
+
+        FindObjectOfType<AudioManager>().PlaySound("Swosh");
     }
 }

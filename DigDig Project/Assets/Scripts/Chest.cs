@@ -10,8 +10,6 @@ public class Chest : MonoBehaviour
 
    public void OpenChest()
     {
-        GetComponent<Animator>().SetBool("open", true);
-
         if(locked)
         {
             if (InventoryManager.instance.items.Contains(key))
@@ -23,16 +21,22 @@ public class Chest : MonoBehaviour
             {
                 canOpen = false;
                 FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
+
+                FindObjectOfType<AudioManager>().PlaySound("ChestLocked");
             }
         }
 
         if (canOpen)
         {
+            GetComponent<Animator>().SetBool("open", true);
+
             foreach (var item in items) InventoryManager.instance.AddItem(item);
             transform.GetChild(0).gameObject.SetActive(false);
 
             if(items.Count > 1) FindObjectOfType<PopupText>().ShowText($"You picked up {items.Count} items");
             else FindObjectOfType<PopupText>().ShowText($"You picked up 1 item");
+
+            FindObjectOfType<AudioManager>().PlaySound("ChestOpen");
 
         }
     }

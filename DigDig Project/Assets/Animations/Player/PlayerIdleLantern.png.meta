@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 7f94cdd62ee59f248839083744e10a7d
+guid: 8744e9149b5994847b6ba6f348cef477
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3235636511037435721
-    second: PLAYER STAND RIGHT LANTERN SPRITE_0
+      213: -8076136124643488959
+    second: PLAYER STAND RIGHT LANTERN SPRITE (1)_0
   - first:
-      213: -7472344092694798020
-    second: PLAYER STAND RIGHT LANTERN SPRITE_1
+      213: -3908488285619510504
+    second: PLAYER STAND RIGHT LANTERN SPRITE (1)_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -95,7 +95,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAYER STAND RIGHT LANTERN SPRITE_0
+      name: PLAYER STAND RIGHT LANTERN SPRITE (1)_0
       rect:
         serializedVersion: 2
         x: 99
@@ -103,20 +103,20 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6301219, y: 0.5}
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b054518cb5b813d0800000000000000
-      internalID: -3235636511037435721
+      spriteID: 14bccecdbfccbef80800000000000000
+      internalID: -8076136124643488959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER STAND RIGHT LANTERN SPRITE_1
+      name: PLAYER STAND RIGHT LANTERN SPRITE (1)_1
       rect:
         serializedVersion: 2
         x: 99
@@ -124,14 +124,14 @@ TextureImporter:
         width: 342
         height: 513
       alignment: 9
-      pivot: {x: 0.6301219, y: 0.5}
+      pivot: {x: 0.6, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c31207b43a6ec4890800000000000000
-      internalID: -7472344092694798020
+      spriteID: 813afdebc9242c9c0800000000000000
+      internalID: -3908488285619510504
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 3320788f445998a46840ba0c72eb1102
     internalID: 0
     vertices: []
     indices: 
