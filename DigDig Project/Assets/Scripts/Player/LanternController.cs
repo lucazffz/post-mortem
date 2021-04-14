@@ -67,4 +67,6 @@ public class LanternController : MonoBehaviour
         }
         else transform.parent = null;
     }
+
+    
 }
