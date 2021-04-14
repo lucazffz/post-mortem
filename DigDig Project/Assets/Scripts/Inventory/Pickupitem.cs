@@ -10,4 +10,5 @@ public class Pickupitem : MonoBehaviour
         InventoryManager.instance.AddItem(itemData);
         FindObjectOfType<PopupText>().ShowText($"You pick up a {itemData.itemName}");
     }
+
 }

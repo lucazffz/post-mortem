@@ -7,9 +7,11 @@ public class CheckLightLevel : MonoBehaviour
 
     public float lightLevel;
     public int roundedLight;
+    public float lowestAllowedLightLevel;
 
     public float maxTime = 10;
     private float currentTime;
+
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class CheckLightLevel : MonoBehaviour
 
         //loop through pixels and add the white level
         Color32[] colors = texture2D.GetPixels32();
+        Destroy(texture2D);
         lightLevel = 0;
         for (int i = 0; i < colors.Length; i++)
         {
@@ -46,7 +49,7 @@ public class CheckLightLevel : MonoBehaviour
         roundedLight = Mathf.RoundToInt(lightLevel);
 
         //wait, then reload level
-        if (lightLevel <= -3.9f)
+        if (lightLevel <= lowestAllowedLightLevel)
         {
             Debug.Log(currentTime);
             currentTime -= Time.deltaTime;

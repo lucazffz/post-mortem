@@ -2,6 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
+using System.Collections;
 
 public class AudioManager: MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class AudioManager: MonoBehaviour
 
     public Sound[] sounds;
 
+    public void Start()
+    {
+        PlaySound("Rain");
+        PlaySound("SoundTrack");
+        StartCoroutine(RandomPlay());
+    }
 
     public void Awake()
     {
@@ -31,6 +38,10 @@ public class AudioManager: MonoBehaviour
             s.source.volume = s.volume * globalVolume;
             s.source.pitch = s.pitch;
         }
+
+        
+
+            
     }
 
 
@@ -52,5 +63,17 @@ public class AudioManager: MonoBehaviour
         }
             
         s.source.Play();
+    }
+
+    IEnumerator RandomPlay()
+    {
+        float rnd = Random.Range(20, 60);
+
+        yield return new WaitForSeconds(rnd);
+
+        Debug.Log("hit");
+        PlaySound("Lightning");
+
+        StartCoroutine(RandomPlay());
     }
 }

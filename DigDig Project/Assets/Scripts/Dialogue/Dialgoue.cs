@@ -3,6 +3,10 @@
 [System.Serializable]
 public class Dialgoue 
 {
+    public bool giveItem;
+    public Item itemData;
+    public int giveItemInConversation;
+
     public Characters interactCharacter;
     public Conversations[] conversations = new Conversations[1];
 

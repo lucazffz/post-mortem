@@ -63,6 +63,7 @@ public class PlayerBehavior : MonoBehaviour
     void Start() 
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        canMove = true;
     }
 
     private void FixedUpdate() 
@@ -109,7 +110,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Update() 
     {
-        if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing) canMove = false;
+        if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing || EndScenecut.playingCutscene) canMove = false;
         else canMove = true;
 
         if (GrabController.grabbing) holding = true;

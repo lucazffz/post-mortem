@@ -12,18 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5d286ede11abf4a9bae7a5f3ced24e, type: 3}
   m_Name: Item_Letter
   m_EditorClassIdentifier: 
-  itemName: Letter from Josh to Jamine
-  itemDesc: 'Hi Jamine
-
-
-    Im sorry i''ve havent written to you in a while, guess
-    i''ve just been busy. I dont know why im writing this to you, perhaps in hope
-    of an awnser, if you still live that is. Anyways, how are you. How is it going
-    with Bob. hope he''s nice to you
-
-
-    Mhv Josh
-
-
-'
+  itemName: Letter from Josh to Celine
+  itemDesc: "Hi Celine\n\nI'm sorry but this will be the last letter i'll send to
+    you. She is on to me, i cannot risk it! I've gotten this far and i'm not going
+    to let her destroy that. Soon will I be there with you, on the other side. That
+    tought brings me happiness. I wont be long. Anyways, how are the kids? I hope
+    you're watching over them while i'm gone. Are there new family good? I truly
+    hope so. I have to go now but we will meet soon. I promise! \n\nKind regards,
+    your beloved.\n\n"
   itemsprite: {fileID: 21300000, guid: 6e7d4649e3ec28e409884455d4e056bc, type: 3}

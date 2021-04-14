@@ -26,6 +26,10 @@ public class DialogueManager : MonoBehaviour
 
     int randomNewNum = 0;
     int randomPrevNum;
+
+    Dialgoue dialogue;
+
+   
    
     #endregion
 
@@ -34,13 +38,14 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && inConversaion && !PauseMenu.pauseMenuActivated) DisplayNextSentence(); 
     }
 
-    public void StartDialogue(Dialgoue dialogue) 
+    public void StartDialogue(Dialgoue _dialogue) 
     {
+        dialogue = _dialogue;
         inConversaion = true;
 
-        haveSpokenTo = dialogue.haveSpokenTo;
-        conversationIndex = dialogue.conversationIndex;
-        sentenceIndex = dialogue.sentenceIndex;
+        haveSpokenTo = _dialogue.haveSpokenTo;
+        conversationIndex = _dialogue.conversationIndex;
+        sentenceIndex = _dialogue.sentenceIndex;
 
         animator.SetBool("isOpen", true);
         IcontinueButtonText.text = "Continue >>";
@@ -51,15 +56,15 @@ public class DialogueManager : MonoBehaviour
             sentenceIndex = 0;
 
             //loop trough all sentences in each conversation and add all lines in a queue
-            for (int i = 0; i < dialogue.conversations[conversationIndex].sentenceGroups.Length; i++) 
+            for (int i = 0; i < _dialogue.conversations[conversationIndex].sentenceGroups.Length; i++) 
             {
-                foreach (string sentence in dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].sentences) 
+                foreach (string sentence in _dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].sentences) 
                 {
                     sentences.Enqueue(sentence);
 
                     //add speaker name and portrait in queues
-                    names.Enqueue(dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.name);
-                    portraits.Enqueue(dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.portrait);
+                    names.Enqueue(_dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.name);
+                    portraits.Enqueue(_dialogue.conversations[conversationIndex].sentenceGroups[sentenceIndex].speaker.portrait);
                 }
 
                 sentenceIndex++;
@@ -68,19 +73,19 @@ public class DialogueManager : MonoBehaviour
         else 
         {
             //random filler lines
-            Iname.text = dialogue.interactCharacter.name;
-            Iportrait.sprite = dialogue.interactCharacter.portrait;
+            Iname.text = _dialogue.interactCharacter.name;
+            Iportrait.sprite = _dialogue.interactCharacter.portrait;
 
             randomPrevNum = randomNewNum;
-            randomNewNum = Random.Range(0, dialogue.fillerLines.Length);
-            while (randomNewNum == randomPrevNum) randomNewNum = Random.Range(0, dialogue.fillerLines.Length);
+            randomNewNum = Random.Range(0, _dialogue.fillerLines.Length);
+            while (randomNewNum == randomPrevNum) randomNewNum = Random.Range(0, _dialogue.fillerLines.Length);
            
-            string sentence = dialogue.fillerLines[randomNewNum];
+            string sentence = _dialogue.fillerLines[randomNewNum];
             sentences.Enqueue(sentence);
         }
 
         DisplayNextSentence();
-        dialogue.haveSpokenTo = true;
+        _dialogue.haveSpokenTo = true;
     }
 
     public void DisplayNextSentence() 
@@ -125,5 +130,12 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
 
         FindObjectOfType<AudioManager>().PlaySound("Swosh");
+
+       
+        if(dialogue.giveItem && conversationIndex == dialogue.giveItemInConversation && !haveSpokenTo)
+        {
+            InventoryManager.instance.AddItem(dialogue.itemData);
+            FindObjectOfType<PopupText>().ShowText($"You pick up a {dialogue.itemData.itemName}");
+        }
     }
 }

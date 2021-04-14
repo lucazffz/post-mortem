@@ -5,9 +5,10 @@ using UnityEngine.Events;
 public class InteractableTrigger : MonoBehaviour
 {
     public bool autoTrigger;
+    public bool destroyAfterAutoTrigger;
 
     [HideInInspector] public int eventIndex = 0;
-    [HideInInspector] public string[] eventPrompt = new string[] { "open", "unlock", "enter", "talk", "pick up", "read", "hold", "climb up", "climb down", "push/pull" };
+    [HideInInspector] public string[] eventPrompt = new string[] { "open", "enter", "talk", "pick up", "hold","click", "climb up/climb down", "push/pull" };
     [HideInInspector] public bool inRange;
 
     public static bool staticInRange;
@@ -16,7 +17,7 @@ public class InteractableTrigger : MonoBehaviour
 
     public KeyCode interactKey = KeyCode.E;
 
-    public bool interacting = false;
+    [HideInInspector] public bool interacting = false;
 
     private void Update () 
     {
@@ -43,7 +44,7 @@ public class InteractableTrigger : MonoBehaviour
             else
             {
                 interactionEvent.Invoke();
-                Destroy(gameObject);
+                if(destroyAfterAutoTrigger) Destroy(gameObject);
             }
         }
     }
@@ -60,7 +61,7 @@ public class InteractableTrigger : MonoBehaviour
 
 #region UI element
 
-
+/*
 // Custom drop down eventPrompt menu
 [CustomEditor(typeof(InteractableTrigger))]
 public class DropDownEditor : Editor
@@ -77,5 +78,5 @@ public class DropDownEditor : Editor
         EditorUtility.SetDirty(target);
     }
 }
-
+*/
 #endregion

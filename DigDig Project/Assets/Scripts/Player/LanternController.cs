@@ -33,12 +33,14 @@ public class LanternController : MonoBehaviour
                 canHoldLantern = false;
                 //transform.GetChild(0).gameObject.SetActive(true);
 
-                GetComponent<CapsuleCollider2D>().enabled = false;
+               // GetComponent<CapsuleCollider2D>().isTrigger = false;
+                GetComponent<EdgeCollider2D>().enabled = false;
 
                 transform.position = lanternHolder.position;
                 transform.parent = lanternHolder;
 
                 GetComponent<Rigidbody2D>().isKinematic = true;
+               
 
                 transform.localScale = lanternHolder.localScale;
 
@@ -50,7 +52,8 @@ public class LanternController : MonoBehaviour
 
                 //transform.parent = null;
                 GetComponent<Rigidbody2D>().isKinematic = false;
-                GetComponent<CapsuleCollider2D>().enabled = true;
+                //GetComponent<CapsuleCollider2D>().isTrigger = true;
+                GetComponent<EdgeCollider2D>().enabled = true;
 
                 transform.localScale = new Vector3(transform.localScale.x, 1);
             }
