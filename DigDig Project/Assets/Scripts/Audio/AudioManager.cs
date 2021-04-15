@@ -35,8 +35,16 @@ public class AudioManager: MonoBehaviour
 
         foreach (Sound s in sounds)
         {
-            s.source.volume = s.volume * globalVolume;
+            if(!s.dontPauseInMenu)
+            {
+                if(PauseMenu.pauseMenuActivated || InventoryManager.instance.inventoryActivated) s.source.volume = 0;
+                else s.source.volume = s.volume * globalVolume;
+            }
+            else s.source.volume = s.volume * globalVolume;
+
             s.source.pitch = s.pitch;
+
+
         }
 
         
@@ -61,6 +69,8 @@ public class AudioManager: MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found");
             return;
         }
+
+
             
         s.source.Play();
     }

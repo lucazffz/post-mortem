@@ -22,7 +22,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Swosh");
+        Debug.Log("hit");
+        
 
         pauseMenuActivated = !pauseMenuActivated;
 
@@ -32,13 +33,14 @@ public class PauseMenu : MonoBehaviour
 
         if (pauseMenuActivated)
         {
+            
             StartCoroutine(WaitForAnimation());
             animator.SetBool("isOpen", true);
             Time.timeScale = 0;
         }
         else
         {
-          
+            
             EventSystem.current.SetSelectedGameObject(null);
             animator.SetBool("isOpen", false);
             Time.timeScale = 1;

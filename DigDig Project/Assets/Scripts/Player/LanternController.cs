@@ -7,6 +7,8 @@ public class LanternController : MonoBehaviour
     public float rayDistance;
     public static bool holdingLantern;
 
+    private bool onBox;
+
     public LayerMask layerMask;
 
     public static bool canHoldLantern;
@@ -22,7 +24,7 @@ public class LanternController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && !DialogueManager.inConversaion && !PauseMenu.pauseMenuActivated && !InventoryManager.instance.inventoryActivated && PlayerBehavior.isGrounded) holdingLantern = !holdingLantern;
 
             canHoldLantern = true;
-            
+            onBox = false;
 
             InteractableManager.eventPrompt = grabPrompt;
             InteractableManager.eventIndex = 0;
@@ -46,7 +48,7 @@ public class LanternController : MonoBehaviour
 
                 
             }
-            else
+            else if(!onBox)
             {
                 //transform.GetChild(0).gameObject.SetActive(false);
 
@@ -55,21 +57,30 @@ public class LanternController : MonoBehaviour
                 //GetComponent<CapsuleCollider2D>().isTrigger = true;
                 GetComponent<EdgeCollider2D>().enabled = true;
 
-                transform.localScale = new Vector3(transform.localScale.x, 1);
+               
+                //transform.localScale = new Vector3(transform.localScale.x, 1);
             }
+            
         }
         else canHoldLantern = false;
+
+        if(!holdingLantern && !onBox)
+        {
+            transform.parent = null;
+            GetComponent<Rigidbody2D>().isKinematic = false;
+            GetComponent<EdgeCollider2D>().enabled = true;
+            //transform.localScale = new Vector3(transform.localScale.x, 1);
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Grabbable")
         {
+            onBox = true;
             transform.parent = collision.gameObject.transform;
-            transform.position = new Vector2(collision.gameObject.transform.position.x, transform.position.y);
+            GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        else transform.parent = null;
     }
 
-    
 }

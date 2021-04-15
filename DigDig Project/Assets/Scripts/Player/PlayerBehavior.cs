@@ -52,6 +52,9 @@ public class PlayerBehavior : MonoBehaviour
     private GameObject platform;
     
     public static bool isClimbing;
+    private bool canClimb;
+
+    private bool ahah;
 
 
 
@@ -76,10 +79,12 @@ public class PlayerBehavior : MonoBehaviour
 
         climbCheck = Physics2D.Raycast(transform.position, Vector2.up, climbCheckDistance, whatIsLadder);
 
-      
-
-        if (isClimbing && climbCheck.collider != null)
+        if(ahah == true && climbCheck.collider != null)
         {
+            isClimbing = true;
+
+            Debug.Log(climbCheck.collider);
+
             rigidBody.gravityScale = 0;
 
             inputVertical = Input.GetAxisRaw("Vertical");
@@ -94,17 +99,19 @@ public class PlayerBehavior : MonoBehaviour
             {
                 platform.transform.GetComponent<BoxCollider2D>().enabled = true;
                 isClimbing = false;
+                
                 Debug.Log("release");
             }
             else if (rigidBody.velocity.y < 0 && isGrounded)
             {
                 isClimbing = false;
+                
                 platform.transform.GetComponent<BoxCollider2D>().enabled = true;
             }
             else platform.transform.GetComponent<BoxCollider2D>().enabled = false;
         }
         else rigidBody.gravityScale = gravity;
-       
+
         #endregion
     }
 
@@ -194,7 +201,8 @@ public class PlayerBehavior : MonoBehaviour
     }
     public void Climb()
     {
-        isClimbing = true;
+        ahah = true;
+        Debug.Log(canClimb);
     }
 }
 
