@@ -18,8 +18,6 @@ public class InventoryUI : MonoBehaviour
             if (InventoryManager.instance.inventoryActivated) Resume();
             else Pause();
         }
-
-        if (PauseMenu.pauseMenuActivated) Resume();
     }
     
     public void Resume()
@@ -28,7 +26,7 @@ public class InventoryUI : MonoBehaviour
         if(!PauseMenu.pauseMenuActivated) Time.timeScale = 1.0f;
         InventoryManager.instance.inventoryActivated = false;
 
-        FindObjectOfType<AudioManager>().PlaySound("Swosh");
+       FindObjectOfType<AudioManager>().PlaySound("Swosh");
     }
 
     public void Pause()

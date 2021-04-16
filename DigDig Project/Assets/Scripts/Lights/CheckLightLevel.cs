@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class CheckLightLevel : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class CheckLightLevel : MonoBehaviour
     public float maxTime = 10;
     private float currentTime;
 
+    bool hasRun = false;
 
     private void Start()
     {
@@ -51,11 +53,31 @@ public class CheckLightLevel : MonoBehaviour
         //wait, then reload level
         if (lightLevel <= lowestAllowedLightLevel)
         {
+
             Debug.Log(currentTime);
             currentTime -= Time.deltaTime;
-            if (currentTime < 0) FindObjectOfType<LevelLoader>().ReloadCurrentLevel();
+            if (currentTime < 0) StartCoroutine(Wait());
 
         }
         else currentTime = maxTime;
     }
+
+    IEnumerator Wait()
+    {
+        
+
+        if(!hasRun)
+        {
+            hasRun = true;
+
+            Debug.Log(currentTime);
+            FindObjectOfType<LevelLoader>().GetComponent<Animator>().SetTrigger("Start");
+
+            yield return new WaitForSeconds(2);
+            FindObjectOfType<AudioManager>().PlaySound("Scream");
+
+            yield return new WaitForSeconds(2);
+            FindObjectOfType<LevelLoader>().ReloadCurrentLevel();
+        }
+    } 
 }

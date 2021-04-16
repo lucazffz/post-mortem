@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 348f14678fd4f6d4189df394ed29efce
+guid: 009a74647aa6fa54ba4f7eee4ac848b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3315242011929379819
-    second: PLAYER PUSH SPRITE_0
+      213: 5495537472492517148
+    second: Candle_Animation_0
   - first:
-      213: -7070410339738494920
-    second: PLAYER PUSH SPRITE_1
+      213: 3875497513700459431
+    second: Candle_Animation_1
   - first:
-      213: -7032734870985274890
-    second: PLAYER PUSH SPRITE_2
+      213: -1126467443402984572
+    second: Candle_Animation_2
   - first:
-      213: -7041829726255221154
-    second: PLAYER PUSH SPRITE_3
+      213: 153367301299417019
+    second: Candle_Animation_3
+  - first:
+      213: 4358644585185407521
+    second: Candle_Animation_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 170
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,85 +104,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PLAYER PUSH SPRITE_0
+      name: Candle_Animation_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 630
-        width: 342
-        height: 513
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        x: 420
+        y: 1634
+        width: 182
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be380818b0b120e20800000000000000
-      internalID: 3315242011929379819
+      spriteID: c17b3c1f632144c40800000000000000
+      internalID: 5495537472492517148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER PUSH SPRITE_1
+      name: Candle_Animation_1
       rect:
         serializedVersion: 2
-        x: 675
-        y: 630
-        width: 342
-        height: 513
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        x: 1455
+        y: 1635
+        width: 182
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83853a3b14bd0ed90800000000000000
-      internalID: -7070410339738494920
+      spriteID: 7a38608947888c530800000000000000
+      internalID: 3875497513700459431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER PUSH SPRITE_2
+      name: Candle_Animation_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 53
-        width: 342
-        height: 513
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        x: 420
+        y: 479
+        width: 182
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f98b6755e4b66e90800000000000000
-      internalID: -7032734870985274890
+      spriteID: 4833ce814dbfd50f0800000000000000
+      internalID: -1126467443402984572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PLAYER PUSH SPRITE_3
+      name: Candle_Animation_3
       rect:
         serializedVersion: 2
-        x: 684
-        y: 53
-        width: 342
-        height: 513
-      alignment: 9
-      pivot: {x: 0.6, y: 0.5}
+        x: 1455
+        y: 480
+        width: 182
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5675c55c25664e90800000000000000
-      internalID: -7041829726255221154
+      spriteID: bbfac1a7fbed02200800000000000000
+      internalID: 153367301299417019
       vertices: []
       indices: 
       edges: []
@@ -187,7 +190,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1f68568415f516247b6967a5deb1d4fc
+    spriteID: 0995a588bb09f9641aff9baa71e658d1
     internalID: 0
     vertices: []
     indices: 

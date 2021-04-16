@@ -53,6 +53,9 @@ TagManager:
   - name: NPC
     uniqueID: 660796761
     locked: 0
+  - name: Clock
+    uniqueID: 2397210911
+    locked: 0
   - name: Player
     uniqueID: 4036289329
     locked: 0

@@ -7,16 +7,15 @@ public class windowDude : MonoBehaviour
 
     private void Start()
     {
-        transform.GetChild(0).gameObject.SetActive(false);
+        interactableTrigger.SetActive(false);
     }
     private void Update()
     {
         if(InventoryManager.instance.ContainsItem(itemData))
         {
-            Destroy(interactableTrigger);
-            transform.GetChild(0).gameObject.SetActive(true);
-
+            interactableTrigger.SetActive(true);
+            Destroy(this);
         }
-        
+
     }
 }

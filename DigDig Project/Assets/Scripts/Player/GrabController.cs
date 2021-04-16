@@ -26,7 +26,7 @@ public class GrabController : MonoBehaviour
     {
         grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * grabHolder.parent.localScale, rayDistance, layerMask);
 
-        if (grabCheck.collider != null && grabCheck.collider.tag == "Grabbable")
+        if (grabCheck.collider != null && grabCheck.collider.tag == "Grabbable" && PlayerBehavior.isGrounded)
         {
             grabPositionRight = grabCheck.collider.gameObject.transform.GetChild(0);
             grabPositionLeft = grabCheck.collider.gameObject.transform.GetChild(1);
@@ -42,8 +42,12 @@ public class GrabController : MonoBehaviour
             {
                 canGrab = false;
 
-                grabCheck.collider.transform.parent = grabHolder;
+                
+
+
                 grabCheck.collider.GetComponent<Rigidbody2D>().isKinematic = true;
+                grabCheck.collider.transform.parent = grabHolder;
+
 
                 if (distance != 0)
                 {
@@ -54,6 +58,8 @@ public class GrabController : MonoBehaviour
 
                     grabCheck.collider.transform.position = Vector3.MoveTowards(grabCheck.collider.transform.position, endPosition, 3 * Time.deltaTime);
                 }
+                
+               
             }
             else
             {

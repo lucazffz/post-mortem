@@ -9,15 +9,25 @@ public class AudioManager: MonoBehaviour
     [Range(0f, 1f)]
     public float globalVolume;
 
-    public GameObject slider;
+    public GameObject gloablVolumeSlider;
+    public GameObject musicVolumeSlider;
 
     public Sound[] sounds;
+
+    public bool playMusic;
+    public float MusicMaxVolume;
+
+    private bool statingSong = false;
 
     public void Start()
     {
         PlaySound("Rain");
-        PlaySound("SoundTrack");
-        StartCoroutine(RandomPlay());
+      
+        StartCoroutine(PlaySoundAtRandom());
+
+        StartCoroutine(PlayMusic());
+
+
     }
 
     public void Awake()
@@ -31,13 +41,14 @@ public class AudioManager: MonoBehaviour
 
     private void Update()
     {
-        globalVolume = slider.GetComponent<Slider>().value;
+        globalVolume = gloablVolumeSlider.GetComponent<Slider>().value;
+    
 
         foreach (Sound s in sounds)
         {
             if(!s.dontPauseInMenu)
             {
-                if(PauseMenu.pauseMenuActivated || InventoryManager.instance.inventoryActivated) s.source.volume = 0;
+                if(PauseMenu.pauseMenuActivated) s.source.volume = 0;
                 else s.source.volume = s.volume * globalVolume;
             }
             else s.source.volume = s.volume * globalVolume;
@@ -48,10 +59,7 @@ public class AudioManager: MonoBehaviour
         }
 
         
-
-            
     }
-
 
 
     public void PlaySound(string name)
@@ -69,21 +77,78 @@ public class AudioManager: MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found");
             return;
         }
-
-
-            
+ 
         s.source.Play();
     }
 
-    IEnumerator RandomPlay()
+    IEnumerator PlaySoundAtRandom()
     {
-        float rnd = Random.Range(20, 60);
+        Sound s = Array.Find(sounds, sound => sound.Name == name);
+        float rnd = Random.Range(30, 60);
 
-        yield return new WaitForSeconds(rnd);
 
-        Debug.Log("hit");
-        PlaySound("Lightning");
+        foreach (var sound in sounds)
+        {
+            if (sound.playAtRandom)
+            {
+                PlaySound(sound.Name);
 
-        StartCoroutine(RandomPlay());
+                yield return new WaitForSeconds(rnd);
+            }
+        }
+
+        StartCoroutine(PlaySoundAtRandom());
     }
+
+    IEnumerator PlayMusic()
+    {
+       
+
+        if(playMusic)
+        {
+            Sound s = Array.Find(sounds, sound => sound.Name == "SoundTrack");
+          
+            float rnd = Random.Range(40, 80);
+            yield return new WaitForSeconds(rnd);
+
+            statingSong = true;
+           
+            if(statingSong)
+            {
+                s.volume = 0;
+                PlaySound("SoundTrack");
+
+                while (s.volume <= MusicMaxVolume)
+                {
+                    s.volume += 0.01f;
+                    yield return new WaitForSeconds(0.4f);
+                }
+            }
+           
+            statingSong = false;
+
+            rnd = Random.Range(30, 60);
+            yield return new WaitForSeconds(rnd);
+
+            Debug.Log("hit");
+            statingSong = true;
+
+            if(statingSong)
+            {
+                while (s.volume >= 0)
+                {
+                    s.volume -= 0.01f;
+                    yield return new WaitForSeconds(0.4f);
+                }
+
+                s.source.Stop();
+            }
+           
+            statingSong = false;
+        }
+
+        StartCoroutine(PlayMusic());
+    }
+
+   
 }

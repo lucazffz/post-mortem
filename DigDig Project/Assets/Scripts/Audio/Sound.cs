@@ -19,4 +19,5 @@ public class Sound
 
     public bool loop;
     public bool dontPauseInMenu;
+    public bool playAtRandom;
 }

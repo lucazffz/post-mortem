@@ -22,8 +22,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("hit");
-        
+        FindObjectOfType<AudioManager>().PlaySound("Swosh");
 
         pauseMenuActivated = !pauseMenuActivated;
 
@@ -33,10 +32,13 @@ public class PauseMenu : MonoBehaviour
 
         if (pauseMenuActivated)
         {
-            
+            FindObjectOfType<InventoryUI>().Resume();
+
             StartCoroutine(WaitForAnimation());
             animator.SetBool("isOpen", true);
             Time.timeScale = 0;
+
+            
         }
         else
         {

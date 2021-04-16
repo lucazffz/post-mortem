@@ -1,0 +1,1426 @@
+fileFormatVersion: 2
+guid: 307139712f70fb944adeb7ce2c4b6c2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9082064569603751697
+    second: GRANDFATHER CLOCK SPRITE_0
+  - first:
+      213: -2110630645219630719
+    second: GRANDFATHER CLOCK SPRITE_1
+  - first:
+      213: -6479507809731771676
+    second: GRANDFATHER CLOCK SPRITE_2
+  - first:
+      213: -4108290119326389165
+    second: GRANDFATHER CLOCK SPRITE_3
+  - first:
+      213: -6714461016903898175
+    second: GRANDFATHER CLOCK SPRITE_4
+  - first:
+      213: 4130351568592450054
+    second: GRANDFATHER CLOCK SPRITE_5
+  - first:
+      213: -5325052424511163181
+    second: GRANDFATHER CLOCK SPRITE_6
+  - first:
+      213: 3791419049820063553
+    second: GRANDFATHER CLOCK SPRITE_7
+  - first:
+      213: 5013380230499939617
+    second: GRANDFATHER CLOCK SPRITE_8
+  - first:
+      213: -2405787583988784757
+    second: GRANDFATHER CLOCK SPRITE_9
+  - first:
+      213: -6006218726349288497
+    second: GRANDFATHER CLOCK SPRITE_10
+  - first:
+      213: -6510388826354409826
+    second: GRANDFATHER CLOCK SPRITE_11
+  - first:
+      213: 2998081319006816934
+    second: GRANDFATHER CLOCK SPRITE_12
+  - first:
+      213: 153951304447972878
+    second: GRANDFATHER CLOCK SPRITE_13
+  - first:
+      213: 2981245174218786816
+    second: GRANDFATHER CLOCK SPRITE_14
+  - first:
+      213: 8060037001555600988
+    second: GRANDFATHER CLOCK SPRITE_15
+  - first:
+      213: -326007658334550524
+    second: GRANDFATHER CLOCK SPRITE_16
+  - first:
+      213: -7706506099432114029
+    second: GRANDFATHER CLOCK SPRITE_17
+  - first:
+      213: 1850246095688424588
+    second: GRANDFATHER CLOCK SPRITE_18
+  - first:
+      213: -8007417622906704547
+    second: GRANDFATHER CLOCK SPRITE_19
+  - first:
+      213: -2077553695577913603
+    second: GRANDFATHER CLOCK SPRITE_20
+  - first:
+      213: 4278100498949763340
+    second: GRANDFATHER CLOCK SPRITE_21
+  - first:
+      213: 5226713067110413128
+    second: GRANDFATHER CLOCK SPRITE_22
+  - first:
+      213: -4756181576126050778
+    second: GRANDFATHER CLOCK SPRITE_23
+  - first:
+      213: -2617703207672531129
+    second: GRANDFATHER CLOCK SPRITE_24
+  - first:
+      213: -5845880071304308539
+    second: GRANDFATHER CLOCK SPRITE_25
+  - first:
+      213: -8695664562344103942
+    second: GRANDFATHER CLOCK SPRITE_26
+  - first:
+      213: 1149274336929972420
+    second: GRANDFATHER CLOCK SPRITE_27
+  - first:
+      213: 6391191227629657889
+    second: GRANDFATHER CLOCK SPRITE_28
+  - first:
+      213: -6992191190533232964
+    second: GRANDFATHER CLOCK SPRITE_29
+  - first:
+      213: 3840738901524774194
+    second: GRANDFATHER CLOCK SPRITE_30
+  - first:
+      213: 3986935234677388934
+    second: GRANDFATHER CLOCK SPRITE_31
+  - first:
+      213: -7959256437224269971
+    second: GRANDFATHER CLOCK SPRITE_32
+  - first:
+      213: -1772082514780900988
+    second: GRANDFATHER CLOCK SPRITE_33
+  - first:
+      213: -2909558093858557796
+    second: GRANDFATHER CLOCK SPRITE_34
+  - first:
+      213: -5626718272435982773
+    second: GRANDFATHER CLOCK SPRITE_35
+  - first:
+      213: 5161966365351757043
+    second: GRANDFATHER CLOCK SPRITE_36
+  - first:
+      213: -5248931947691979336
+    second: GRANDFATHER CLOCK SPRITE_37
+  - first:
+      213: 2101180090966946758
+    second: GRANDFATHER CLOCK SPRITE_38
+  - first:
+      213: -4541651688532431950
+    second: GRANDFATHER CLOCK SPRITE_39
+  - first:
+      213: 3710418290243515625
+    second: GRANDFATHER CLOCK SPRITE_40
+  - first:
+      213: 5274998919560352366
+    second: GRANDFATHER CLOCK SPRITE_41
+  - first:
+      213: 7777342455171791432
+    second: GRANDFATHER CLOCK SPRITE_42
+  - first:
+      213: 1956036323632516687
+    second: GRANDFATHER CLOCK SPRITE_43
+  - first:
+      213: -1957738684939169583
+    second: GRANDFATHER CLOCK SPRITE_44
+  - first:
+      213: -7383710713632005013
+    second: GRANDFATHER CLOCK SPRITE_45
+  - first:
+      213: -2956145338161464496
+    second: GRANDFATHER CLOCK SPRITE_46
+  - first:
+      213: -2948506181854977828
+    second: GRANDFATHER CLOCK SPRITE_47
+  - first:
+      213: -6451511878993424296
+    second: GRANDFATHER CLOCK SPRITE_48
+  - first:
+      213: 2592697772369057724
+    second: GRANDFATHER CLOCK SPRITE_49
+  - first:
+      213: 6201118123979225728
+    second: GRANDFATHER CLOCK SPRITE_50
+  - first:
+      213: -1328297660162085912
+    second: GRANDFATHER CLOCK SPRITE_51
+  - first:
+      213: -5131238674507361357
+    second: GRANDFATHER CLOCK SPRITE_52
+  - first:
+      213: 2641177512238325283
+    second: GRANDFATHER CLOCK SPRITE_53
+  - first:
+      213: 2622299999755247640
+    second: GRANDFATHER CLOCK SPRITE_54
+  - first:
+      213: -408755573720650232
+    second: GRANDFATHER CLOCK SPRITE_55
+  - first:
+      213: -604545241679399831
+    second: GRANDFATHER CLOCK SPRITE_56
+  - first:
+      213: 3910940181850139869
+    second: GRANDFATHER CLOCK SPRITE_57
+  - first:
+      213: -3644512078150881624
+    second: GRANDFATHER CLOCK SPRITE_58
+  - first:
+      213: 6744444087332382945
+    second: GRANDFATHER CLOCK SPRITE_59
+  - first:
+      213: -6986209954212725996
+    second: GRANDFATHER CLOCK SPRITE_60
+  - first:
+      213: -4084755253909277756
+    second: GRANDFATHER CLOCK SPRITE_61
+  - first:
+      213: -1662253506728224660
+    second: GRANDFATHER CLOCK SPRITE_62
+  - first:
+      213: 6838776994865500842
+    second: GRANDFATHER CLOCK SPRITE_63
+  - first:
+      213: -7895491671329328301
+    second: GRANDFATHER CLOCK SPRITE_64
+  - first:
+      213: 1199123478454611472
+    second: GRANDFATHER CLOCK SPRITE_65
+  - first:
+      213: -7595804361056885387
+    second: GRANDFATHER CLOCK SPRITE_66
+  - first:
+      213: -4401572804354043356
+    second: GRANDFATHER CLOCK SPRITE_67
+  - first:
+      213: 6906094524131828439
+    second: GRANDFATHER CLOCK SPRITE_68
+  - first:
+      213: 8456666557818250769
+    second: GRANDFATHER CLOCK SPRITE_69
+  - first:
+      213: 6807531047594328352
+    second: GRANDFATHER CLOCK SPRITE_70
+  - first:
+      213: 4593930428248156838
+    second: GRANDFATHER CLOCK SPRITE_71
+  - first:
+      213: 4010880539952612438
+    second: GRANDFATHER CLOCK SPRITE_72
+  - first:
+      213: -6613810525912631425
+    second: GRANDFATHER CLOCK SPRITE_73
+  - first:
+      213: 7561067434191710873
+    second: GRANDFATHER CLOCK SPRITE_74
+  - first:
+      213: -5824915604280543487
+    second: GRANDFATHER CLOCK SPRITE_75
+  - first:
+      213: 2537486733925203856
+    second: GRANDFATHER CLOCK SPRITE_76
+  - first:
+      213: -5214784048940463943
+    second: GRANDFATHER CLOCK SPRITE_77
+  - first:
+      213: 7594913733664269634
+    second: GRANDFATHER CLOCK SPRITE_78
+  - first:
+      213: -4861178235087657231
+    second: GRANDFATHER CLOCK SPRITE_79
+  - first:
+      213: -7679002781021683873
+    second: GRANDFATHER CLOCK SPRITE_80
+  - first:
+      213: 3087393382365578584
+    second: GRANDFATHER CLOCK SPRITE_81
+  - first:
+      213: 7737679159321506191
+    second: GRANDFATHER CLOCK SPRITE_82
+  - first:
+      213: -8897496836682062598
+    second: GRANDFATHER CLOCK SPRITE_83
+  - first:
+      213: 1088967194092847900
+    second: GRANDFATHER CLOCK SPRITE_84
+  - first:
+      213: 3167291031780321815
+    second: GRANDFATHER CLOCK SPRITE_85
+  - first:
+      213: -4269155152165934731
+    second: GRANDFATHER CLOCK SPRITE_86
+  - first:
+      213: 1638391354336593595
+    second: GRANDFATHER CLOCK SPRITE_87
+  - first:
+      213: 950185965185753836
+    second: GRANDFATHER CLOCK SPRITE_88
+  - first:
+      213: 2028221604218677970
+    second: GRANDFATHER CLOCK SPRITE_89
+  - first:
+      213: -5944141969476986738
+    second: GRANDFATHER CLOCK SPRITE_90
+  - first:
+      213: -3941922351947491715
+    second: GRANDFATHER CLOCK SPRITE_91
+  - first:
+      213: -2974040588510195580
+    second: GRANDFATHER CLOCK SPRITE_92
+  - first:
+      213: 5297216142706600386
+    second: GRANDFATHER CLOCK SPRITE_93
+  - first:
+      213: 2320829251341082873
+    second: GRANDFATHER CLOCK SPRITE_94
+  - first:
+      213: -6659509003555566754
+    second: GRANDFATHER CLOCK SPRITE_95
+  - first:
+      213: 9040389207951217459
+    second: GRANDFATHER CLOCK SPRITE_96
+  - first:
+      213: -7316531421074520816
+    second: GRANDFATHER CLOCK SPRITE_97
+  - first:
+      213: -3731468311844117760
+    second: GRANDFATHER CLOCK SPRITE_98
+  - first:
+      213: -2730007780072369659
+    second: GRANDFATHER CLOCK SPRITE_99
+  - first:
+      213: -2439074422142204789
+    second: GRANDFATHER CLOCK SPRITE_100
+  - first:
+      213: -5854257002802644175
+    second: GRANDFATHER CLOCK SPRITE_101
+  - first:
+      213: -1358677137096144550
+    second: GRANDFATHER CLOCK SPRITE_102
+  - first:
+      213: -491315585027341999
+    second: GRANDFATHER CLOCK SPRITE_103
+  - first:
+      213: -6154449054736482581
+    second: GRANDFATHER CLOCK SPRITE_104
+  - first:
+      213: 8373167758822201934
+    second: GRANDFATHER CLOCK SPRITE_105
+  - first:
+      213: 5204047120782490140
+    second: GRANDFATHER CLOCK SPRITE_106
+  - first:
+      213: -894975579844125933
+    second: GRANDFATHER CLOCK SPRITE_107
+  - first:
+      213: 8041785589876719631
+    second: GRANDFATHER CLOCK SPRITE_108
+  - first:
+      213: 3412794648402599504
+    second: GRANDFATHER CLOCK SPRITE_109
+  - first:
+      213: 1472132854571510109
+    second: GRANDFATHER CLOCK SPRITE_110
+  - first:
+      213: -1468738031891836963
+    second: GRANDFATHER CLOCK SPRITE_111
+  - first:
+      213: -8928268838680248900
+    second: GRANDFATHER CLOCK SPRITE_112
+  - first:
+      213: -2196281278962780829
+    second: GRANDFATHER CLOCK SPRITE_113
+  - first:
+      213: -4985816432398603866
+    second: GRANDFATHER CLOCK SPRITE_114
+  - first:
+      213: -4668839827227782263
+    second: GRANDFATHER CLOCK SPRITE_115
+  - first:
+      213: 4871608940163152354
+    second: GRANDFATHER CLOCK SPRITE_116
+  - first:
+      213: -6027794982536543621
+    second: GRANDFATHER CLOCK SPRITE_117
+  - first:
+      213: -6023252975657195363
+    second: GRANDFATHER CLOCK SPRITE_118
+  - first:
+      213: -4275805258337567201
+    second: GRANDFATHER CLOCK SPRITE_119
+  - first:
+      213: -6143577211719750731
+    second: GRANDFATHER CLOCK SPRITE_120
+  - first:
+      213: 6283824141802719174
+    second: GRANDFATHER CLOCK SPRITE_121
+  - first:
+      213: -4380332778613126651
+    second: GRANDFATHER CLOCK SPRITE_122
+  - first:
+      213: -3564714340999046155
+    second: GRANDFATHER CLOCK SPRITE_123
+  - first:
+      213: 6461491321801166021
+    second: GRANDFATHER CLOCK SPRITE_124
+  - first:
+      213: 1700709372678873575
+    second: GRANDFATHER CLOCK SPRITE_125
+  - first:
+      213: 802810463277318693
+    second: GRANDFATHER CLOCK SPRITE_126
+  - first:
+      213: 5524698740873881681
+    second: GRANDFATHER CLOCK SPRITE_127
+  - first:
+      213: 5152762366871023966
+    second: GRANDFATHER CLOCK SPRITE_128
+  - first:
+      213: -1641515565369315110
+    second: GRANDFATHER CLOCK SPRITE_129
+  - first:
+      213: -8582068461691552574
+    second: GRANDFATHER CLOCK SPRITE_130
+  - first:
+      213: -6226282048317690919
+    second: GRANDFATHER CLOCK SPRITE_131
+  - first:
+      213: -914040697029586352
+    second: GRANDFATHER CLOCK SPRITE_132
+  - first:
+      213: 8816558005215222798
+    second: GRANDFATHER CLOCK SPRITE_133
+  - first:
+      213: 4524500410894212561
+    second: GRANDFATHER CLOCK SPRITE_134
+  - first:
+      213: 2377380973079347977
+    second: GRANDFATHER CLOCK SPRITE_135
+  - first:
+      213: -1840213394795475885
+    second: GRANDFATHER CLOCK SPRITE_136
+  - first:
+      213: 3363680060261564129
+    second: GRANDFATHER CLOCK SPRITE_137
+  - first:
+      213: 3841466442004065166
+    second: GRANDFATHER CLOCK SPRITE_138
+  - first:
+      213: 1676650281752098008
+    second: GRANDFATHER CLOCK SPRITE_139
+  - first:
+      213: -597380937034846467
+    second: GRANDFATHER CLOCK SPRITE_140
+  - first:
+      213: -591857465514867415
+    second: GRANDFATHER CLOCK SPRITE_141
+  - first:
+      213: 3080590225652613588
+    second: GRANDFATHER CLOCK SPRITE_142
+  - first:
+      213: -8707869603373174140
+    second: GRANDFATHER CLOCK SPRITE_143
+  - first:
+      213: 4141663058773744464
+    second: GRANDFATHER CLOCK SPRITE_144
+  - first:
+      213: 427805485133466085
+    second: GRANDFATHER CLOCK SPRITE_145
+  - first:
+      213: -1009502532845882345
+    second: GRANDFATHER CLOCK SPRITE_146
+  - first:
+      213: 6863403435311403488
+    second: GRANDFATHER CLOCK SPRITE_147
+  - first:
+      213: 7839249567955776239
+    second: GRANDFATHER CLOCK SPRITE_148
+  - first:
+      213: -5804949471304449871
+    second: GRANDFATHER CLOCK SPRITE_149
+  - first:
+      213: -9173822227050058846
+    second: GRANDFATHER CLOCK SPRITE_150
+  - first:
+      213: -5441733726851093515
+    second: GRANDFATHER CLOCK SPRITE_151
+  - first:
+      213: 2253243902464370397
+    second: GRANDFATHER CLOCK SPRITE_152
+  - first:
+      213: 1581281365108920450
+    second: GRANDFATHER CLOCK SPRITE_153
+  - first:
+      213: 8194022588364526059
+    second: GRANDFATHER CLOCK SPRITE_154
+  - first:
+      213: 989689620452200025
+    second: GRANDFATHER CLOCK SPRITE_155
+  - first:
+      213: -1820834307123278004
+    second: GRANDFATHER CLOCK SPRITE_156
+  - first:
+      213: 6838338015425145299
+    second: GRANDFATHER CLOCK SPRITE_157
+  - first:
+      213: 7093160457359552322
+    second: GRANDFATHER CLOCK SPRITE_158
+  - first:
+      213: 2761855512499382466
+    second: GRANDFATHER CLOCK SPRITE_159
+  - first:
+      213: 3326253835369401481
+    second: GRANDFATHER CLOCK SPRITE_160
+  - first:
+      213: 671654634306662002
+    second: GRANDFATHER CLOCK SPRITE_161
+  - first:
+      213: 159210551906233875
+    second: GRANDFATHER CLOCK SPRITE_162
+  - first:
+      213: -7425239717917284762
+    second: GRANDFATHER CLOCK SPRITE_163
+  - first:
+      213: -8455926003586833781
+    second: GRANDFATHER CLOCK SPRITE_164
+  - first:
+      213: 8866183029431493119
+    second: GRANDFATHER CLOCK SPRITE_165
+  - first:
+      213: -1306908134778602561
+    second: GRANDFATHER CLOCK SPRITE_166
+  - first:
+      213: -8860891241230503080
+    second: GRANDFATHER CLOCK SPRITE_167
+  - first:
+      213: -7034361005219367973
+    second: GRANDFATHER CLOCK SPRITE_168
+  - first:
+      213: -2071920861840165155
+    second: GRANDFATHER CLOCK SPRITE_169
+  - first:
+      213: -3475304931438329307
+    second: GRANDFATHER CLOCK SPRITE_170
+  - first:
+      213: -4383268199284531487
+    second: GRANDFATHER CLOCK SPRITE_171
+  - first:
+      213: -6515675964593526766
+    second: GRANDFATHER CLOCK SPRITE_172
+  - first:
+      213: -6603777964316909047
+    second: GRANDFATHER CLOCK SPRITE_173
+  - first:
+      213: -2871838397026659898
+    second: GRANDFATHER CLOCK SPRITE_174
+  - first:
+      213: -9066172730941743325
+    second: GRANDFATHER CLOCK SPRITE_175
+  - first:
+      213: 6806534383377635935
+    second: GRANDFATHER CLOCK SPRITE_176
+  - first:
+      213: 5078572556527874619
+    second: GRANDFATHER CLOCK SPRITE_177
+  - first:
+      213: -6071015537392414734
+    second: GRANDFATHER CLOCK SPRITE_178
+  - first:
+      213: -7641960770028904068
+    second: GRANDFATHER CLOCK SPRITE_179
+  - first:
+      213: -4871360710434369652
+    second: GRANDFATHER CLOCK SPRITE_180
+  - first:
+      213: -2223786718628140602
+    second: GRANDFATHER CLOCK SPRITE_181
+  - first:
+      213: 2693547327685488094
+    second: GRANDFATHER CLOCK SPRITE_182
+  - first:
+      213: 4386878969988889510
+    second: GRANDFATHER CLOCK SPRITE_183
+  - first:
+      213: 1979832933963759338
+    second: GRANDFATHER CLOCK SPRITE_184
+  - first:
+      213: -1029296391135440709
+    second: GRANDFATHER CLOCK SPRITE_185
+  - first:
+      213: 942159050400447456
+    second: GRANDFATHER CLOCK SPRITE_186
+  - first:
+      213: 2762523349168935277
+    second: GRANDFATHER CLOCK SPRITE_187
+  - first:
+      213: -5228826119800995084
+    second: GRANDFATHER CLOCK SPRITE_188
+  - first:
+      213: -3846165832958476666
+    second: GRANDFATHER CLOCK SPRITE_189
+  - first:
+      213: -9011424936122290528
+    second: GRANDFATHER CLOCK SPRITE_190
+  - first:
+      213: -9046772010706361109
+    second: GRANDFATHER CLOCK SPRITE_191
+  - first:
+      213: -3704787947129949857
+    second: GRANDFATHER CLOCK SPRITE_192
+  - first:
+      213: -5840741333463664049
+    second: GRANDFATHER CLOCK SPRITE_193
+  - first:
+      213: 6907110594597426519
+    second: GRANDFATHER CLOCK SPRITE_194
+  - first:
+      213: 5090591565814105029
+    second: GRANDFATHER CLOCK SPRITE_195
+  - first:
+      213: -1973138366436861790
+    second: GRANDFATHER CLOCK SPRITE_196
+  - first:
+      213: 5772459621635456200
+    second: GRANDFATHER CLOCK SPRITE_197
+  - first:
+      213: -6578805499352906350
+    second: GRANDFATHER CLOCK SPRITE_198
+  - first:
+      213: 6276676067629038765
+    second: GRANDFATHER CLOCK SPRITE_199
+  - first:
+      213: 8863075257255348171
+    second: GRANDFATHER CLOCK SPRITE_200
+  - first:
+      213: -4323032694288662201
+    second: GRANDFATHER CLOCK SPRITE_201
+  - first:
+      213: 1344451007959914370
+    second: GRANDFATHER CLOCK SPRITE_202
+  - first:
+      213: -396735047322751416
+    second: GRANDFATHER CLOCK SPRITE_203
+  - first:
+      213: 8304384757973991104
+    second: GRANDFATHER CLOCK SPRITE_204
+  - first:
+      213: 5252929977238707731
+    second: GRANDFATHER CLOCK SPRITE_205
+  - first:
+      213: -4416476766335898766
+    second: GRANDFATHER CLOCK SPRITE_206
+  - first:
+      213: 832363166769065982
+    second: GRANDFATHER CLOCK SPRITE_207
+  - first:
+      213: -5066083446894711178
+    second: GRANDFATHER CLOCK SPRITE_208
+  - first:
+      213: 2655488434293503586
+    second: GRANDFATHER CLOCK SPRITE_209
+  - first:
+      213: 4663932258059774942
+    second: GRANDFATHER CLOCK SPRITE_210
+  - first:
+      213: 417084711029366481
+    second: GRANDFATHER CLOCK SPRITE_211
+  - first:
+      213: -6371875542816124683
+    second: GRANDFATHER CLOCK SPRITE_212
+  - first:
+      213: -7315134977943699443
+    second: GRANDFATHER CLOCK SPRITE_213
+  - first:
+      213: 1249469068073216134
+    second: GRANDFATHER CLOCK SPRITE_214
+  - first:
+      213: 3227808190211236505
+    second: GRANDFATHER CLOCK SPRITE_215
+  - first:
+      213: -2643305690569839990
+    second: GRANDFATHER CLOCK SPRITE_216
+  - first:
+      213: 5156869601601780694
+    second: GRANDFATHER CLOCK SPRITE_217
+  - first:
+      213: -153763375670556233
+    second: GRANDFATHER CLOCK SPRITE_218
+  - first:
+      213: 155367123093521769
+    second: GRANDFATHER CLOCK SPRITE_219
+  - first:
+      213: -5992083738172857172
+    second: GRANDFATHER CLOCK SPRITE_220
+  - first:
+      213: -2713909372409239360
+    second: GRANDFATHER CLOCK SPRITE_221
+  - first:
+      213: -3574309330346510078
+    second: GRANDFATHER CLOCK SPRITE_222
+  - first:
+      213: 4842377805621245776
+    second: GRANDFATHER CLOCK SPRITE_223
+  - first:
+      213: -3137101472633024254
+    second: GRANDFATHER CLOCK SPRITE_224
+  - first:
+      213: 3589347102137434734
+    second: GRANDFATHER CLOCK SPRITE_225
+  - first:
+      213: 7461561769092627835
+    second: GRANDFATHER CLOCK SPRITE_226
+  - first:
+      213: 981796775025208959
+    second: GRANDFATHER CLOCK SPRITE_227
+  - first:
+      213: 4403759890385671766
+    second: GRANDFATHER CLOCK SPRITE_228
+  - first:
+      213: -4034372826506475988
+    second: GRANDFATHER CLOCK SPRITE_229
+  - first:
+      213: -467279380132993017
+    second: GRANDFATHER CLOCK SPRITE_230
+  - first:
+      213: -5401101169912421228
+    second: GRANDFATHER CLOCK SPRITE_231
+  - first:
+      213: -444215080961683867
+    second: GRANDFATHER CLOCK SPRITE_232
+  - first:
+      213: 8964323107820002267
+    second: GRANDFATHER CLOCK SPRITE_233
+  - first:
+      213: 2148368828235497434
+    second: GRANDFATHER CLOCK SPRITE_234
+  - first:
+      213: -464610821578353859
+    second: GRANDFATHER CLOCK SPRITE_235
+  - first:
+      213: -7098299536959054906
+    second: GRANDFATHER CLOCK SPRITE_236
+  - first:
+      213: 6390860039469425290
+    second: GRANDFATHER CLOCK SPRITE_237
+  - first:
+      213: -3514949352336137245
+    second: GRANDFATHER CLOCK SPRITE_238
+  - first:
+      213: -5853648613827527401
+    second: GRANDFATHER CLOCK SPRITE_239
+  - first:
+      213: -7375013238949412291
+    second: GRANDFATHER CLOCK SPRITE_240
+  - first:
+      213: 7589313324933436145
+    second: GRANDFATHER CLOCK SPRITE_241
+  - first:
+      213: -7603390136947977935
+    second: GRANDFATHER CLOCK SPRITE_242
+  - first:
+      213: -437478937472305299
+    second: GRANDFATHER CLOCK SPRITE_243
+  - first:
+      213: -403014021571425439
+    second: GRANDFATHER CLOCK SPRITE_244
+  - first:
+      213: 3653294597337566909
+    second: GRANDFATHER CLOCK SPRITE_245
+  - first:
+      213: -6197476215599522073
+    second: GRANDFATHER CLOCK SPRITE_246
+  - first:
+      213: -765745871897867082
+    second: GRANDFATHER CLOCK SPRITE_247
+  - first:
+      213: -5927317553900431347
+    second: GRANDFATHER CLOCK SPRITE_248
+  - first:
+      213: -1274114021669928102
+    second: GRANDFATHER CLOCK SPRITE_249
+  - first:
+      213: -6832159496482747371
+    second: GRANDFATHER CLOCK SPRITE_250
+  - first:
+      213: -2210541355491744875
+    second: GRANDFATHER CLOCK SPRITE_251
+  - first:
+      213: -3401320676946728667
+    second: GRANDFATHER CLOCK SPRITE_252
+  - first:
+      213: 2039863305988249574
+    second: GRANDFATHER CLOCK SPRITE_253
+  - first:
+      213: -7859517092144234181
+    second: GRANDFATHER CLOCK SPRITE_254
+  - first:
+      213: 6238910586139777714
+    second: GRANDFATHER CLOCK SPRITE_255
+  - first:
+      213: -8470622785661290801
+    second: GRANDFATHER CLOCK SPRITE_256
+  - first:
+      213: 5192560964170060160
+    second: GRANDFATHER CLOCK SPRITE_257
+  - first:
+      213: -3462425315190299948
+    second: GRANDFATHER CLOCK SPRITE_258
+  - first:
+      213: -7979344485529458273
+    second: GRANDFATHER CLOCK SPRITE_259
+  - first:
+      213: -9040684461860989622
+    second: GRANDFATHER CLOCK SPRITE_260
+  - first:
+      213: 8614650592728102101
+    second: GRANDFATHER CLOCK SPRITE_261
+  - first:
+      213: -2853905890502736725
+    second: GRANDFATHER CLOCK SPRITE_262
+  - first:
+      213: 8336667404733008710
+    second: GRANDFATHER CLOCK SPRITE_263
+  - first:
+      213: -3397347178720659652
+    second: GRANDFATHER CLOCK SPRITE_264
+  - first:
+      213: -2670706373638786937
+    second: GRANDFATHER CLOCK SPRITE_265
+  - first:
+      213: -2992916064123007052
+    second: GRANDFATHER CLOCK SPRITE_266
+  - first:
+      213: 7902211089784412415
+    second: GRANDFATHER CLOCK SPRITE_267
+  - first:
+      213: 2990885585573963135
+    second: GRANDFATHER CLOCK SPRITE_268
+  - first:
+      213: 3315535941435150460
+    second: GRANDFATHER CLOCK SPRITE_269
+  - first:
+      213: 6957478870292784227
+    second: GRANDFATHER CLOCK SPRITE_270
+  - first:
+      213: 1321294267609144400
+    second: GRANDFATHER CLOCK SPRITE_271
+  - first:
+      213: -2929887670404696839
+    second: GRANDFATHER CLOCK SPRITE_272
+  - first:
+      213: -8916789374433242773
+    second: GRANDFATHER CLOCK SPRITE_273
+  - first:
+      213: -7370345763179859102
+    second: GRANDFATHER CLOCK SPRITE_274
+  - first:
+      213: 2436367922438655189
+    second: GRANDFATHER CLOCK SPRITE_275
+  - first:
+      213: 2422569669290275677
+    second: GRANDFATHER CLOCK SPRITE_276
+  - first:
+      213: 5880176262042930614
+    second: GRANDFATHER CLOCK SPRITE_277
+  - first:
+      213: -4159387265007070866
+    second: GRANDFATHER CLOCK SPRITE_278
+  - first:
+      213: -3216034680093386119
+    second: GRANDFATHER CLOCK SPRITE_279
+  - first:
+      213: 4857441452675664402
+    second: GRANDFATHER CLOCK SPRITE_280
+  - first:
+      213: 8117864137774916964
+    second: GRANDFATHER CLOCK SPRITE_281
+  - first:
+      213: -3156250433402405771
+    second: GRANDFATHER CLOCK SPRITE_282
+  - first:
+      213: 9091010652489322337
+    second: GRANDFATHER CLOCK SPRITE_283
+  - first:
+      213: 5880856791590613134
+    second: GRANDFATHER CLOCK SPRITE_284
+  - first:
+      213: 205903080661691794
+    second: GRANDFATHER CLOCK SPRITE_285
+  - first:
+      213: 3911372890932894248
+    second: GRANDFATHER CLOCK SPRITE_286
+  - first:
+      213: 8569245868480431400
+    second: GRANDFATHER CLOCK SPRITE_287
+  - first:
+      213: -812169281402862528
+    second: GRANDFATHER CLOCK SPRITE_288
+  - first:
+      213: -7735031542872817398
+    second: GRANDFATHER CLOCK SPRITE_289
+  - first:
+      213: -2796399631908152379
+    second: GRANDFATHER CLOCK SPRITE_290
+  - first:
+      213: 8261468747022232975
+    second: GRANDFATHER CLOCK SPRITE_291
+  - first:
+      213: 3268737599196035805
+    second: GRANDFATHER CLOCK SPRITE_292
+  - first:
+      213: 4571232830107738001
+    second: GRANDFATHER CLOCK SPRITE_293
+  - first:
+      213: 5275316506232665646
+    second: GRANDFATHER CLOCK SPRITE_294
+  - first:
+      213: 3560654502342300884
+    second: GRANDFATHER CLOCK SPRITE_295
+  - first:
+      213: -7750490405850569938
+    second: GRANDFATHER CLOCK SPRITE_296
+  - first:
+      213: 394156280191849309
+    second: GRANDFATHER CLOCK SPRITE_297
+  - first:
+      213: -1624482207540814402
+    second: GRANDFATHER CLOCK SPRITE_298
+  - first:
+      213: 3578639664485758170
+    second: GRANDFATHER CLOCK SPRITE_299
+  - first:
+      213: -8478002121709354303
+    second: GRANDFATHER CLOCK SPRITE_300
+  - first:
+      213: -4043185515935411629
+    second: GRANDFATHER CLOCK SPRITE_301
+  - first:
+      213: 8323737892487330313
+    second: GRANDFATHER CLOCK SPRITE_302
+  - first:
+      213: 7306550566487397357
+    second: GRANDFATHER CLOCK SPRITE_303
+  - first:
+      213: -8527213901447801861
+    second: GRANDFATHER CLOCK SPRITE_304
+  - first:
+      213: 579233978379799242
+    second: GRANDFATHER CLOCK SPRITE_305
+  - first:
+      213: -5647357478962942407
+    second: GRANDFATHER CLOCK SPRITE_306
+  - first:
+      213: -9091011808632573973
+    second: GRANDFATHER CLOCK SPRITE_307
+  - first:
+      213: 3016299632055794756
+    second: GRANDFATHER CLOCK SPRITE_308
+  - first:
+      213: -5723805631587041203
+    second: GRANDFATHER CLOCK SPRITE_309
+  - first:
+      213: -4083846485020333500
+    second: GRANDFATHER CLOCK SPRITE_310
+  - first:
+      213: 46736741999203416
+    second: GRANDFATHER CLOCK SPRITE_311
+  - first:
+      213: 15264627493598004
+    second: GRANDFATHER CLOCK SPRITE_312
+  - first:
+      213: 4824965648069999828
+    second: GRANDFATHER CLOCK SPRITE_313
+  - first:
+      213: 1621165384599384340
+    second: GRANDFATHER CLOCK SPRITE_314
+  - first:
+      213: -4810374627411042734
+    second: GRANDFATHER CLOCK SPRITE_315
+  - first:
+      213: 2732441496755059690
+    second: GRANDFATHER CLOCK SPRITE_316
+  - first:
+      213: 5593768895491185505
+    second: GRANDFATHER CLOCK SPRITE_317
+  - first:
+      213: 7744617516777704266
+    second: GRANDFATHER CLOCK SPRITE_318
+  - first:
+      213: 2256968885088865009
+    second: GRANDFATHER CLOCK SPRITE_319
+  - first:
+      213: 4862579263715778446
+    second: GRANDFATHER CLOCK SPRITE_320
+  - first:
+      213: 5912799065049668037
+    second: GRANDFATHER CLOCK SPRITE_321
+  - first:
+      213: -8174926417594671071
+    second: GRANDFATHER CLOCK SPRITE_322
+  - first:
+      213: 6864827456790955186
+    second: GRANDFATHER CLOCK SPRITE_323
+  - first:
+      213: 5138762491965843703
+    second: GRANDFATHER CLOCK SPRITE_324
+  - first:
+      213: -1412019262512433324
+    second: GRANDFATHER CLOCK SPRITE_325
+  - first:
+      213: 1227210067642747789
+    second: GRANDFATHER CLOCK SPRITE_326
+  - first:
+      213: -4598097465760563937
+    second: GRANDFATHER CLOCK SPRITE_327
+  - first:
+      213: 8978049122971160663
+    second: GRANDFATHER CLOCK SPRITE_328
+  - first:
+      213: 831452236507366977
+    second: GRANDFATHER CLOCK SPRITE_329
+  - first:
+      213: 9032329558575068224
+    second: GRANDFATHER CLOCK SPRITE_330
+  - first:
+      213: -8918862213144114271
+    second: GRANDFATHER CLOCK SPRITE_331
+  - first:
+      213: -6076981555365405537
+    second: GRANDFATHER CLOCK SPRITE_332
+  - first:
+      213: 4437160023023187226
+    second: GRANDFATHER CLOCK SPRITE_333
+  - first:
+      213: 2861161399443304028
+    second: GRANDFATHER CLOCK SPRITE_334
+  - first:
+      213: 2113637845944264688
+    second: GRANDFATHER CLOCK SPRITE_335
+  - first:
+      213: 5397034681187772850
+    second: GRANDFATHER CLOCK SPRITE_336
+  - first:
+      213: -7327592088874151442
+    second: GRANDFATHER CLOCK SPRITE_337
+  - first:
+      213: 10006963321104762
+    second: GRANDFATHER CLOCK SPRITE_338
+  - first:
+      213: -7189357787392340298
+    second: GRANDFATHER CLOCK SPRITE_339
+  - first:
+      213: 1941154000490719311
+    second: GRANDFATHER CLOCK SPRITE_340
+  - first:
+      213: 5262121666813187152
+    second: GRANDFATHER CLOCK SPRITE_341
+  - first:
+      213: 4409269437184153479
+    second: GRANDFATHER CLOCK SPRITE_342
+  - first:
+      213: -5417607104051549296
+    second: GRANDFATHER CLOCK SPRITE_343
+  - first:
+      213: -9124600353914872338
+    second: GRANDFATHER CLOCK SPRITE_344
+  - first:
+      213: 7451661535038409805
+    second: GRANDFATHER CLOCK SPRITE_345
+  - first:
+      213: 1276261697864544332
+    second: GRANDFATHER CLOCK SPRITE_346
+  - first:
+      213: 7848016202739951428
+    second: GRANDFATHER CLOCK SPRITE_347
+  - first:
+      213: -1638485412482947481
+    second: GRANDFATHER CLOCK SPRITE_348
+  - first:
+      213: 7953148941101630210
+    second: GRANDFATHER CLOCK SPRITE_349
+  - first:
+      213: -4437963619540233562
+    second: GRANDFATHER CLOCK SPRITE_350
+  - first:
+      213: 5500007563651126259
+    second: GRANDFATHER CLOCK SPRITE_351
+  - first:
+      213: 2544727726302750108
+    second: GRANDFATHER CLOCK SPRITE_352
+  - first:
+      213: -6043603190373401150
+    second: GRANDFATHER CLOCK SPRITE_353
+  - first:
+      213: -7335713499826012079
+    second: GRANDFATHER CLOCK SPRITE_354
+  - first:
+      213: 5710027254216329973
+    second: GRANDFATHER CLOCK SPRITE_355
+  - first:
+      213: -7012996878468485956
+    second: GRANDFATHER CLOCK SPRITE_356
+  - first:
+      213: -2112101001791948040
+    second: GRANDFATHER CLOCK SPRITE_357
+  - first:
+      213: -8398416055853759682
+    second: GRANDFATHER CLOCK SPRITE_358
+  - first:
+      213: 2397131509613251829
+    second: GRANDFATHER CLOCK SPRITE_359
+  - first:
+      213: 153206629732876094
+    second: GRANDFATHER CLOCK SPRITE_360
+  - first:
+      213: -7272066844919376865
+    second: GRANDFATHER CLOCK SPRITE_361
+  - first:
+      213: 5575872156334025425
+    second: GRANDFATHER CLOCK SPRITE_362
+  - first:
+      213: -4584254759479586834
+    second: GRANDFATHER CLOCK SPRITE_363
+  - first:
+      213: -5317107149010839413
+    second: GRANDFATHER CLOCK SPRITE_364
+  - first:
+      213: -118448090655276360
+    second: GRANDFATHER CLOCK SPRITE_365
+  - first:
+      213: 2087978067966533404
+    second: GRANDFATHER CLOCK SPRITE_366
+  - first:
+      213: -4253469498526059135
+    second: GRANDFATHER CLOCK SPRITE_367
+  - first:
+      213: -2604650702788914560
+    second: GRANDFATHER CLOCK SPRITE_368
+  - first:
+      213: -3049354569639472010
+    second: GRANDFATHER CLOCK SPRITE_369
+  - first:
+      213: 3243958840085826764
+    second: GRANDFATHER CLOCK SPRITE_370
+  - first:
+      213: -9113075741635940584
+    second: GRANDFATHER CLOCK SPRITE_371
+  - first:
+      213: -8758598772127937749
+    second: GRANDFATHER CLOCK SPRITE_372
+  - first:
+      213: 4252194625159821214
+    second: GRANDFATHER CLOCK SPRITE_373
+  - first:
+      213: -2538752863832863235
+    second: GRANDFATHER CLOCK SPRITE_374
+  - first:
+      213: -3895129652481069858
+    second: GRANDFATHER CLOCK SPRITE_375
+  - first:
+      213: -23824917393832371
+    second: GRANDFATHER CLOCK SPRITE_376
+  - first:
+      213: -1184060206608020878
+    second: GRANDFATHER CLOCK SPRITE_377
+  - first:
+      213: 8952016071009911615
+    second: GRANDFATHER CLOCK SPRITE_378
+  - first:
+      213: 4039976045862347199
+    second: GRANDFATHER CLOCK SPRITE_379
+  - first:
+      213: 4722267161457042206
+    second: GRANDFATHER CLOCK SPRITE_380
+  - first:
+      213: -1844840186239876996
+    second: GRANDFATHER CLOCK SPRITE_381
+  - first:
+      213: -6460034632455630524
+    second: GRANDFATHER CLOCK SPRITE_382
+  - first:
+      213: 2159362258651590908
+    second: GRANDFATHER CLOCK SPRITE_383
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe08b9d846606f180800000000000000
+      internalID: -9082064569603751697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 864
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18161ab5c9885b2e0800000000000000
+      internalID: -2110630645219630719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_2
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 864
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e281991af92416a0800000000000000
+      internalID: -6479507809731771676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 864
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cad4337eb6cf6c0800000000000000
+      internalID: -4108290119326389165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_4
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 864
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb2c35a74171d2a0800000000000000
+      internalID: -6714461016903898175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6023e6b3ed4f15930800000000000000
+      internalID: 4130351568592450054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_6
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4fda2880d9916b0800000000000000
+      internalID: -5325052424511163181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GRANDFATHER CLOCK SPRITE_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 234
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1478c2bb983dd9430800000000000000
+      internalID: 3791419049820063553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

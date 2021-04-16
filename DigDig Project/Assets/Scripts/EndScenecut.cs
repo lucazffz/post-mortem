@@ -4,15 +4,16 @@ using UnityEngine;
 public class EndScenecut : MonoBehaviour
 {
     public GameObject cover;
+    public GameObject jumpScare;
 
     static public bool playingCutscene;
 
     private void Start()
     {
         cover.SetActive(false);
+        jumpScare.SetActive(false);
         playingCutscene = false;
     }
-
 
     public void StartSceneCut()
     {
@@ -25,11 +26,24 @@ public class EndScenecut : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         FindObjectOfType<AudioManager>().PlaySound("ButtonClick");
+        FindObjectOfType<AudioManager>().PlaySound("Light");
+
         cover.SetActive(true);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
+        FindObjectOfType<AudioManager>().PlaySound("Scream");
+        jumpScare.SetActive(true);
 
+        yield return new WaitForSeconds(0.2f);
+        jumpScare.SetActive(false);
+
+        yield return new WaitForSeconds(2);
         FindObjectOfType<LevelLoader>().LoadNextLevel();
+
+
+
+
+
 
 
     }

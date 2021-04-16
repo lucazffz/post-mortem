@@ -14,6 +14,8 @@ public class LanternController : MonoBehaviour
     public static bool canHoldLantern;
 
     public string[] grabPrompt = new string[] { "hold" };
+
+    public GameObject collideDetection;
    
     private void Update()
     {
@@ -77,9 +79,12 @@ public class LanternController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Grabbable")
         {
-            onBox = true;
-            transform.parent = collision.gameObject.transform;
-            GetComponent<Rigidbody2D>().isKinematic = true;
+            if(transform.position.y > collision.transform.position.y)
+            {
+                onBox = true;
+                transform.parent = collision.gameObject.transform;
+                GetComponent<Rigidbody2D>().isKinematic = true;
+            }
         }
     }
 

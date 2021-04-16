@@ -52,13 +52,7 @@ public class PlayerBehavior : MonoBehaviour
     private GameObject platform;
     
     public static bool isClimbing;
-    private bool canClimb;
-
-    private bool ahah;
-
-
-
-    RaycastHit2D climbCheck;
+    static RaycastHit2D climbCheck;
 
     #endregion
   
@@ -79,12 +73,8 @@ public class PlayerBehavior : MonoBehaviour
 
         climbCheck = Physics2D.Raycast(transform.position, Vector2.up, climbCheckDistance, whatIsLadder);
 
-        if(ahah == true && climbCheck.collider != null)
+        if(isClimbing == true)
         {
-            isClimbing = true;
-
-            Debug.Log(climbCheck.collider);
-
             rigidBody.gravityScale = 0;
 
             inputVertical = Input.GetAxisRaw("Vertical");
@@ -99,13 +89,12 @@ public class PlayerBehavior : MonoBehaviour
             {
                 platform.transform.GetComponent<BoxCollider2D>().enabled = true;
                 isClimbing = false;
-                
-                Debug.Log("release");
             }
             else if (rigidBody.velocity.y < 0 && isGrounded)
             {
                 isClimbing = false;
-                
+
+
                 platform.transform.GetComponent<BoxCollider2D>().enabled = true;
             }
             else platform.transform.GetComponent<BoxCollider2D>().enabled = false;
@@ -122,6 +111,8 @@ public class PlayerBehavior : MonoBehaviour
 
         if (GrabController.grabbing) holding = true;
         else holding = false;
+
+        
 
         if (!canMove && isGrounded) moveInput = 0;
 
@@ -170,6 +161,7 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetBool("Holding", LanternController.holdingLantern);
 
         lanternPosAnimatior.SetFloat("Speed", Mathf.Abs(moveInput));
+        lanternPosAnimatior.SetBool("Holding", LanternController.holdingLantern);
 
         animator.SetBool("Climbing", isClimbing);
         if (isClimbing) animator.speed = Mathf.Abs(rigidBody.velocity.normalized.y);
@@ -201,8 +193,12 @@ public class PlayerBehavior : MonoBehaviour
     }
     public void Climb()
     {
-        ahah = true;
-        Debug.Log(canClimb);
+        Debug.Log(climbCheck.collider);
+        if(climbCheck.collider != null)
+        {
+            isClimbing = true;
+            Debug.Log("climb");
+        }
     }
 }
 
