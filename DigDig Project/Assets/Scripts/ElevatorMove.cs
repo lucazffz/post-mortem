@@ -36,6 +36,7 @@ public class ElevatorMove : MonoBehaviour
     {
         activate = true;
         FindObjectOfType<AudioManager>().PlaySound("ButtonClick");
+        FindObjectOfType<AudioManager>().PlaySound("Elevator");
     }
     public void ChangePos()
     {
@@ -43,4 +44,6 @@ public class ElevatorMove : MonoBehaviour
         if (nexPos == posA) nexPos = posB;
         else if(nexPos == posB) nexPos = posA;
     }
+
+   
 }

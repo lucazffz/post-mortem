@@ -6,7 +6,7 @@ public class EndScenecut : MonoBehaviour
     public GameObject cover;
     public GameObject jumpScare;
 
-    static public bool playingCutscene;
+    public static bool playingCutscene;
 
     private void Start()
     {

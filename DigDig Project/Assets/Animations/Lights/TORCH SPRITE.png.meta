@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: 7e13114e7aff01e469de56d423f792cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2089948302263988398
+    second: TORCH SPRITE_0
+  - first:
+      213: 6874282634527320336
+    second: TORCH SPRITE_1
+  - first:
+      213: 5135920367558352665
+    second: TORCH SPRITE_2
+  - first:
+      213: 6010521895905429991
+    second: TORCH SPRITE_3
+  - first:
+      213: -2900181167813049386
+    second: TORCH SPRITE_4
+  - first:
+      213: -3465787209178253445
+    second: TORCH SPRITE_5
+  - first:
+      213: 3886677961038064021
+    second: TORCH SPRITE_6
+  - first:
+      213: -7588534067643676610
+    second: TORCH SPRITE_7
+  - first:
+      213: -5879065323830154433
+    second: TORCH SPRITE_8
+  - first:
+      213: -7453748906968591636
+    second: TORCH SPRITE_9
+  - first:
+      213: -4990389359369444780
+    second: TORCH SPRITE_10
+  - first:
+      213: 3593020146169637338
+    second: TORCH SPRITE_11
+  - first:
+      213: 9131893485636543486
+    second: TORCH SPRITE_12
+  - first:
+      213: 2455111707623502804
+    second: TORCH SPRITE_13
+  - first:
+      213: -8801876149340048565
+    second: TORCH SPRITE_14
+  - first:
+      213: -2757687096325016324
+    second: TORCH SPRITE_15
+  - first:
+      213: -6579914333668628813
+    second: TORCH SPRITE_16
+  - first:
+      213: 823050802605960539
+    second: TORCH SPRITE_17
+  - first:
+      213: -692523510993305490
+    second: TORCH SPRITE_18
+  - first:
+      213: -4574720138990201378
+    second: TORCH SPRITE_19
+  - first:
+      213: 1268356717692813735
+    second: TORCH SPRITE_20
+  - first:
+      213: 5447404315548091609
+    second: TORCH SPRITE_21
+  - first:
+      213: 8282875526113948753
+    second: TORCH SPRITE_22
+  - first:
+      213: 4301088902266728849
+    second: TORCH SPRITE_23
+  - first:
+      213: -8588537358439574811
+    second: TORCH SPRITE_24
+  - first:
+      213: -3273936644385645461
+    second: TORCH SPRITE_25
+  - first:
+      213: 896942440201177108
+    second: TORCH SPRITE_26
+  - first:
+      213: -7558813865179980376
+    second: TORCH SPRITE_27
+  - first:
+      213: -9111888173032194969
+    second: TORCH SPRITE_28
+  - first:
+      213: -1923817422076302211
+    second: TORCH SPRITE_29
+  - first:
+      213: -2475390801132085961
+    second: TORCH SPRITE_30
+  - first:
+      213: 7005784425768528124
+    second: TORCH SPRITE_31
+  - first:
+      213: 2965554887934484618
+    second: TORCH SPRITE_32
+  - first:
+      213: -4963464234934266081
+    second: TORCH SPRITE_33
+  - first:
+      213: 5200057599721558191
+    second: TORCH SPRITE_34
+  - first:
+      213: -2036841395883386358
+    second: TORCH SPRITE_35
+  - first:
+      213: 5720515869121622441
+    second: TORCH SPRITE_36
+  - first:
+      213: -2285585195801808961
+    second: TORCH SPRITE_37
+  - first:
+      213: -8099600770837863984
+    second: TORCH SPRITE_38
+  - first:
+      213: -6805908346445118266
+    second: TORCH SPRITE_39
+  - first:
+      213: -4361328499852797410
+    second: TORCH SPRITE_40
+  - first:
+      213: -6720884704771412847
+    second: TORCH SPRITE_41
+  - first:
+      213: -94472018307822263
+    second: TORCH SPRITE_42
+  - first:
+      213: 7424114030755076060
+    second: TORCH SPRITE_43
+  - first:
+      213: -3231138504529432972
+    second: TORCH SPRITE_44
+  - first:
+      213: 9199968959661112305
+    second: TORCH SPRITE_45
+  - first:
+      213: -4054724752224862195
+    second: TORCH SPRITE_46
+  - first:
+      213: -870853175932767657
+    second: TORCH SPRITE_47
+  - first:
+      213: 817053309763271114
+    second: TORCH SPRITE_48
+  - first:
+      213: 4898893420452246606
+    second: TORCH SPRITE_49
+  - first:
+      213: -8737600120165675666
+    second: TORCH SPRITE_50
+  - first:
+      213: -3923546420283942393
+    second: TORCH SPRITE_51
+  - first:
+      213: -1399533794285133015
+    second: TORCH SPRITE_52
+  - first:
+      213: 7804270093011348987
+    second: TORCH SPRITE_53
+  - first:
+      213: -8059002452800273138
+    second: TORCH SPRITE_54
+  - first:
+      213: -6275725657760389085
+    second: TORCH SPRITE_55
+  - first:
+      213: 1659685082595144726
+    second: TORCH SPRITE_56
+  - first:
+      213: 1246680442368243444
+    second: TORCH SPRITE_57
+  - first:
+      213: 4266975771772577836
+    second: TORCH SPRITE_58
+  - first:
+      213: 6879172074752288200
+    second: TORCH SPRITE_59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TORCH SPRITE_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 621
+        width: 76
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fcf9497130ff2e0800000000000000
+      internalID: -2089948302263988398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_1
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 621
+        width: 162
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01923a472ab566f50800000000000000
+      internalID: 6874282634527320336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_2
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 621
+        width: 118
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f520fec54764740800000000000000
+      internalID: 5135920367558352665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 333
+        width: 110
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5996308530140f530800000000000000
+      internalID: 3886677961038064021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_9
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 333
+        width: 128
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce25e2b5cd6fe8890800000000000000
+      internalID: -7453748906968591636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_11
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 333
+        width: 140
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9634b49c8fcd130800000000000000
+      internalID: 3593020146169637338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 45
+        width: 76
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b437a99c64479d580800000000000000
+      internalID: -8801876149340048565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TORCH SPRITE_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 45
+        width: 98
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b62e2186c27fa4a0800000000000000
+      internalID: -6579914333668628813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 664714551d2c18e4cbc02ee7feb78494
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

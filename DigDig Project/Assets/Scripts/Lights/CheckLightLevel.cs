@@ -72,6 +72,7 @@ public class CheckLightLevel : MonoBehaviour
 
             Debug.Log(currentTime);
             FindObjectOfType<LevelLoader>().GetComponent<Animator>().SetTrigger("Start");
+            EndScenecut.playingCutscene = true;
 
             yield return new WaitForSeconds(2);
             FindObjectOfType<AudioManager>().PlaySound("Scream");

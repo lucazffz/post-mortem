@@ -112,7 +112,8 @@ public class PlayerBehavior : MonoBehaviour
         if (GrabController.grabbing) holding = true;
         else holding = false;
 
-        
+        if (LanternController.holdingLantern) GetComponent<BoxCollider2D>().enabled = true;
+        else GetComponent<BoxCollider2D>().enabled = false;
 
         if (!canMove && isGrounded) moveInput = 0;
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class FakeWall : MonoBehaviour
 {
@@ -18,10 +19,28 @@ public class FakeWall : MonoBehaviour
     public void RevealWall()
     {
         activated = true;
+       
 
         if (InventoryManager.instance.ContainsItem(map))
         {
-            for (int i = 0; i <= 2; i++) transform.GetChild(i).gameObject.SetActive(false);
+            StartCoroutine(Wait());
         }
+
+    }
+
+    IEnumerator Wait()
+    {
+       EndScenecut.playingCutscene = true;
+
+        yield return new WaitForSeconds(2);
+
+        transform.GetChild(0).gameObject.SetActive(false);
+        transform.GetChild(1).gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+
+       GetComponent<DialogueTrigger>().TriggerDialogue();
+
+        EndScenecut.playingCutscene = false;
     }
 }
