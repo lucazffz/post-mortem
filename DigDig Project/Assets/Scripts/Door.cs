@@ -5,6 +5,8 @@ public class Door : MonoBehaviour
     public Item key;
     public bool locked;
     private bool canOpen;
+
+    public bool isTrapdoor;
    
     public void OpenDoor()
     {
@@ -17,7 +19,11 @@ public class Door : MonoBehaviour
                 InventoryManager.instance.Removeitem(key);
                 canOpen = true;
             }
-            else FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
+            else
+            {
+                if(isTrapdoor)FindObjectOfType<PopupText>().ShowText("You don't have the requierd tool");
+                else FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
+            }
         }
         else canOpen = true;
        

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Item_BoltCutter
   m_EditorClassIdentifier: 
   itemName: Bolt Cutter
-  itemDesc: 
+  itemDesc: ' Looks like it can cut open a lot of things. I think ths will come in
+    handy. '
   itemsprite: {fileID: 21300000, guid: 71828daa9e5e8904fa9b533c512a0a97, type: 3}

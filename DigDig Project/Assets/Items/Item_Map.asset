@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5d286ede11abf4a9bae7a5f3ced24e, type: 3}
   m_Name: Item_Map
   m_EditorClassIdentifier: 
-  itemName: Map
-  itemDesc: 
+  itemName: Riddle
+  itemDesc: The clock says tick... tock... tick... tock. Time, a strange thing.
   itemsprite: {fileID: 21300000, guid: 6e7d4649e3ec28e409884455d4e056bc, type: 3}

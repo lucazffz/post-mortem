@@ -61,6 +61,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         canMove = true;
+
+        isClimbing = false;
     }
 
     private void FixedUpdate() 
