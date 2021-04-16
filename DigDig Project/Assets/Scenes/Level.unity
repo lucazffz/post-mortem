@@ -825,10 +825,10 @@ MonoBehaviour:
     giveItem: 0
     itemData: {fileID: 0}
     giveItemInConversation: 0
-    interactCharacter: {fileID: 11400000, guid: a05bd74516b1ef546b350edf3bfd7662, type: 2}
+    interactCharacter: {fileID: 11400000, guid: 345e321dbff27a644ad776094bdad88e, type: 2}
     conversations:
     - sentenceGroups:
-      - speaker: {fileID: 11400000, guid: a05bd74516b1ef546b350edf3bfd7662, type: 2}
+      - speaker: {fileID: 11400000, guid: 345e321dbff27a644ad776094bdad88e, type: 2}
         sentences:
         - Hey, hey you!
         - Yes, your not old, are you little kid?
@@ -836,7 +836,7 @@ MonoBehaviour:
         sentences:
         - No, i'm only seven years old. I just turned today!
         - Who are you?
-      - speaker: {fileID: 11400000, guid: a05bd74516b1ef546b350edf3bfd7662, type: 2}
+      - speaker: {fileID: 11400000, guid: 345e321dbff27a644ad776094bdad88e, type: 2}
         sentences:
         - Ohh, on your birthday. That's not fun huh.
         - But it does not matter.
@@ -845,7 +845,7 @@ MonoBehaviour:
         sentences:
         - Yes I did! He was very nice but he did'nt want to play with me...
         - Can we play together!?
-      - speaker: {fileID: 11400000, guid: a05bd74516b1ef546b350edf3bfd7662, type: 2}
+      - speaker: {fileID: 11400000, guid: 345e321dbff27a644ad776094bdad88e, type: 2}
         sentences:
         - No! No, keep quite. I can hear her...
         - You need to go back to him and get his bult cutter and set me free.
@@ -34035,7 +34035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300072934549449851, guid: 382029b6bcfeb714aa48d1012cf77433, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.899998
+      value: -79.3
       objectReference: {fileID: 0}
     - target: {fileID: 7300072934549449851, guid: 382029b6bcfeb714aa48d1012cf77433, type: 3}
       propertyPath: m_LocalPosition.y
