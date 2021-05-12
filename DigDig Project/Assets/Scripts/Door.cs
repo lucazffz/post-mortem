@@ -7,6 +7,8 @@ public class Door : MonoBehaviour
     private bool canOpen;
 
     public bool isTrapdoor;
+
+    public GameObject trigger;
    
     public void OpenDoor()
     {
@@ -21,8 +23,8 @@ public class Door : MonoBehaviour
             }
             else
             {
-                if(isTrapdoor)FindObjectOfType<PopupText>().ShowText("You don't have the requierd tool");
-                else FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
+                if(isTrapdoor)FindObjectOfType<PopupText>().ShowText("You don't have the required tool");
+                else FindObjectOfType<PopupText>().ShowText("You don't have the required key");
             }
         }
         else canOpen = true;
@@ -34,6 +36,11 @@ public class Door : MonoBehaviour
 
             GetComponent<Animator>().SetBool("open", true);
             FindObjectOfType<AudioManager>().PlaySound("DoorCreak");
+
+            if (isTrapdoor) trigger.SetActive(true);
+
+            if(isTrapdoor) FindObjectOfType<PopupText>().ShowText("Tool was removed from inventory");
+            else FindObjectOfType<PopupText>().ShowText("Key was removed from inventory");
         }
 
         FindObjectOfType<AudioManager>().PlaySound("DoorHandle");

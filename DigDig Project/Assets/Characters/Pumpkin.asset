@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 559d143308e9853428fb0a3c47c31d26, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  name: Josh
+  name: Alfred
   portrait: {fileID: 21300000, guid: 5cd9afeadd6e66a4fa876a34ab83af34, type: 3}

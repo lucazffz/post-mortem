@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Item_Letter
   m_EditorClassIdentifier: 
   itemName: Letter from Josh to Celine
-  itemDesc: "Hi Celine\n\nI'm sorry but this will be the last letter i'll send to
-    you. She is on to me, i cannot risk it! I've gotten this far and i'm not going
+  itemDesc: "Hi Celine\n\nI'm sorry but this will be the last letter I'll send to
+    you. She is on to me, I cannot risk it! I've gotten this far and I'm not going
     to let her destroy that. Soon will I be there with you, on the other side. That
-    tought brings me happiness. I wont be long. Anyways, how are the kids? I hope
-    you're watching over them while i'm gone. Are there new family good? I truly
+    tought brings me happiness. I won't be long. Anyways, how are the kids? I hope
+    you're watching over them while I'm gone. Are their new family good? I truly
     hope so. I have to go now but we will meet soon. I promise! \n\nKind regards,
     your beloved.\n\n"
   itemsprite: {fileID: 21300000, guid: 6e7d4649e3ec28e409884455d4e056bc, type: 3}

@@ -23,6 +23,9 @@ public class EndScenecut : MonoBehaviour
 
     IEnumerator Timer()
     {
+
+       
+
         yield return new WaitForSeconds(2);
 
         FindObjectOfType<AudioManager>().PlaySound("ButtonClick");

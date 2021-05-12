@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Prisoner
   m_EditorClassIdentifier: 
   name: Prisoner
-  portrait: {fileID: 5495537472492517148, guid: 009a74647aa6fa54ba4f7eee4ac848b0, type: 3}
+  portrait: {fileID: 21300000, guid: e50266c117e9af240952c6da4ca5021a, type: 3}

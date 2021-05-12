@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: f6ec40b2dbb9236418489499f9c84b80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -583744278542198102
+    second: PLAYER JUMP W_LANTERN SPRITE_0
+  - first:
+      213: -657862789271626266
+    second: PLAYER JUMP W_LANTERN SPRITE_1
+  - first:
+      213: -1915918322661350105
+    second: PLAYER JUMP W_LANTERN SPRITE_2
+  - first:
+      213: 3479122514906651994
+    second: PLAYER JUMP W_LANTERN SPRITE_3
+  - first:
+      213: 4895108772128149884
+    second: PLAYER JUMP W_LANTERN SPRITE_4
+  - first:
+      213: 7150682036533254791
+    second: PLAYER JUMP W_LANTERN SPRITE_5
+  - first:
+      213: 8552465132060047289
+    second: PLAYER JUMP W_LANTERN SPRITE_6
+  - first:
+      213: 6695630756798358274
+    second: PLAYER JUMP W_LANTERN SPRITE_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1152
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa53d5ebaf16e7f0800000000000000
+      internalID: -583744278542198102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_1
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1152
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed5486574dced6f0800000000000000
+      internalID: -657862789271626266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_2
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1152
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725ab1fbf6a4965e0800000000000000
+      internalID: -1915918322661350105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 576
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d131f7e73584030800000000000000
+      internalID: 3479122514906651994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 582
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71d89b2e7beee340800000000000000
+      internalID: 4895108772128149884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_5
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 578
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ad4512d635c3360800000000000000
+      internalID: 7150682036533254791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b77a5689b570b670800000000000000
+      internalID: 8552465132060047289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PLAYER JUMP W_LANTERN SPRITE_7
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 351
+        height: 513
+      alignment: 9
+      pivot: {x: 0.6, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2036526c2b8abec50800000000000000
+      internalID: 6695630756798358274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 75f379228a9e15e4ca9c94fb6294fa1b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

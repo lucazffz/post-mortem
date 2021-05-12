@@ -20,7 +20,7 @@ public class Chest : MonoBehaviour
             else
             {
                 canOpen = false;
-                FindObjectOfType<PopupText>().ShowText("You don't have the requierd key");
+                FindObjectOfType<PopupText>().ShowText("You don't have the required key");
 
                 FindObjectOfType<AudioManager>().PlaySound("ChestLocked");
             }

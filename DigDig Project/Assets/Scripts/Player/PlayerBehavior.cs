@@ -77,6 +77,9 @@ public class PlayerBehavior : MonoBehaviour
 
         if(isClimbing == true)
         {
+            LanternController.holdingLantern = false;
+            Debug.Log(climbCheck.collider);
+
             rigidBody.gravityScale = 0;
 
             inputVertical = Input.GetAxisRaw("Vertical");
@@ -108,7 +111,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Update() 
     {
-        if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing || EndScenecut.playingCutscene) canMove = false;
+        if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing || EndScenecut.playingCutscene || InventoryManager.instance.inventoryActivated) canMove = false;
         else canMove = true;
 
         if (GrabController.grabbing) holding = true;
@@ -162,9 +165,12 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetBool("isGrounded", isGrounded);
         animator.SetFloat("Jump", rigidBody.velocity.normalized.y);
         animator.SetBool("Holding", LanternController.holdingLantern);
+       
 
         lanternPosAnimatior.SetFloat("Speed", Mathf.Abs(moveInput));
         lanternPosAnimatior.SetBool("Holding", LanternController.holdingLantern);
+        lanternPosAnimatior.SetBool("isGrounded", isGrounded);
+        lanternPosAnimatior.SetFloat("Jump", rigidBody.velocity.normalized.y);
 
         animator.SetBool("Climbing", isClimbing);
         if (isClimbing) animator.speed = Mathf.Abs(rigidBody.velocity.normalized.y);
@@ -181,8 +187,8 @@ public class PlayerBehavior : MonoBehaviour
 
         if (!GrabController.grabbing && !isClimbing)
         {
-            if (!facingRight && moveInput > 0) Flip();
-            else if (facingRight && moveInput < 0) Flip();
+            if (!facingRight && moveInput < 0) Flip();
+            else if (facingRight && moveInput > 0) Flip();
         }
        
 

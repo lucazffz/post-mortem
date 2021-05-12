@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3786599954582192543}
   - component: {fileID: 733774826917468146}
   m_Layer: 0
-  m_Name: Candle
+  m_Name: Candle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -11364149
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8cd808754c3e41d4fa757818a3dacef7, type: 3}
+  m_Sprite: {fileID: 5495537472492517148, guid: 009a74647aa6fa54ba4f7eee4ac848b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

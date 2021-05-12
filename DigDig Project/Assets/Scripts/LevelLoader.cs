@@ -10,6 +10,8 @@ public class LevelLoader : MonoBehaviour
     public void Start()
     {
         transitionTime = animator.GetCurrentAnimatorStateInfo(0).length;
+
+       
     }
 
     public void LoadNextLevel() 

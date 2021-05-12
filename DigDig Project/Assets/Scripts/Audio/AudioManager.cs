@@ -3,6 +3,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AudioManager: MonoBehaviour
 {
@@ -19,8 +20,12 @@ public class AudioManager: MonoBehaviour
 
     private bool statingSong = false;
 
+   
+
     public void Start()
     {
+        playMusic = true;
+
         PlaySound("Rain");
       
         StartCoroutine(PlaySoundAtRandom());
@@ -58,7 +63,12 @@ public class AudioManager: MonoBehaviour
 
         }
 
-        
+        if (EndScenecut.playingCutscene && playMusic != false)
+        {
+            playMusic = false;
+            StartCoroutine(PlayMusic());
+            StartCoroutine(PlaySoundAtRandom());
+        }
     }
 
 
@@ -86,7 +96,6 @@ public class AudioManager: MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.Name == name);
         float rnd = Random.Range(30, 60);
 
-
         foreach (var sound in sounds)
         {
             if (sound.playAtRandom)
@@ -97,23 +106,27 @@ public class AudioManager: MonoBehaviour
             }
         }
 
+
+
+
+
+
+
         StartCoroutine(PlaySoundAtRandom());
     }
 
-    IEnumerator PlayMusic()
+    public IEnumerator PlayMusic()
     {
-       
+        Sound s = Array.Find(sounds, sound => sound.Name == "SoundTrack");
 
-        if(playMusic)
+        if (playMusic)
         {
-            Sound s = Array.Find(sounds, sound => sound.Name == "SoundTrack");
-          
             float rnd = Random.Range(40, 80);
             yield return new WaitForSeconds(rnd);
 
             statingSong = true;
-           
-            if(statingSong)
+
+            if (statingSong)
             {
                 s.volume = 0;
                 PlaySound("SoundTrack");
@@ -124,7 +137,7 @@ public class AudioManager: MonoBehaviour
                     yield return new WaitForSeconds(0.4f);
                 }
             }
-           
+
             statingSong = false;
 
             rnd = Random.Range(30, 60);
@@ -133,7 +146,7 @@ public class AudioManager: MonoBehaviour
             Debug.Log("hit");
             statingSong = true;
 
-            if(statingSong)
+            if (statingSong)
             {
                 while (s.volume >= 0)
                 {
@@ -143,12 +156,15 @@ public class AudioManager: MonoBehaviour
 
                 s.source.Stop();
             }
-           
+
             statingSong = false;
+        }
+        else 
+        {
+            yield return new WaitForSeconds(0);
+            s.source.Stop();
         }
 
         StartCoroutine(PlayMusic());
     }
-
-   
 }

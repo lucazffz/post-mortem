@@ -6,6 +6,8 @@ public class InventoryManager : MonoBehaviour
 {
     #region Variables
 
+
+
     public static InventoryManager instance;
     public bool inventoryActivated;
 
