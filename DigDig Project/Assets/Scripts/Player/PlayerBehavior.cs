@@ -22,6 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     //X-axis movement
     public float moveInput;
     public float speed = 4f;
+
+  
    
     //Jump
     public float jumpForce = 15f;
@@ -71,6 +73,8 @@ public class PlayerBehavior : MonoBehaviour
         if (canMove) moveInput = Input.GetAxisRaw("Horizontal");
         rigidBody.velocity = new Vector2(moveInput * speed, rigidBody.velocity.y);
 
+        
+
         #region Climbing
 
         climbCheck = Physics2D.Raycast(transform.position, Vector2.up, climbCheckDistance, whatIsLadder);
@@ -111,6 +115,20 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Update() 
     {
+       
+
+
+       
+        float gravity = -9.81f;
+
+        Vector2 velocity = new Vector2();
+        velocity *= gravity;
+
+        Debug.Log(velocity);
+
+
+
+
         if (DialogueManager.inConversaion || PauseMenu.pauseMenuActivated || isClimbing || EndScenecut.playingCutscene || InventoryManager.instance.inventoryActivated) canMove = false;
         else canMove = true;
 
@@ -139,6 +157,10 @@ public class PlayerBehavior : MonoBehaviour
             jumpTimeCounter = jumpTime;
             jumpBufferCounter = 0;
             isJumping = true;
+
+            rigidBody.velocity *= jumpForce;
+
+
 
             FindObjectOfType<AudioManager>().PlaySound("Jump");
         }
